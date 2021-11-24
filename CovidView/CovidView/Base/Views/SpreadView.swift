@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainView: UIView {
+@IBDesignable class SpreadView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -35,7 +35,7 @@ class MainView: UIView {
         path.addLine(to: p4)
         path.close()
         
-        UIColor.white.set()
+        UIColor(red: 253/255, green: 253/255, blue: 253/255, alpha: 1).set()
         path.fill()
     }
 }

@@ -7,8 +7,13 @@
 
 import Foundation
 
-class InfoViewModel {
+protocol InfoViewModelProtocol: AnyObject {
     
+}
+
+class InfoViewModel {
+    weak var coordinator: InfoCoordinatorDelegate!
+    weak var view: InfoViewInput!
 }
 
 extension InfoViewModel: InfoViewModelProtocol {

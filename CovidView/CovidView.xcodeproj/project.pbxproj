@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FAB35FA8274CC5E40075D76A /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB35FA7274CC5E40075D76A /* Coordinator.swift */; };
+		FAB35FAA274CD3C30075D76A /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB35FA9274CD3C30075D76A /* UIImageExtension.swift */; };
+		FAB35FCE274D00CB0075D76A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAB35FCD274D00CB0075D76A /* Main.storyboard */; };
+		FAB35FD0274D07980075D76A /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB35FCF274D07980075D76A /* GradientView.swift */; };
+		FAB35FD2274D166A0075D76A /* TextFieldBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB35FD1274D166A0075D76A /* TextFieldBackView.swift */; };
+		FAB35FD6274D2B120075D76A /* StatisticBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB35FD5274D2B120075D76A /* StatisticBackView.swift */; };
+		FAB35FD8274D33170075D76A /* MarkBorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB35FD7274D33170075D76A /* MarkBorderView.swift */; };
 		FAD6683D274BD2C300CD0C97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD6683C274BD2C300CD0C97 /* AppDelegate.swift */; };
 		FAD6683F274BD2C300CD0C97 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD6683E274BD2C300CD0C97 /* SceneDelegate.swift */; };
 		FAD66846274BD2C400CD0C97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAD66845274BD2C400CD0C97 /* Assets.xcassets */; };
@@ -15,16 +22,13 @@
 		FAD6685E274BD2C400CD0C97 /* CovidViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD6685D274BD2C400CD0C97 /* CovidViewUITests.swift */; };
 		FAD66860274BD2C400CD0C97 /* CovidViewUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD6685F274BD2C400CD0C97 /* CovidViewUITestsLaunchTests.swift */; };
 		FAD6686D274BD66100CD0C97 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD6686C274BD66100CD0C97 /* InfoViewController.swift */; };
-		FAD6686F274BD7FF00CD0C97 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD6686E274BD7FF00CD0C97 /* MainView.swift */; };
+		FAD6686F274BD7FF00CD0C97 /* SpreadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD6686E274BD7FF00CD0C97 /* SpreadView.swift */; };
 		FAD66874274BE18000CD0C97 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAD66871274BE17F00CD0C97 /* Poppins-Bold.ttf */; };
 		FAD66875274BE18000CD0C97 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAD66872274BE18000CD0C97 /* Poppins-Medium.ttf */; };
 		FAD66876274BE18000CD0C97 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAD66873274BE18000CD0C97 /* Poppins-Regular.ttf */; };
 		FAD66879274BE24900CD0C97 /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD66878274BE24900CD0C97 /* UIFontExtension.swift */; };
-		FAD66881274BE6F200CD0C97 /* InfoViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD66880274BE6F200CD0C97 /* InfoViewInput.swift */; };
 		FAD66884274BE75500CD0C97 /* InfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD66883274BE75500CD0C97 /* InfoViewModel.swift */; };
-		FAD66886274BE76700CD0C97 /* InfoViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD66885274BE76700CD0C97 /* InfoViewModelProtocol.swift */; };
 		FAD66889274BE7EF00CD0C97 /* InfoCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD66888274BE7EF00CD0C97 /* InfoCoordinator.swift */; };
-		FAD6688B274BE82300CD0C97 /* InfoCoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD6688A274BE82300CD0C97 /* InfoCoordinatorDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +49,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FAB35FA7274CC5E40075D76A /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		FAB35FA9274CD3C30075D76A /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		FAB35FCD274D00CB0075D76A /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		FAB35FCF274D07980075D76A /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		FAB35FD1274D166A0075D76A /* TextFieldBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldBackView.swift; sourceTree = "<group>"; };
+		FAB35FD5274D2B120075D76A /* StatisticBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticBackView.swift; sourceTree = "<group>"; };
+		FAB35FD7274D33170075D76A /* MarkBorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkBorderView.swift; sourceTree = "<group>"; };
 		FAD66839274BD2C300CD0C97 /* CovidView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CovidView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAD6683C274BD2C300CD0C97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAD6683E274BD2C300CD0C97 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,16 +68,13 @@
 		FAD6685D274BD2C400CD0C97 /* CovidViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidViewUITests.swift; sourceTree = "<group>"; };
 		FAD6685F274BD2C400CD0C97 /* CovidViewUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidViewUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FAD6686C274BD66100CD0C97 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
-		FAD6686E274BD7FF00CD0C97 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		FAD6686E274BD7FF00CD0C97 /* SpreadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpreadView.swift; sourceTree = "<group>"; };
 		FAD66871274BE17F00CD0C97 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		FAD66872274BE18000CD0C97 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
 		FAD66873274BE18000CD0C97 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		FAD66878274BE24900CD0C97 /* UIFontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtension.swift; sourceTree = "<group>"; };
-		FAD66880274BE6F200CD0C97 /* InfoViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewInput.swift; sourceTree = "<group>"; };
 		FAD66883274BE75500CD0C97 /* InfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewModel.swift; sourceTree = "<group>"; };
-		FAD66885274BE76700CD0C97 /* InfoViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewModelProtocol.swift; sourceTree = "<group>"; };
 		FAD66888274BE7EF00CD0C97 /* InfoCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCoordinator.swift; sourceTree = "<group>"; };
-		FAD6688A274BE82300CD0C97 /* InfoCoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCoordinatorDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +102,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FAB35FA6274CC5C30075D76A /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				FAD66877274BE23000CD0C97 /* Extensions */,
+				FAD6687A274BE37C00CD0C97 /* Views */,
+				FAB35FA7274CC5E40075D76A /* Coordinator.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		FAD66830274BD2C300CD0C97 = {
 			isa = PBXGroup;
 			children = (
@@ -117,13 +135,13 @@
 		FAD6683B274BD2C300CD0C97 /* CovidView */ = {
 			isa = PBXGroup;
 			children = (
+				FAB35FA6274CC5C30075D76A /* Base */,
 				FAD6687D274BE48500CD0C97 /* Modules */,
 				FAD6687C274BE3B300CD0C97 /* Source */,
 				FAD6687B274BE39600CD0C97 /* Delegates */,
-				FAD6687A274BE37C00CD0C97 /* Views */,
-				FAD66877274BE23000CD0C97 /* Extensions */,
 				FAD66870274BE15100CD0C97 /* Fonts */,
 				FAD66847274BD2C400CD0C97 /* LaunchScreen.storyboard */,
+				FAB35FCD274D00CB0075D76A /* Main.storyboard */,
 			);
 			path = CovidView;
 			sourceTree = "<group>";
@@ -159,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				FAD66878274BE24900CD0C97 /* UIFontExtension.swift */,
+				FAB35FA9274CD3C30075D76A /* UIImageExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -166,7 +185,11 @@
 		FAD6687A274BE37C00CD0C97 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				FAD6686E274BD7FF00CD0C97 /* MainView.swift */,
+				FAD6686E274BD7FF00CD0C97 /* SpreadView.swift */,
+				FAB35FCF274D07980075D76A /* GradientView.swift */,
+				FAB35FD1274D166A0075D76A /* TextFieldBackView.swift */,
+				FAB35FD5274D2B120075D76A /* StatisticBackView.swift */,
+				FAB35FD7274D33170075D76A /* MarkBorderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -211,7 +234,6 @@
 			isa = PBXGroup;
 			children = (
 				FAD6686C274BD66100CD0C97 /* InfoViewController.swift */,
-				FAD66880274BE6F200CD0C97 /* InfoViewInput.swift */,
 			);
 			path = InfoView;
 			sourceTree = "<group>";
@@ -220,7 +242,6 @@
 			isa = PBXGroup;
 			children = (
 				FAD66883274BE75500CD0C97 /* InfoViewModel.swift */,
-				FAD66885274BE76700CD0C97 /* InfoViewModelProtocol.swift */,
 			);
 			path = InfoViewModel;
 			sourceTree = "<group>";
@@ -229,7 +250,6 @@
 			isa = PBXGroup;
 			children = (
 				FAD66888274BE7EF00CD0C97 /* InfoCoordinator.swift */,
-				FAD6688A274BE82300CD0C97 /* InfoCoordinatorDelegate.swift */,
 			);
 			path = InfoCoordinator;
 			sourceTree = "<group>";
@@ -341,6 +361,7 @@
 				FAD66849274BD2C400CD0C97 /* LaunchScreen.storyboard in Resources */,
 				FAD66875274BE18000CD0C97 /* Poppins-Medium.ttf in Resources */,
 				FAD66874274BE18000CD0C97 /* Poppins-Bold.ttf in Resources */,
+				FAB35FCE274D00CB0075D76A /* Main.storyboard in Resources */,
 				FAD66846274BD2C400CD0C97 /* Assets.xcassets in Resources */,
 				FAD66876274BE18000CD0C97 /* Poppins-Regular.ttf in Resources */,
 			);
@@ -367,16 +388,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAD66886274BE76700CD0C97 /* InfoViewModelProtocol.swift in Sources */,
+				FAB35FA8274CC5E40075D76A /* Coordinator.swift in Sources */,
 				FAD6683D274BD2C300CD0C97 /* AppDelegate.swift in Sources */,
+				FAB35FD0274D07980075D76A /* GradientView.swift in Sources */,
+				FAB35FD2274D166A0075D76A /* TextFieldBackView.swift in Sources */,
 				FAD66889274BE7EF00CD0C97 /* InfoCoordinator.swift in Sources */,
 				FAD66879274BE24900CD0C97 /* UIFontExtension.swift in Sources */,
-				FAD6686F274BD7FF00CD0C97 /* MainView.swift in Sources */,
-				FAD66881274BE6F200CD0C97 /* InfoViewInput.swift in Sources */,
+				FAB35FD8274D33170075D76A /* MarkBorderView.swift in Sources */,
+				FAD6686F274BD7FF00CD0C97 /* SpreadView.swift in Sources */,
+				FAB35FD6274D2B120075D76A /* StatisticBackView.swift in Sources */,
+				FAB35FAA274CD3C30075D76A /* UIImageExtension.swift in Sources */,
 				FAD66884274BE75500CD0C97 /* InfoViewModel.swift in Sources */,
 				FAD6686D274BD66100CD0C97 /* InfoViewController.swift in Sources */,
 				FAD6683F274BD2C300CD0C97 /* SceneDelegate.swift in Sources */,
-				FAD6688B274BE82300CD0C97 /* InfoCoordinatorDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -550,6 +574,7 @@
 				DEVELOPMENT_TEAM = BAW28W4LV2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CovidView/Source/Info.plist;
+				INFOPLIST_KEY_NSMainNibFile = Main;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -578,6 +603,7 @@
 				DEVELOPMENT_TEAM = BAW28W4LV2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CovidView/Source/Info.plist;
+				INFOPLIST_KEY_NSMainNibFile = Main;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
