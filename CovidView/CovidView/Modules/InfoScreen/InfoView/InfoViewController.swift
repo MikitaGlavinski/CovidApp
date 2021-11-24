@@ -35,6 +35,7 @@ class InfoViewController: UIViewController {
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var buttonConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,8 +43,12 @@ class InfoViewController: UIViewController {
     }
     
     private func setupUI() {
-        mapView.layer.cornerRadius = 20
         scrollView.delegate = self
+        navigationController?.navigationBar.isHidden = true
+    }
+
+    @IBAction func seeDetailsTapped(_ sender: Any) {
+        print("tap")
     }
 }
 
@@ -53,9 +58,11 @@ extension InfoViewController: InfoViewInput {
 
 extension InfoViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        view.frame.origin.y = max(0, (-scrollView.contentOffset.y) / 5)
-//        view.frame.origin.y = max(0, (-scrollView.contentOffset.y))
-        view.layer.sublayers?[0].frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: max(UIScreen.main.bounds.height / 2, -scrollView.contentOffset.y * 2.8))
-        print(-scrollView.contentOffset.y)
+        view.frame.origin.y = max(0, (-scrollView.contentOffset.y) / 1)
+        view.layer.sublayers?[0].frame = CGRect(x: 0,
+                                                y: 0,
+                                                width: UIScreen.main.bounds.width,
+                                                height: max(UIScreen.main.bounds.height / 2, -scrollView.contentOffset.y * 2.8))
+        buttonConstraint.constant = 45 - (-scrollView.contentOffset.y)
     }
 }

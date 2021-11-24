@@ -61,24 +61,20 @@ is stay at home.</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJ6-4k-LDX">
-                                <rect key="frame" x="364" y="45" width="40" height="27"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="27" id="Vjj-KC-qe5"/>
-                                    <constraint firstAttribute="width" constant="40" id="efw-eb-inv"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="menu">
-                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                            </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="LSm-kB-Kf6">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3tr-Yl-KAr" userLabel="containerView">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1025"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="virus" translatesAutoresizingMaskIntoConstraints="NO" id="18B-H4-gGh">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sVo-Hh-7MF">
+                                                <rect key="frame" x="0.0" y="-305" width="414" height="300"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="300" id="H3X-3x-WXw"/>
+                                                </constraints>
+                                            </view>
+                                            <imageView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="virus" translatesAutoresizingMaskIntoConstraints="NO" id="18B-H4-gGh">
                                                 <rect key="frame" x="0.0" y="45" width="414" height="180"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="180" id="egZ-bx-w2W"/>
@@ -160,6 +156,9 @@ is stay at home.</string>
                                                                 <real key="value" value="1"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="seeDetailsTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="80j-pO-UYQ"/>
+                                                        </connections>
                                                     </button>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o81-UN-fcB" customClass="StatisticBackView" customModule="CovidView" customModuleProvider="target">
                                                         <rect key="frame" x="25" y="268" width="364" height="170"/>
@@ -359,6 +358,11 @@ is stay at home.</string>
                                                         <subviews>
                                                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="6Sd-Xu-z3q">
                                                                 <rect key="frame" x="0.0" y="0.0" width="364" height="170"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <integer key="value" value="20"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
                                                             </mapView>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -397,19 +401,31 @@ is stay at home.</string>
                                                     <constraint firstItem="Z6w-8r-2d7" firstAttribute="top" secondItem="M5d-fX-WL5" secondAttribute="bottom" constant="1" id="ytX-gy-1kJ"/>
                                                 </constraints>
                                             </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exi-Gh-n83">
+                                                <rect key="frame" x="352.5" y="45" width="46.5" height="27"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="menu">
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="3Ri-73-0xa" firstAttribute="top" secondItem="18B-H4-gGh" secondAttribute="bottom" id="0Ef-mc-NAe"/>
                                             <constraint firstAttribute="trailing" secondItem="18B-H4-gGh" secondAttribute="trailing" id="2Pn-WU-eHK"/>
                                             <constraint firstAttribute="trailing" secondItem="1cC-cc-Fpl" secondAttribute="trailing" constant="20" id="37p-td-q0y"/>
+                                            <constraint firstItem="sVo-Hh-7MF" firstAttribute="bottom" secondItem="18B-H4-gGh" secondAttribute="top" constant="-50" id="3g8-Ch-fHT"/>
                                             <constraint firstItem="Z6w-8r-2d7" firstAttribute="leading" secondItem="3tr-Yl-KAr" secondAttribute="leading" constant="20" id="6Kp-Fy-8jv"/>
+                                            <constraint firstItem="exi-Gh-n83" firstAttribute="top" secondItem="3tr-Yl-KAr" secondAttribute="top" constant="45" id="Boh-cp-tQL"/>
+                                            <constraint firstAttribute="trailing" secondItem="exi-Gh-n83" secondAttribute="trailing" constant="15" id="CYl-If-By5"/>
                                             <constraint firstItem="18B-H4-gGh" firstAttribute="leading" secondItem="3tr-Yl-KAr" secondAttribute="leading" id="KPe-KJ-f1r"/>
                                             <constraint firstItem="M5d-fX-WL5" firstAttribute="leading" secondItem="3tr-Yl-KAr" secondAttribute="leading" constant="20" id="L6m-Oj-SzV"/>
                                             <constraint firstItem="18B-H4-gGh" firstAttribute="top" secondItem="3tr-Yl-KAr" secondAttribute="top" constant="45" id="iZb-BS-PV9"/>
                                             <constraint firstItem="3Ri-73-0xa" firstAttribute="leading" secondItem="3tr-Yl-KAr" secondAttribute="leading" id="jzC-1W-D8j"/>
                                             <constraint firstAttribute="trailing" secondItem="3Ri-73-0xa" secondAttribute="trailing" id="oK6-kA-ghP"/>
                                             <constraint firstAttribute="bottom" secondItem="3Ri-73-0xa" secondAttribute="bottom" id="pFL-dj-5lx"/>
+                                            <constraint firstAttribute="trailing" secondItem="sVo-Hh-7MF" secondAttribute="trailing" id="pvo-S3-aOE"/>
+                                            <constraint firstItem="sVo-Hh-7MF" firstAttribute="leading" secondItem="3tr-Yl-KAr" secondAttribute="leading" id="tkC-g5-smU"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -427,10 +443,8 @@ is stay at home.</string>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" red="0.99215686274509807" green="0.99215686274509807" blue="0.99215686274509807" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="eJ6-4k-LDX" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="45" id="AwS-1Z-jrj"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="LSm-kB-Kf6" secondAttribute="trailing" id="Cvz-Li-qWK"/>
                             <constraint firstItem="3tr-Yl-KAr" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" id="Fqd-Xh-1fd"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="eJ6-4k-LDX" secondAttribute="trailing" constant="10" id="I0N-4u-UaH"/>
                             <constraint firstItem="LSm-kB-Kf6" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="J6w-nf-ZRI"/>
                             <constraint firstItem="YEu-U2-5KG" firstAttribute="top" secondItem="jau-Jd-2eV" secondAttribute="top" constant="30" id="JtY-jt-Iuz"/>
                             <constraint firstAttribute="top" secondItem="LSm-kB-Kf6" secondAttribute="top" id="Ny9-vN-QRy"/>
@@ -452,20 +466,16 @@ is stay at home.</string>
                     <navigationItem key="navigationItem" id="kAb-nF-fGx"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="buttonConstraint" destination="Boh-cp-tQL" id="DVg-Wn-D9b"/>
                         <outlet property="mapView" destination="6Sd-Xu-z3q" id="52g-mb-F59"/>
                         <outlet property="scrollView" destination="LSm-kB-Kf6" id="Hpu-au-PGJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-288.40579710144931" y="48.883928571428569"/>
+            <point key="canvasLocation" x="-272.46376811594206" y="48.883928571428569"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="1cC-cc-Fpl">
-            <size key="intrinsicContentSize" width="82" height="21"/>
-        </designable>
-    </designables>
     <resources>
         <image name="Drcorona" width="194" height="373"/>
         <image name="dropdown" width="10.906000137329102" height="6.4039998054504395"/>

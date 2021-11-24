@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA67CE6C274E5300000AA1C1 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA67CE6B274E5300000AA1C1 /* NetworkService.swift */; };
+		FA67CE6E274E530E000AA1C1 /* NetworkApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA67CE6D274E530E000AA1C1 /* NetworkApi.swift */; };
+		FA67CE70274E5316000AA1C1 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA67CE6F274E5316000AA1C1 /* Router.swift */; };
+		FA67CE72274E580E000AA1C1 /* DictinoryHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA67CE71274E580E000AA1C1 /* DictinoryHelper.swift */; };
+		FA67CE74274E5A9A000AA1C1 /* ParametersEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA67CE73274E5A9A000AA1C1 /* ParametersEncoder.swift */; };
+		FA67CE77274E6585000AA1C1 /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA67CE76274E6585000AA1C1 /* CountryModel.swift */; };
 		FAB35FA8274CC5E40075D76A /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB35FA7274CC5E40075D76A /* Coordinator.swift */; };
 		FAB35FAA274CD3C30075D76A /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB35FA9274CD3C30075D76A /* UIImageExtension.swift */; };
 		FAB35FCE274D00CB0075D76A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAB35FCD274D00CB0075D76A /* Main.storyboard */; };
@@ -49,6 +55,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA67CE6B274E5300000AA1C1 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		FA67CE6D274E530E000AA1C1 /* NetworkApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkApi.swift; sourceTree = "<group>"; };
+		FA67CE6F274E5316000AA1C1 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		FA67CE71274E580E000AA1C1 /* DictinoryHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictinoryHelper.swift; sourceTree = "<group>"; };
+		FA67CE73274E5A9A000AA1C1 /* ParametersEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParametersEncoder.swift; sourceTree = "<group>"; };
+		FA67CE76274E6585000AA1C1 /* CountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryModel.swift; sourceTree = "<group>"; };
 		FAB35FA7274CC5E40075D76A /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		FAB35FA9274CD3C30075D76A /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		FAB35FCD274D00CB0075D76A /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -102,6 +114,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA67CE69274E52D4000AA1C1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FA67CE6A274E52DC000AA1C1 /* NetworkService */,
+				FA67CE71274E580E000AA1C1 /* DictinoryHelper.swift */,
+				FA67CE73274E5A9A000AA1C1 /* ParametersEncoder.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		FA67CE6A274E52DC000AA1C1 /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				FA67CE6B274E5300000AA1C1 /* NetworkService.swift */,
+				FA67CE6D274E530E000AA1C1 /* NetworkApi.swift */,
+				FA67CE6F274E5316000AA1C1 /* Router.swift */,
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		FA67CE75274E6577000AA1C1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FA67CE76274E6585000AA1C1 /* CountryModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		FAB35FA6274CC5C30075D76A /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +175,7 @@
 		FAD6683B274BD2C300CD0C97 /* CovidView */ = {
 			isa = PBXGroup;
 			children = (
+				FA67CE69274E52D4000AA1C1 /* Services */,
 				FAB35FA6274CC5C30075D76A /* Base */,
 				FAD6687D274BE48500CD0C97 /* Modules */,
 				FAD6687C274BE3B300CD0C97 /* Source */,
@@ -223,6 +264,7 @@
 		FAD6687E274BE48E00CD0C97 /* InfoScreen */ = {
 			isa = PBXGroup;
 			children = (
+				FA67CE75274E6577000AA1C1 /* Models */,
 				FAD66887274BE7CD00CD0C97 /* InfoCoordinator */,
 				FAD66882274BE74200CD0C97 /* InfoViewModel */,
 				FAD6687F274BE49E00CD0C97 /* InfoView */,
@@ -388,12 +430,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA67CE6E274E530E000AA1C1 /* NetworkApi.swift in Sources */,
 				FAB35FA8274CC5E40075D76A /* Coordinator.swift in Sources */,
+				FA67CE74274E5A9A000AA1C1 /* ParametersEncoder.swift in Sources */,
 				FAD6683D274BD2C300CD0C97 /* AppDelegate.swift in Sources */,
+				FA67CE72274E580E000AA1C1 /* DictinoryHelper.swift in Sources */,
 				FAB35FD0274D07980075D76A /* GradientView.swift in Sources */,
+				FA67CE77274E6585000AA1C1 /* CountryModel.swift in Sources */,
 				FAB35FD2274D166A0075D76A /* TextFieldBackView.swift in Sources */,
 				FAD66889274BE7EF00CD0C97 /* InfoCoordinator.swift in Sources */,
 				FAD66879274BE24900CD0C97 /* UIFontExtension.swift in Sources */,
+				FA67CE6C274E5300000AA1C1 /* NetworkService.swift in Sources */,
+				FA67CE70274E5316000AA1C1 /* Router.swift in Sources */,
 				FAB35FD8274D33170075D76A /* MarkBorderView.swift in Sources */,
 				FAD6686F274BD7FF00CD0C97 /* SpreadView.swift in Sources */,
 				FAB35FD6274D2B120075D76A /* StatisticBackView.swift in Sources */,
