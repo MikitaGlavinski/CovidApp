@@ -38,7 +38,7 @@
         <!--Info View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="InfoViewController" customModule="CovidView" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Info" id="Y6W-OH-hqX" customClass="InfoViewController" customModule="CovidView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc" customClass="GradientView" customModule="CovidView" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -72,7 +72,7 @@ is stay at home.</string>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                             </button>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LSm-kB-Kf6">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="LSm-kB-Kf6">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3tr-Yl-KAr" userLabel="containerView">
@@ -146,13 +146,14 @@ is stay at home.</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1cC-cc-Fpl">
-                                                        <rect key="frame" x="284" y="210" width="110" height="35"/>
+                                                        <rect key="frame" x="284" y="217" width="110" height="21"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="110" id="oZe-x2-yrc"/>
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="See details">
                                                             <fontDescription key="titleFontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
+                                                            <directionalEdgeInsets key="contentInsets" top="0.0" leading="0.0" bottom="0.0" trailing="-15"/>
                                                         </buttonConfiguration>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="titleAlignment">
@@ -336,18 +337,63 @@ is stay at home.</string>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spread of Virus" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GjW-HB-ZKh">
+                                                        <rect key="frame" x="20" y="483" width="167.5" height="31"/>
+                                                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="22"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mKu-eu-2x8">
+                                                        <rect key="frame" x="284" y="488" width="110" height="21"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="110" id="O8L-r4-fza"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="See details">
+                                                            <fontDescription key="titleFontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
+                                                            <directionalEdgeInsets key="contentInsets" top="0.0" leading="0.0" bottom="0.0" trailing="-15"/>
+                                                        </buttonConfiguration>
+                                                    </button>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4dZ-hL-80U" customClass="StatisticBackView" customModule="CovidView" customModuleProvider="target">
+                                                        <rect key="frame" x="25" y="544" width="364" height="170"/>
+                                                        <subviews>
+                                                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="6Sd-Xu-z3q">
+                                                                <rect key="frame" x="0.0" y="0.0" width="364" height="170"/>
+                                                            </mapView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="bottom" secondItem="6Sd-Xu-z3q" secondAttribute="bottom" id="2td-p0-nrH"/>
+                                                            <constraint firstAttribute="height" constant="170" id="6RV-iX-3uF"/>
+                                                            <constraint firstAttribute="trailing" secondItem="6Sd-Xu-z3q" secondAttribute="trailing" id="bUU-Fw-X7J"/>
+                                                            <constraint firstItem="6Sd-Xu-z3q" firstAttribute="top" secondItem="4dZ-hL-80U" secondAttribute="top" id="dDe-XJ-AKr"/>
+                                                            <constraint firstItem="6Sd-Xu-z3q" firstAttribute="leading" secondItem="4dZ-hL-80U" secondAttribute="leading" id="yDk-CD-d1S"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="20"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.99215686274509807" green="0.99215686274509807" blue="0.99215686274509807" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
+                                                    <constraint firstItem="4dZ-hL-80U" firstAttribute="leading" secondItem="3Ri-73-0xa" secondAttribute="leading" constant="25" id="BIt-mK-uK6"/>
                                                     <constraint firstAttribute="height" constant="800" id="DL6-7Y-EmI"/>
+                                                    <constraint firstAttribute="trailing" secondItem="mKu-eu-2x8" secondAttribute="trailing" constant="20" id="Fyw-yY-gB0"/>
                                                     <constraint firstAttribute="trailing" secondItem="o81-UN-fcB" secondAttribute="trailing" constant="25" id="HDX-me-Fjf"/>
                                                     <constraint firstItem="M5d-fX-WL5" firstAttribute="top" secondItem="7Lp-Cn-thE" secondAttribute="bottom" constant="40" id="HpS-uF-pR4"/>
                                                     <constraint firstItem="o81-UN-fcB" firstAttribute="leading" secondItem="3Ri-73-0xa" secondAttribute="leading" constant="25" id="P0o-DE-bog"/>
+                                                    <constraint firstItem="GjW-HB-ZKh" firstAttribute="leading" secondItem="3Ri-73-0xa" secondAttribute="leading" constant="20" id="PRI-qK-0Z3"/>
                                                     <constraint firstItem="o81-UN-fcB" firstAttribute="top" secondItem="Z6w-8r-2d7" secondAttribute="bottom" constant="30" id="Q9b-h3-g7Z"/>
+                                                    <constraint firstAttribute="trailing" secondItem="4dZ-hL-80U" secondAttribute="trailing" constant="25" id="X1x-h4-JXZ"/>
                                                     <constraint firstItem="1cC-cc-Fpl" firstAttribute="centerY" secondItem="Z6w-8r-2d7" secondAttribute="centerY" id="Ye6-qL-Q3A"/>
                                                     <constraint firstItem="7Lp-Cn-thE" firstAttribute="top" secondItem="3Ri-73-0xa" secondAttribute="top" constant="80" id="aIx-GN-rh9"/>
                                                     <constraint firstAttribute="trailing" secondItem="7Lp-Cn-thE" secondAttribute="trailing" constant="20" id="b2W-qB-kCS"/>
                                                     <constraint firstItem="7Lp-Cn-thE" firstAttribute="leading" secondItem="3Ri-73-0xa" secondAttribute="leading" constant="20" id="hUs-Tx-gTW"/>
+                                                    <constraint firstItem="mKu-eu-2x8" firstAttribute="centerY" secondItem="GjW-HB-ZKh" secondAttribute="centerY" id="lfj-2z-ebC"/>
+                                                    <constraint firstItem="GjW-HB-ZKh" firstAttribute="top" secondItem="o81-UN-fcB" secondAttribute="bottom" constant="45" id="qpt-Hm-kQM"/>
+                                                    <constraint firstItem="4dZ-hL-80U" firstAttribute="top" secondItem="GjW-HB-ZKh" secondAttribute="bottom" constant="30" id="ulY-2U-uQU"/>
                                                     <constraint firstItem="Z6w-8r-2d7" firstAttribute="top" secondItem="M5d-fX-WL5" secondAttribute="bottom" constant="1" id="ytX-gy-1kJ"/>
                                                 </constraints>
                                             </view>
@@ -405,6 +451,10 @@ is stay at home.</string>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="kAb-nF-fGx"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="mapView" destination="6Sd-Xu-z3q" id="52g-mb-F59"/>
+                        <outlet property="scrollView" destination="LSm-kB-Kf6" id="Hpu-au-PGJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -413,7 +463,7 @@ is stay at home.</string>
     </scenes>
     <designables>
         <designable name="1cC-cc-Fpl">
-            <size key="intrinsicContentSize" width="106" height="35"/>
+            <size key="intrinsicContentSize" width="82" height="21"/>
         </designable>
     </designables>
     <resources>
@@ -427,6 +477,9 @@ is stay at home.</string>
         </systemColor>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

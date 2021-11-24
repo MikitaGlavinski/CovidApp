@@ -20,6 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
         let navigationController = UINavigationController()
         window?.rootViewController = navigationController
+        window?.backgroundColor = .white
         window?.makeKeyAndVisible()
         let infoCoordinator = InfoCoordinator(rootNavigationController: navigationController)
         infoCoordinator.start()

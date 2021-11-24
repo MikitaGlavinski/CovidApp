@@ -24,8 +24,9 @@ class InfoCoordinator: Coordinator {
     func start() {
         guard let rootNavigationController = rootNavigationController else { return }
         let infoViewModel = InfoViewModel()
-        let infoView = InfoViewController()
-        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let infoView = storyboard.instantiateViewController(withIdentifier: "Info") as! InfoViewController
+//        let infoView = InfoViewController()
         infoViewModel.view = infoView
         infoViewModel.coordinator = self
         infoView.viewModel = infoViewModel
