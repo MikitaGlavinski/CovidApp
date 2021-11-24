@@ -8,7 +8,7 @@
 import Foundation
 
 protocol InfoViewModelProtocol: AnyObject {
-    
+    func viewDidLoad()
 }
 
 class InfoViewModel {
@@ -18,4 +18,18 @@ class InfoViewModel {
 
 extension InfoViewModel: InfoViewModelProtocol {
     
+    func viewDidLoad() {
+        NetworkService.shared.getAllCountries { result in
+            switch result {
+            case .success(let countries):
+                DispatchQueue.main.async {
+                    self.view.setCountries(countryModels: countries)
+                }
+            case .failure(let error):
+                DispatchQueue.main.async {
+                    self.view.showError(error)
+                }
+            }
+        }
+    }
 }

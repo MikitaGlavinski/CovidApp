@@ -8,10 +8,14 @@
 import Foundation
 
 protocol NetworkServiceProtocol {
-    func getAllCountries(completion: @escaping (Result<CountryModel, Error>) -> ())
+    func getAllCountries(completion: @escaping (Result<[CountryModel], Error>) -> ())
 }
 
 class NetworkService {
+    
+    static var shared = NetworkService()
+    
+    init() {}
     
     let router = Router<NetworkEndPoint>(baseURL: URL(string: "https://api.covid19api.com")!)
     
@@ -47,8 +51,8 @@ class NetworkService {
 
 extension NetworkService: NetworkServiceProtocol {
     
-    func getAllCountries(completion: @escaping (Result<CountryModel, Error>) -> ()) {
-        routerRequest(.getAllCountries, decodeType: CountryModel.self, completion: completion)
+    func getAllCountries(completion: @escaping (Result<[CountryModel], Error>) -> ()) {
+        routerRequest(.getAllCountries, decodeType: [CountryModel].self, completion: completion)
     }
     
     

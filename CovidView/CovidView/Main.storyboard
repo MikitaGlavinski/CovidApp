@@ -61,7 +61,7 @@ is stay at home.</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="LSm-kB-Kf6">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" canCancelContentTouches="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LSm-kB-Kf6">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3tr-Yl-KAr" userLabel="containerView">
@@ -93,26 +93,33 @@ is stay at home.</string>
                                                                     <constraint firstAttribute="height" constant="25" id="iRr-q0-VhV"/>
                                                                 </constraints>
                                                             </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Indonesia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVJ-2n-caB">
-                                                                <rect key="frame" x="57" y="20" width="89.5" height="25.5"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVJ-2n-caB">
+                                                                <rect key="frame" x="57" y="20" width="73.5" height="25.5"/>
                                                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="18"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dropdown" translatesAutoresizingMaskIntoConstraints="NO" id="5Pg-79-qUH">
-                                                                <rect key="frame" x="339" y="25" width="15" height="15"/>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CEQ-Pg-aAg">
+                                                                <rect key="frame" x="334" y="22.5" width="20" height="20"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="height" constant="15" id="hvd-8B-ZKK"/>
-                                                                    <constraint firstAttribute="width" constant="15" id="rDY-xh-Gw0"/>
+                                                                    <constraint firstAttribute="width" constant="20" id="3Ei-1c-byh"/>
+                                                                    <constraint firstAttribute="height" constant="20" id="Mnj-KC-YzP"/>
                                                                 </constraints>
-                                                            </imageView>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" image="dropdown">
+                                                                    <color key="baseForegroundColor" systemColor="linkColor"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="dropDownTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="zr1-xA-d0Z"/>
+                                                                </connections>
+                                                            </button>
                                                         </subviews>
                                                         <color key="backgroundColor" red="0.99215686274509807" green="0.99215686274509807" blue="0.99215686274509807" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstItem="eVJ-2n-caB" firstAttribute="leading" secondItem="hI9-ml-tjp" secondAttribute="trailing" constant="15" id="5qd-Mo-PRU"/>
                                                             <constraint firstItem="hI9-ml-tjp" firstAttribute="leading" secondItem="7Lp-Cn-thE" secondAttribute="leading" constant="19" id="6F2-0w-NdR"/>
-                                                            <constraint firstItem="5Pg-79-qUH" firstAttribute="centerY" secondItem="7Lp-Cn-thE" secondAttribute="centerY" id="VZT-1x-hhl"/>
-                                                            <constraint firstAttribute="trailing" secondItem="5Pg-79-qUH" secondAttribute="trailing" constant="20" id="Ylp-CW-hAv"/>
+                                                            <constraint firstItem="CEQ-Pg-aAg" firstAttribute="centerY" secondItem="7Lp-Cn-thE" secondAttribute="centerY" id="BRr-Db-rxq"/>
+                                                            <constraint firstAttribute="trailing" secondItem="CEQ-Pg-aAg" secondAttribute="trailing" constant="20" id="Bbr-DY-4wV"/>
                                                             <constraint firstAttribute="height" constant="65" id="Ysc-bz-Maq"/>
                                                             <constraint firstItem="eVJ-2n-caB" firstAttribute="centerY" secondItem="7Lp-Cn-thE" secondAttribute="centerY" id="dQO-mB-vQv"/>
                                                             <constraint firstItem="hI9-ml-tjp" firstAttribute="centerY" secondItem="7Lp-Cn-thE" secondAttribute="centerY" id="s9O-oR-PwO"/>
@@ -379,6 +386,55 @@ is stay at home.</string>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
+                                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ph9-Hf-mGS" customClass="StatisticBackView" customModule="CovidView" customModuleProvider="target">
+                                                        <rect key="frame" x="62" y="79" width="332" height="270"/>
+                                                        <subviews>
+                                                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Awf-as-Lj9">
+                                                                <rect key="frame" x="0.0" y="0.0" width="332" height="270"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <prototypes>
+                                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CountryCell" rowHeight="67" id="Vmc-7i-Gpf" customClass="CountryTableViewCell" customModule="CovidView" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="44.5" width="332" height="67"/>
+                                                                        <autoresizingMask key="autoresizingMask"/>
+                                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Vmc-7i-Gpf" id="6KO-bo-wDh">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="332" height="67"/>
+                                                                            <autoresizingMask key="autoresizingMask"/>
+                                                                            <subviews>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Indonesia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YbE-lo-J2i">
+                                                                                    <rect key="frame" x="15" y="20.5" width="90" height="26"/>
+                                                                                    <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="18"/>
+                                                                                    <nil key="textColor"/>
+                                                                                    <nil key="highlightedColor"/>
+                                                                                </label>
+                                                                            </subviews>
+                                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <constraints>
+                                                                                <constraint firstItem="YbE-lo-J2i" firstAttribute="centerY" secondItem="6KO-bo-wDh" secondAttribute="centerY" id="H1J-RC-S2T"/>
+                                                                                <constraint firstItem="YbE-lo-J2i" firstAttribute="leading" secondItem="6KO-bo-wDh" secondAttribute="leading" constant="15" id="e2n-0w-CtS"/>
+                                                                            </constraints>
+                                                                        </tableViewCellContentView>
+                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <connections>
+                                                                            <outlet property="countryLabel" destination="YbE-lo-J2i" id="SsA-sr-4XT"/>
+                                                                        </connections>
+                                                                    </tableViewCell>
+                                                                </prototypes>
+                                                            </tableView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="270" id="CYC-5r-R7N"/>
+                                                            <constraint firstAttribute="trailing" secondItem="Awf-as-Lj9" secondAttribute="trailing" id="I9K-Wy-Ywi"/>
+                                                            <constraint firstItem="Awf-as-Lj9" firstAttribute="leading" secondItem="Ph9-Hf-mGS" secondAttribute="leading" id="YBv-P3-W9a"/>
+                                                            <constraint firstAttribute="bottom" secondItem="Awf-as-Lj9" secondAttribute="bottom" id="tua-E6-Nxz"/>
+                                                            <constraint firstItem="Awf-as-Lj9" firstAttribute="top" secondItem="Ph9-Hf-mGS" secondAttribute="top" id="uJ1-1v-zz8"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="0.0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.99215686274509807" green="0.99215686274509807" blue="0.99215686274509807" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -396,8 +452,11 @@ is stay at home.</string>
                                                     <constraint firstAttribute="trailing" secondItem="7Lp-Cn-thE" secondAttribute="trailing" constant="20" id="b2W-qB-kCS"/>
                                                     <constraint firstItem="7Lp-Cn-thE" firstAttribute="leading" secondItem="3Ri-73-0xa" secondAttribute="leading" constant="20" id="hUs-Tx-gTW"/>
                                                     <constraint firstItem="mKu-eu-2x8" firstAttribute="centerY" secondItem="GjW-HB-ZKh" secondAttribute="centerY" id="lfj-2z-ebC"/>
+                                                    <constraint firstItem="Ph9-Hf-mGS" firstAttribute="top" secondItem="7Lp-Cn-thE" secondAttribute="top" constant="-1" id="nEc-18-6aI"/>
                                                     <constraint firstItem="GjW-HB-ZKh" firstAttribute="top" secondItem="o81-UN-fcB" secondAttribute="bottom" constant="45" id="qpt-Hm-kQM"/>
+                                                    <constraint firstItem="Ph9-Hf-mGS" firstAttribute="leading" secondItem="hI9-ml-tjp" secondAttribute="trailing" id="sZy-El-qyo"/>
                                                     <constraint firstItem="4dZ-hL-80U" firstAttribute="top" secondItem="GjW-HB-ZKh" secondAttribute="bottom" constant="30" id="ulY-2U-uQU"/>
+                                                    <constraint firstItem="Ph9-Hf-mGS" firstAttribute="trailing" secondItem="7Lp-Cn-thE" secondAttribute="trailing" id="xHT-f5-3hb"/>
                                                     <constraint firstItem="Z6w-8r-2d7" firstAttribute="top" secondItem="M5d-fX-WL5" secondAttribute="bottom" constant="1" id="ytX-gy-1kJ"/>
                                                 </constraints>
                                             </view>
@@ -467,8 +526,15 @@ is stay at home.</string>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="buttonConstraint" destination="Boh-cp-tQL" id="DVg-Wn-D9b"/>
+                        <outlet property="countryLabel" destination="eVJ-2n-caB" id="1A1-48-tEr"/>
+                        <outlet property="deathsCountLabel" destination="mYw-DX-k6e" id="0wA-he-daf"/>
+                        <outlet property="infectedCountLabel" destination="ddk-eR-kas" id="nYb-fw-Sbt"/>
                         <outlet property="mapView" destination="6Sd-Xu-z3q" id="52g-mb-F59"/>
+                        <outlet property="recoveredCountLabel" destination="7dG-dG-eCt" id="V2K-tA-04e"/>
                         <outlet property="scrollView" destination="LSm-kB-Kf6" id="Hpu-au-PGJ"/>
+                        <outlet property="tableBackView" destination="Ph9-Hf-mGS" id="hzh-eF-6A7"/>
+                        <outlet property="tableView" destination="Awf-as-Lj9" id="PBe-aI-1hk"/>
+                        <outlet property="updateLabel" destination="Z6w-8r-2d7" id="8QA-BZ-h8g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -482,6 +548,9 @@ is stay at home.</string>
         <image name="maps-and-flags" width="15" height="15"/>
         <image name="menu" width="22.885000228881836" height="13"/>
         <image name="virus" width="441" height="300"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
