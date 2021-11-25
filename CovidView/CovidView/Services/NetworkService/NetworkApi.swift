@@ -25,14 +25,15 @@ protocol EndPointType {
 enum NetworkEndPoint: EndPointType {
     
     case getAllCountries
-    case getInfoBy(country: String, date: String)
+    case getInfoBy(country: String)
     
     var path: String {
         switch self {
         case .getAllCountries:
             return "/countries"
-        case let .getInfoBy(country: country, date: date):
-            return "/live/country/\(country)/status/confirmed/date/\(date)"
+        case let .getInfoBy(country: country):
+            return "/live/country/\(country)"
+//            return "/live/country/\(country)/status/confirmed/date/\(date)"
         }
     }
     

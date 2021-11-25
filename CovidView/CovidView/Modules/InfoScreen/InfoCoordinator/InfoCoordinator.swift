@@ -17,14 +17,14 @@ class InfoCoordinator: Coordinator {
     
     private var childCoordinators = [Coordinator]()
     
-    init(rootNavigationController: UINavigationController) {
-        self.rootNavigationController = rootNavigationController
+    init(navigation: UINavigationController) {
+        self.rootNavigationController = navigation
     }
     
     func start() {
-        guard let rootNavigationController = rootNavigationController else { return }
-        let infoViewModel = InfoViewModel()
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let rootNavigationController = rootNavigationController else { return}
+        let infoViewModel = InfoViewModel()
         let infoView = storyboard.instantiateViewController(withIdentifier: "Info") as! InfoViewController
         infoViewModel.view = infoView
         infoViewModel.coordinator = self

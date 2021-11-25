@@ -12,9 +12,9 @@ protocol SecureStorageServiceProtocol {
     func obtainLastInfo() -> InfoCountryModel
 }
 
-class SecureStorageService {
+class SecureStorageService: SecureStorageServiceProtocol {
     
-    static var shared = SecureStorageService()
+    static var shared: SecureStorageServiceProtocol = SecureStorageService()
     
     init() {}
     

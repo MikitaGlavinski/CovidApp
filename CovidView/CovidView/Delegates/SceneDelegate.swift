@@ -22,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.rootViewController = navigationController
         window?.backgroundColor = .white
         window?.makeKeyAndVisible()
-        let infoCoordinator = InfoCoordinator(rootNavigationController: navigationController)
+        let infoCoordinator = InfoCoordinator(navigation: navigationController)
         infoCoordinator.start()
     }
 

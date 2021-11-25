@@ -24,7 +24,7 @@ class InfoViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var buttonConstraint: NSLayoutConstraint!
     @IBOutlet weak var tableBackView: StatisticBackView!
-    @IBOutlet weak var tableView: CountriesTableView!
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var infectedCountLabel: UILabel!
     @IBOutlet weak var deathsCountLabel: UILabel!
     @IBOutlet weak var recoveredCountLabel: UILabel!
@@ -53,7 +53,7 @@ class InfoViewController: UIViewController {
     }
 
     @IBAction func seeDetailsTapped(_ sender: Any) {
-        
+        print(countryModels.count)
     }
     
     @IBAction func dropDownTapped(_ sender: Any) {
@@ -91,9 +91,8 @@ extension InfoViewController: InfoViewInput {
         
         updateLabel.text = "Newest update \(country.date ?? "")"
         
-        let annotations = mapView.annotations
-        mapView.removeAnnotations(annotations)
-        let location = CLLocationCoordinate2D(latitude: country.lat ?? 0.0, longitude: country.lon ?? 0.0)
+        mapView.removeAnnotations(mapView.annotations)
+        let location = CLLocationCoordinate2D(latitude: country.lat ?? 54.55, longitude: country.lon ?? 52.25)
         mapView.setCenter(location, animated: true)
         let annotation = MKPointAnnotation()
         annotation.coordinate = location
@@ -147,12 +146,11 @@ extension InfoViewController: UITableViewDataSource {
 extension InfoViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        viewModel.getInfoBy(country: countryModels[indexPath.row].slug ?? "")
-        tableBackView.isHidden = true
-        self.tableView.isHidden = true
         let country = countryModels.remove(at: indexPath.row)
         countryModels.insert(country, at: 0)
-        tableViewAppeared = false
+        countryLabel.text = country.name
+        hideTableView()
+        viewModel.getInfoBy(country: country.slug ?? "")
     }
 }
 

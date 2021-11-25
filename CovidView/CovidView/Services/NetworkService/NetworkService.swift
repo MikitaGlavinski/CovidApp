@@ -9,12 +9,12 @@ import Foundation
 
 protocol NetworkServiceProtocol {
     func getAllCountries(completion: @escaping (Result<[CountryModel], Error>) -> ())
-    func getInfoBy(country: String, date: String, completion: @escaping (Result<[InfoCountryModel], Error>) -> ())
+    func getInfoBy(country: String, completion: @escaping (Result<[InfoCountryModel], Error>) -> ())
 }
 
 class NetworkService {
     
-    static var shared = NetworkService()
+    static var shared: NetworkServiceProtocol = NetworkService()
     
     init() {}
     
@@ -56,7 +56,7 @@ extension NetworkService: NetworkServiceProtocol {
         routerRequest(.getAllCountries, decodeType: [CountryModel].self, completion: completion)
     }
     
-    func getInfoBy(country: String, date: String, completion: @escaping (Result<[InfoCountryModel], Error>) -> ()) {
-        routerRequest(.getInfoBy(country: country, date: date), decodeType: [InfoCountryModel].self, completion: completion)
+    func getInfoBy(country: String, completion: @escaping (Result<[InfoCountryModel], Error>) -> ()) {
+        routerRequest(.getInfoBy(country: country), decodeType: [InfoCountryModel].self, completion: completion)
     }
 }

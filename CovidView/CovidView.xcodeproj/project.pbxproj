@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		FA3097CA274E72FE00A78B66 /* CountryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3097C9274E72FE00A78B66 /* CountryTableViewCell.swift */; };
-		FA60D7B3274E6E200087646A /* CountriesTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA60D7B2274E6E200087646A /* CountriesTableView.swift */; };
 		FA67CE6C274E5300000AA1C1 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA67CE6B274E5300000AA1C1 /* NetworkService.swift */; };
 		FA67CE6E274E530E000AA1C1 /* NetworkApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA67CE6D274E530E000AA1C1 /* NetworkApi.swift */; };
 		FA67CE70274E5316000AA1C1 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA67CE6F274E5316000AA1C1 /* Router.swift */; };
 		FA67CE72274E580E000AA1C1 /* DictinoryHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA67CE71274E580E000AA1C1 /* DictinoryHelper.swift */; };
 		FA67CE74274E5A9A000AA1C1 /* ParametersEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA67CE73274E5A9A000AA1C1 /* ParametersEncoder.swift */; };
 		FA67CE77274E6585000AA1C1 /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA67CE76274E6585000AA1C1 /* CountryModel.swift */; };
+		FA97E795274FB53400D8549F /* InfoViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA97E794274FB53400D8549F /* InfoViewControllerTests.swift */; };
+		FAB2B701274FCE26005023B2 /* InfoCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB2B700274FCE26005023B2 /* InfoCoordinatorTests.swift */; };
 		FAB35FA8274CC5E40075D76A /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB35FA7274CC5E40075D76A /* Coordinator.swift */; };
 		FAB35FAA274CD3C30075D76A /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB35FA9274CD3C30075D76A /* UIImageExtension.swift */; };
 		FAB35FCE274D00CB0075D76A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAB35FCD274D00CB0075D76A /* Main.storyboard */; };
@@ -26,7 +27,6 @@
 		FAD6683F274BD2C300CD0C97 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD6683E274BD2C300CD0C97 /* SceneDelegate.swift */; };
 		FAD66846274BD2C400CD0C97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAD66845274BD2C400CD0C97 /* Assets.xcassets */; };
 		FAD66849274BD2C400CD0C97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAD66847274BD2C400CD0C97 /* LaunchScreen.storyboard */; };
-		FAD66854274BD2C400CD0C97 /* CovidViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD66853274BD2C400CD0C97 /* CovidViewTests.swift */; };
 		FAD6685E274BD2C400CD0C97 /* CovidViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD6685D274BD2C400CD0C97 /* CovidViewUITests.swift */; };
 		FAD66860274BD2C400CD0C97 /* CovidViewUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD6685F274BD2C400CD0C97 /* CovidViewUITestsLaunchTests.swift */; };
 		FAD6686D274BD66100CD0C97 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD6686C274BD66100CD0C97 /* InfoViewController.swift */; };
@@ -39,6 +39,8 @@
 		FAD66889274BE7EF00CD0C97 /* InfoCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD66888274BE7EF00CD0C97 /* InfoCoordinator.swift */; };
 		FADAFBE4274F6AF20003BC9A /* InfoCountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADAFBE3274F6AF20003BC9A /* InfoCountryModel.swift */; };
 		FADAFBE6274F844C0003BC9A /* SecureStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADAFBE5274F844C0003BC9A /* SecureStorageService.swift */; };
+		FADAFBE8274F96110003BC9A /* SecureStorageServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADAFBE7274F96110003BC9A /* SecureStorageServiceTests.swift */; };
+		FADAFBEA274FA3200003BC9A /* RouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADAFBE9274FA3200003BC9A /* RouterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,13 +62,14 @@
 
 /* Begin PBXFileReference section */
 		FA3097C9274E72FE00A78B66 /* CountryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryTableViewCell.swift; sourceTree = "<group>"; };
-		FA60D7B2274E6E200087646A /* CountriesTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesTableView.swift; sourceTree = "<group>"; };
 		FA67CE6B274E5300000AA1C1 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		FA67CE6D274E530E000AA1C1 /* NetworkApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkApi.swift; sourceTree = "<group>"; };
 		FA67CE6F274E5316000AA1C1 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		FA67CE71274E580E000AA1C1 /* DictinoryHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictinoryHelper.swift; sourceTree = "<group>"; };
 		FA67CE73274E5A9A000AA1C1 /* ParametersEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParametersEncoder.swift; sourceTree = "<group>"; };
 		FA67CE76274E6585000AA1C1 /* CountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryModel.swift; sourceTree = "<group>"; };
+		FA97E794274FB53400D8549F /* InfoViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewControllerTests.swift; sourceTree = "<group>"; };
+		FAB2B700274FCE26005023B2 /* InfoCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCoordinatorTests.swift; sourceTree = "<group>"; };
 		FAB35FA7274CC5E40075D76A /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		FAB35FA9274CD3C30075D76A /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		FAB35FCD274D00CB0075D76A /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -81,7 +84,6 @@
 		FAD66848274BD2C400CD0C97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAD6684A274BD2C400CD0C97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAD6684F274BD2C400CD0C97 /* CovidViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CovidViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FAD66853274BD2C400CD0C97 /* CovidViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidViewTests.swift; sourceTree = "<group>"; };
 		FAD66859274BD2C400CD0C97 /* CovidViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CovidViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAD6685D274BD2C400CD0C97 /* CovidViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidViewUITests.swift; sourceTree = "<group>"; };
 		FAD6685F274BD2C400CD0C97 /* CovidViewUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidViewUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -95,6 +97,8 @@
 		FAD66888274BE7EF00CD0C97 /* InfoCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCoordinator.swift; sourceTree = "<group>"; };
 		FADAFBE3274F6AF20003BC9A /* InfoCountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCountryModel.swift; sourceTree = "<group>"; };
 		FADAFBE5274F844C0003BC9A /* SecureStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureStorageService.swift; sourceTree = "<group>"; };
+		FADAFBE7274F96110003BC9A /* SecureStorageServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureStorageServiceTests.swift; sourceTree = "<group>"; };
+		FADAFBE9274FA3200003BC9A /* RouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,7 +204,10 @@
 		FAD66852274BD2C400CD0C97 /* CovidViewTests */ = {
 			isa = PBXGroup;
 			children = (
-				FAD66853274BD2C400CD0C97 /* CovidViewTests.swift */,
+				FADAFBE7274F96110003BC9A /* SecureStorageServiceTests.swift */,
+				FADAFBE9274FA3200003BC9A /* RouterTests.swift */,
+				FA97E794274FB53400D8549F /* InfoViewControllerTests.swift */,
+				FAB2B700274FCE26005023B2 /* InfoCoordinatorTests.swift */,
 			);
 			path = CovidViewTests;
 			sourceTree = "<group>";
@@ -241,7 +248,6 @@
 				FAB35FD1274D166A0075D76A /* TextFieldBackView.swift */,
 				FAB35FD5274D2B120075D76A /* StatisticBackView.swift */,
 				FAB35FD7274D33170075D76A /* MarkBorderView.swift */,
-				FA60D7B2274E6E200087646A /* CountriesTableView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -444,7 +450,6 @@
 			files = (
 				FA67CE6E274E530E000AA1C1 /* NetworkApi.swift in Sources */,
 				FAB35FA8274CC5E40075D76A /* Coordinator.swift in Sources */,
-				FA60D7B3274E6E200087646A /* CountriesTableView.swift in Sources */,
 				FA67CE74274E5A9A000AA1C1 /* ParametersEncoder.swift in Sources */,
 				FAD6683D274BD2C300CD0C97 /* AppDelegate.swift in Sources */,
 				FA67CE72274E580E000AA1C1 /* DictinoryHelper.swift in Sources */,
@@ -472,7 +477,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAD66854274BD2C400CD0C97 /* CovidViewTests.swift in Sources */,
+				FAB2B701274FCE26005023B2 /* InfoCoordinatorTests.swift in Sources */,
+				FADAFBE8274F96110003BC9A /* SecureStorageServiceTests.swift in Sources */,
+				FADAFBEA274FA3200003BC9A /* RouterTests.swift in Sources */,
+				FA97E795274FB53400D8549F /* InfoViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -638,7 +646,6 @@
 				DEVELOPMENT_TEAM = BAW28W4LV2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CovidView/Source/Info.plist;
-				INFOPLIST_KEY_NSMainNibFile = Main;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -667,7 +674,6 @@
 				DEVELOPMENT_TEAM = BAW28W4LV2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CovidView/Source/Info.plist;
-				INFOPLIST_KEY_NSMainNibFile = Main;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;

@@ -13,7 +13,7 @@ protocol InfoViewModelProtocol: AnyObject {
 }
 
 class InfoViewModel {
-    weak var coordinator: InfoCoordinatorDelegate!
+    var coordinator: InfoCoordinatorDelegate!
     weak var view: InfoViewInput!
 }
 
@@ -37,14 +37,12 @@ extension InfoViewModel: InfoViewModelProtocol {
     }
     
     func getInfoBy(country: String) {
-        let date = Date(timeIntervalSince1970: Date().timeIntervalSince1970 - 86400)
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-        NetworkService.shared.getInfoBy(country: country, date: formatter.string(from: date)) { result in
+        NetworkService.shared.getInfoBy(country: country) { result in
             switch result {
             case .success(let infoCountryModels):
                 guard var country = infoCountryModels.last else { return }
                 let date = Date()
+                let formatter = DateFormatter()
                 formatter.dateFormat = "MMMM dd"
                 let stringDate = formatter.string(from: date)
                 SecureStorageService.shared.saveLastInfo(countryInfo: country, currentDate: stringDate)
