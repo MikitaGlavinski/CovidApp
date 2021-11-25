@@ -43,13 +43,6 @@ class InfoViewController: UIViewController {
         tableView.delegate = self
         navigationController?.navigationBar.isHidden = true
         
-        infectedCountLabel.adjustsFontSizeToFitWidth = true
-        infectedCountLabel.minimumScaleFactor = 0.5
-        deathsCountLabel.adjustsFontSizeToFitWidth = true
-        deathsCountLabel.minimumScaleFactor = 0.5
-        recoveredCountLabel.adjustsFontSizeToFitWidth = true
-        recoveredCountLabel.minimumScaleFactor = 0.5
-        
         addGestures()
     }
     
@@ -60,7 +53,7 @@ class InfoViewController: UIViewController {
     }
 
     @IBAction func seeDetailsTapped(_ sender: Any) {
-        print("tap")
+        
     }
     
     @IBAction func dropDownTapped(_ sender: Any) {

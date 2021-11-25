@@ -10,7 +10,6 @@ import UIKit
 @IBDesignable class SpreadView: UIView {
     
     override func draw(_ rect: CGRect) {
-        backgroundColor = .clear
         let size = self.bounds.size
         
         let p1 = self.bounds.origin
