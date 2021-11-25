@@ -25,17 +25,22 @@ protocol EndPointType {
 enum NetworkEndPoint: EndPointType {
     
     case getAllCountries
+    case getInfoBy(country: String, date: String)
     
     var path: String {
         switch self {
         case .getAllCountries:
             return "/countries"
+        case let .getInfoBy(country: country, date: date):
+            return "/live/country/\(country)/status/confirmed/date/\(date)"
         }
     }
     
     var httpMethod: HTTPMethod {
         switch self {
         case .getAllCountries:
+            return .get
+        case .getInfoBy:
             return .get
         }
     }
@@ -44,12 +49,16 @@ enum NetworkEndPoint: EndPointType {
         switch self {
         case .getAllCountries:
             return nil
+        case .getInfoBy:
+            return nil
         }
     }
     
     var urlParameters: UrlParameters? {
         switch self {
         case .getAllCountries:
+            return nil
+        case .getInfoBy:
             return nil
         }
     }

@@ -207,7 +207,7 @@ is stay at home.</string>
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SRV-Cm-aX9">
-                                                                <rect key="frame" x="164" y="18" width="30" height="30"/>
+                                                                <rect key="frame" x="167" y="18" width="30" height="30"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SJu-Hq-6qQ" customClass="MarkBorderView" customModule="CovidView" customModuleProvider="target">
                                                                         <rect key="frame" x="7.5" y="7.5" width="15" height="15"/>
@@ -278,20 +278,29 @@ is stay at home.</string>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1046" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ddk-eR-kas">
-                                                                <rect key="frame" x="34.5" y="73" width="81.5" height="42"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ddk-eR-kas">
+                                                                <rect key="frame" x="30" y="73" width="90" height="42"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="90" id="L4Y-7l-5aR"/>
+                                                                </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                                                 <color key="textColor" red="1" green="0.5725490196078431" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="87" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mYw-DX-k6e">
-                                                                <rect key="frame" x="158.5" y="73" width="41" height="42"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mYw-DX-k6e">
+                                                                <rect key="frame" x="137" y="73" width="90" height="42"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="90" id="o8s-9y-7re"/>
+                                                                </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                                                 <color key="textColor" red="1" green="0.28235294117647058" blue="0.28235294117647058" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="46" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7dG-dG-eCt">
-                                                                <rect key="frame" x="267" y="73" width="44" height="42"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7dG-dG-eCt">
+                                                                <rect key="frame" x="244" y="73" width="90" height="42"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="90" id="j87-2V-AJI"/>
+                                                                </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                                                 <color key="textColor" red="0.21176470588235294" green="0.75686274509803919" blue="0.17254901960784313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -303,7 +312,7 @@ is stay at home.</string>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deaths" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mL7-oH-iDC">
-                                                                <rect key="frame" x="150.5" y="125" width="57" height="22.5"/>
+                                                                <rect key="frame" x="153.5" y="125" width="57" height="22.5"/>
                                                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
                                                                 <color key="textColor" red="0.67450980390000004" green="0.67450980390000004" blue="0.67450980390000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -322,12 +331,12 @@ is stay at home.</string>
                                                             <constraint firstItem="mL7-oH-iDC" firstAttribute="top" secondItem="mYw-DX-k6e" secondAttribute="bottom" constant="10" id="DQb-NX-YTK"/>
                                                             <constraint firstItem="ddk-eR-kas" firstAttribute="centerX" secondItem="UJW-ga-RfM" secondAttribute="centerX" id="EfW-SR-L3H"/>
                                                             <constraint firstItem="ppD-Z3-xtx" firstAttribute="top" secondItem="o81-UN-fcB" secondAttribute="top" constant="18" id="FCM-kr-8Q2"/>
-                                                            <constraint firstItem="SRV-Cm-aX9" firstAttribute="leading" secondItem="UJW-ga-RfM" secondAttribute="trailing" constant="74" id="HyK-gI-mvm"/>
                                                             <constraint firstItem="7dG-dG-eCt" firstAttribute="centerX" secondItem="ppD-Z3-xtx" secondAttribute="centerX" id="JBH-LP-ERq"/>
                                                             <constraint firstItem="7dG-dG-eCt" firstAttribute="top" secondItem="ppD-Z3-xtx" secondAttribute="bottom" constant="25" id="L2F-gz-ciL"/>
                                                             <constraint firstItem="mYw-DX-k6e" firstAttribute="top" secondItem="SRV-Cm-aX9" secondAttribute="bottom" constant="25" id="LFs-O3-h92"/>
                                                             <constraint firstItem="mYw-DX-k6e" firstAttribute="centerX" secondItem="SRV-Cm-aX9" secondAttribute="centerX" id="Tno-f8-cT2"/>
                                                             <constraint firstItem="p0c-b1-kSK" firstAttribute="centerX" secondItem="7dG-dG-eCt" secondAttribute="centerX" id="d7Y-vK-1Zl"/>
+                                                            <constraint firstItem="SRV-Cm-aX9" firstAttribute="centerX" secondItem="o81-UN-fcB" secondAttribute="centerX" id="fhM-cr-unf"/>
                                                             <constraint firstItem="p0c-b1-kSK" firstAttribute="top" secondItem="7dG-dG-eCt" secondAttribute="bottom" constant="11" id="ga3-Kb-5aL"/>
                                                             <constraint firstItem="mL7-oH-iDC" firstAttribute="centerX" secondItem="mYw-DX-k6e" secondAttribute="centerX" id="gwW-VG-Fv1"/>
                                                             <constraint firstItem="UJW-ga-RfM" firstAttribute="top" secondItem="o81-UN-fcB" secondAttribute="top" constant="18" id="mHi-Nc-gOg"/>
@@ -393,7 +402,7 @@ is stay at home.</string>
                                                                 <rect key="frame" x="0.0" y="0.0" width="332" height="270"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <prototypes>
-                                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CountryCell" rowHeight="67" id="Vmc-7i-Gpf" customClass="CountryTableViewCell" customModule="CovidView" customModuleProvider="target">
+                                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="gray" indentationWidth="10" reuseIdentifier="CountryCell" rowHeight="67" id="Vmc-7i-Gpf" customClass="CountryTableViewCell" customModule="CovidView" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="44.5" width="332" height="67"/>
                                                                         <autoresizingMask key="autoresizingMask"/>
                                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Vmc-7i-Gpf" id="6KO-bo-wDh">
@@ -401,19 +410,18 @@ is stay at home.</string>
                                                                             <autoresizingMask key="autoresizingMask"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Indonesia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YbE-lo-J2i">
-                                                                                    <rect key="frame" x="15" y="20.5" width="90" height="26"/>
+                                                                                    <rect key="frame" x="15" y="20.5" width="302" height="26"/>
                                                                                     <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="18"/>
                                                                                     <nil key="textColor"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
                                                                             </subviews>
-                                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <constraints>
                                                                                 <constraint firstItem="YbE-lo-J2i" firstAttribute="centerY" secondItem="6KO-bo-wDh" secondAttribute="centerY" id="H1J-RC-S2T"/>
+                                                                                <constraint firstAttribute="trailing" secondItem="YbE-lo-J2i" secondAttribute="trailing" constant="15" id="Nwe-vQ-fMY"/>
                                                                                 <constraint firstItem="YbE-lo-J2i" firstAttribute="leading" secondItem="6KO-bo-wDh" secondAttribute="leading" constant="15" id="e2n-0w-CtS"/>
                                                                             </constraints>
                                                                         </tableViewCellContentView>
-                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <connections>
                                                                             <outlet property="countryLabel" destination="YbE-lo-J2i" id="SsA-sr-4XT"/>
                                                                         </connections>

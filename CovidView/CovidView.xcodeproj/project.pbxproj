@@ -37,6 +37,8 @@
 		FAD66879274BE24900CD0C97 /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD66878274BE24900CD0C97 /* UIFontExtension.swift */; };
 		FAD66884274BE75500CD0C97 /* InfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD66883274BE75500CD0C97 /* InfoViewModel.swift */; };
 		FAD66889274BE7EF00CD0C97 /* InfoCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD66888274BE7EF00CD0C97 /* InfoCoordinator.swift */; };
+		FADAFBE4274F6AF20003BC9A /* InfoCountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADAFBE3274F6AF20003BC9A /* InfoCountryModel.swift */; };
+		FADAFBE6274F844C0003BC9A /* SecureStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADAFBE5274F844C0003BC9A /* SecureStorageService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +93,8 @@
 		FAD66878274BE24900CD0C97 /* UIFontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtension.swift; sourceTree = "<group>"; };
 		FAD66883274BE75500CD0C97 /* InfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewModel.swift; sourceTree = "<group>"; };
 		FAD66888274BE7EF00CD0C97 /* InfoCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCoordinator.swift; sourceTree = "<group>"; };
+		FADAFBE3274F6AF20003BC9A /* InfoCountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCountryModel.swift; sourceTree = "<group>"; };
+		FADAFBE5274F844C0003BC9A /* SecureStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureStorageService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +128,7 @@
 				FA67CE6A274E52DC000AA1C1 /* NetworkService */,
 				FA67CE71274E580E000AA1C1 /* DictinoryHelper.swift */,
 				FA67CE73274E5A9A000AA1C1 /* ParametersEncoder.swift */,
+				FADAFBE5274F844C0003BC9A /* SecureStorageService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -142,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				FA67CE76274E6585000AA1C1 /* CountryModel.swift */,
+				FADAFBE3274F6AF20003BC9A /* InfoCountryModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -451,11 +457,13 @@
 				FA3097CA274E72FE00A78B66 /* CountryTableViewCell.swift in Sources */,
 				FA67CE70274E5316000AA1C1 /* Router.swift in Sources */,
 				FAB35FD8274D33170075D76A /* MarkBorderView.swift in Sources */,
+				FADAFBE6274F844C0003BC9A /* SecureStorageService.swift in Sources */,
 				FAD6686F274BD7FF00CD0C97 /* SpreadView.swift in Sources */,
 				FAB35FD6274D2B120075D76A /* StatisticBackView.swift in Sources */,
 				FAB35FAA274CD3C30075D76A /* UIImageExtension.swift in Sources */,
 				FAD66884274BE75500CD0C97 /* InfoViewModel.swift in Sources */,
 				FAD6686D274BD66100CD0C97 /* InfoViewController.swift in Sources */,
+				FADAFBE4274F6AF20003BC9A /* InfoCountryModel.swift in Sources */,
 				FAD6683F274BD2C300CD0C97 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

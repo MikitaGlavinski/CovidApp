@@ -11,6 +11,7 @@ import MapKit
 protocol InfoViewInput: AnyObject {
     func showError(_ error: Error)
     func setCountries(countryModels: [CountryModel])
+    func updateInfo(by country: InfoCountryModel)
 }
 
 class InfoViewController: UIViewController {
@@ -42,11 +43,19 @@ class InfoViewController: UIViewController {
         tableView.delegate = self
         navigationController?.navigationBar.isHidden = true
         
+        infectedCountLabel.adjustsFontSizeToFitWidth = true
+        infectedCountLabel.minimumScaleFactor = 0.5
+        deathsCountLabel.adjustsFontSizeToFitWidth = true
+        deathsCountLabel.minimumScaleFactor = 0.5
+        recoveredCountLabel.adjustsFontSizeToFitWidth = true
+        recoveredCountLabel.minimumScaleFactor = 0.5
+        
         addGestures()
     }
     
     private func addGestures() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(hideTableView))
+        tap.delegate = self
         view.addGestureRecognizer(tap)
     }
 
@@ -58,6 +67,7 @@ class InfoViewController: UIViewController {
         tableBackView.isHidden = false
         tableView.isHidden = false
         tableView.reloadData()
+        tableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: false)
     }
     
     @objc func hideTableView() {
@@ -78,7 +88,24 @@ extension InfoViewController: InfoViewInput {
     
     func setCountries(countryModels: [CountryModel]) {
         self.countryModels = countryModels
-        countryLabel.text = countryModels.first?.name
+    }
+    
+    func updateInfo(by country: InfoCountryModel) {
+        infectedCountLabel.text = String(country.confirmed ?? 0)
+        deathsCountLabel.text = String(country.deaths ?? 0)
+        recoveredCountLabel.text = String(country.recovered ?? 0)
+        countryLabel.text = country.name
+        
+        updateLabel.text = "Newest update \(country.date ?? "")"
+        
+        let annotations = mapView.annotations
+        mapView.removeAnnotations(annotations)
+        let location = CLLocationCoordinate2D(latitude: country.lat ?? 0.0, longitude: country.lon ?? 0.0)
+        mapView.setCenter(location, animated: true)
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = location
+        annotation.subtitle = "Infected - \(String(country.confirmed ?? 0))\nDeaths - \(String(country.deaths ?? 0))\n Recovered - \(String(country.recovered ?? 0))"
+        mapView.addAnnotation(annotation)
     }
 }
 
@@ -120,11 +147,28 @@ extension InfoViewController: UITableViewDataSource {
             } completion: { _ in
                 self.tableViewAppeared = true
             }
-
         }
     }
 }
 
 extension InfoViewController: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel.getInfoBy(country: countryModels[indexPath.row].slug ?? "")
+        tableBackView.isHidden = true
+        self.tableView.isHidden = true
+        let country = countryModels.remove(at: indexPath.row)
+        countryModels.insert(country, at: 0)
+        tableViewAppeared = false
+    }
+}
+
+extension InfoViewController: UIGestureRecognizerDelegate {
+    
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
+        if touch.view?.isDescendant(of: tableView) == true {
+            return false
+        }
+        return true
+    }
 }

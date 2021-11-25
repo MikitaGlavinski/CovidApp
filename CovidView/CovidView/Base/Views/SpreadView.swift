@@ -9,17 +9,8 @@ import UIKit
 
 @IBDesignable class SpreadView: UIView {
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        backgroundColor = .clear
-    }
-    
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        backgroundColor = .clear
-    }
-    
     override func draw(_ rect: CGRect) {
+        backgroundColor = .clear
         let size = self.bounds.size
         
         let p1 = self.bounds.origin
