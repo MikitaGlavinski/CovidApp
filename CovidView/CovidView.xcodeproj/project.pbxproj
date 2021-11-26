@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		FA3097CA274E72FE00A78B66 /* CountryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3097C9274E72FE00A78B66 /* CountryTableViewCell.swift */; };
+		FA5227E02750CE8000440076 /* AboutCovidViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5227DF2750CE8000440076 /* AboutCovidViewController.swift */; };
+		FA5227E22750CEAA00440076 /* AboutCovidViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5227E12750CEAA00440076 /* AboutCovidViewModel.swift */; };
+		FA5227E42750CF6900440076 /* AboutCovidCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5227E32750CF6900440076 /* AboutCovidCoordinator.swift */; };
+		FA5227E62750DEE000440076 /* PreventionBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5227E52750DEE000440076 /* PreventionBackView.swift */; };
+		FA5227E82751282A00440076 /* AboutCovidCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5227E72751282A00440076 /* AboutCovidCoordinatorTests.swift */; };
 		FA67CE6C274E5300000AA1C1 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA67CE6B274E5300000AA1C1 /* NetworkService.swift */; };
 		FA67CE6E274E530E000AA1C1 /* NetworkApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA67CE6D274E530E000AA1C1 /* NetworkApi.swift */; };
 		FA67CE70274E5316000AA1C1 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA67CE6F274E5316000AA1C1 /* Router.swift */; };
@@ -17,7 +22,6 @@
 		FA97E795274FB53400D8549F /* InfoViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA97E794274FB53400D8549F /* InfoViewControllerTests.swift */; };
 		FAB2B701274FCE26005023B2 /* InfoCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB2B700274FCE26005023B2 /* InfoCoordinatorTests.swift */; };
 		FAB35FA8274CC5E40075D76A /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB35FA7274CC5E40075D76A /* Coordinator.swift */; };
-		FAB35FAA274CD3C30075D76A /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB35FA9274CD3C30075D76A /* UIImageExtension.swift */; };
 		FAB35FCE274D00CB0075D76A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAB35FCD274D00CB0075D76A /* Main.storyboard */; };
 		FAB35FD0274D07980075D76A /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB35FCF274D07980075D76A /* GradientView.swift */; };
 		FAB35FD2274D166A0075D76A /* TextFieldBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB35FD1274D166A0075D76A /* TextFieldBackView.swift */; };
@@ -62,6 +66,11 @@
 
 /* Begin PBXFileReference section */
 		FA3097C9274E72FE00A78B66 /* CountryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryTableViewCell.swift; sourceTree = "<group>"; };
+		FA5227DF2750CE8000440076 /* AboutCovidViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCovidViewController.swift; sourceTree = "<group>"; };
+		FA5227E12750CEAA00440076 /* AboutCovidViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCovidViewModel.swift; sourceTree = "<group>"; };
+		FA5227E32750CF6900440076 /* AboutCovidCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCovidCoordinator.swift; sourceTree = "<group>"; };
+		FA5227E52750DEE000440076 /* PreventionBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreventionBackView.swift; sourceTree = "<group>"; };
+		FA5227E72751282A00440076 /* AboutCovidCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCovidCoordinatorTests.swift; sourceTree = "<group>"; };
 		FA67CE6B274E5300000AA1C1 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		FA67CE6D274E530E000AA1C1 /* NetworkApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkApi.swift; sourceTree = "<group>"; };
 		FA67CE6F274E5316000AA1C1 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
@@ -71,7 +80,6 @@
 		FA97E794274FB53400D8549F /* InfoViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewControllerTests.swift; sourceTree = "<group>"; };
 		FAB2B700274FCE26005023B2 /* InfoCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCoordinatorTests.swift; sourceTree = "<group>"; };
 		FAB35FA7274CC5E40075D76A /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		FAB35FA9274CD3C30075D76A /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		FAB35FCD274D00CB0075D76A /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		FAB35FCF274D07980075D76A /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		FAB35FD1274D166A0075D76A /* TextFieldBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldBackView.swift; sourceTree = "<group>"; };
@@ -126,6 +134,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA5227DA2750CD9C00440076 /* AboutCovidScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FA5227DE2750CE2900440076 /* AboutCovidView */,
+				FA5227DD2750CE1400440076 /* AboutCovidViewModel */,
+				FA5227DB2750CDE000440076 /* AboutCovidCoordinator */,
+			);
+			path = AboutCovidScreen;
+			sourceTree = "<group>";
+		};
+		FA5227DB2750CDE000440076 /* AboutCovidCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				FA5227E32750CF6900440076 /* AboutCovidCoordinator.swift */,
+			);
+			path = AboutCovidCoordinator;
+			sourceTree = "<group>";
+		};
+		FA5227DD2750CE1400440076 /* AboutCovidViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FA5227E12750CEAA00440076 /* AboutCovidViewModel.swift */,
+			);
+			path = AboutCovidViewModel;
+			sourceTree = "<group>";
+		};
+		FA5227DE2750CE2900440076 /* AboutCovidView */ = {
+			isa = PBXGroup;
+			children = (
+				FA5227DF2750CE8000440076 /* AboutCovidViewController.swift */,
+			);
+			path = AboutCovidView;
+			sourceTree = "<group>";
+		};
 		FA67CE69274E52D4000AA1C1 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +250,7 @@
 				FADAFBE9274FA3200003BC9A /* RouterTests.swift */,
 				FA97E794274FB53400D8549F /* InfoViewControllerTests.swift */,
 				FAB2B700274FCE26005023B2 /* InfoCoordinatorTests.swift */,
+				FA5227E72751282A00440076 /* AboutCovidCoordinatorTests.swift */,
 			);
 			path = CovidViewTests;
 			sourceTree = "<group>";
@@ -235,7 +278,6 @@
 			isa = PBXGroup;
 			children = (
 				FAD66878274BE24900CD0C97 /* UIFontExtension.swift */,
-				FAB35FA9274CD3C30075D76A /* UIImageExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -248,6 +290,7 @@
 				FAB35FD1274D166A0075D76A /* TextFieldBackView.swift */,
 				FAB35FD5274D2B120075D76A /* StatisticBackView.swift */,
 				FAB35FD7274D33170075D76A /* MarkBorderView.swift */,
+				FA5227E52750DEE000440076 /* PreventionBackView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -273,6 +316,7 @@
 		FAD6687D274BE48500CD0C97 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				FA5227DA2750CD9C00440076 /* AboutCovidScreen */,
 				FAD6687E274BE48E00CD0C97 /* InfoScreen */,
 			);
 			path = Modules;
@@ -448,9 +492,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA5227E22750CEAA00440076 /* AboutCovidViewModel.swift in Sources */,
 				FA67CE6E274E530E000AA1C1 /* NetworkApi.swift in Sources */,
+				FA5227E42750CF6900440076 /* AboutCovidCoordinator.swift in Sources */,
 				FAB35FA8274CC5E40075D76A /* Coordinator.swift in Sources */,
 				FA67CE74274E5A9A000AA1C1 /* ParametersEncoder.swift in Sources */,
+				FA5227E02750CE8000440076 /* AboutCovidViewController.swift in Sources */,
 				FAD6683D274BD2C300CD0C97 /* AppDelegate.swift in Sources */,
 				FA67CE72274E580E000AA1C1 /* DictinoryHelper.swift in Sources */,
 				FAB35FD0274D07980075D76A /* GradientView.swift in Sources */,
@@ -465,7 +512,7 @@
 				FADAFBE6274F844C0003BC9A /* SecureStorageService.swift in Sources */,
 				FAD6686F274BD7FF00CD0C97 /* SpreadView.swift in Sources */,
 				FAB35FD6274D2B120075D76A /* StatisticBackView.swift in Sources */,
-				FAB35FAA274CD3C30075D76A /* UIImageExtension.swift in Sources */,
+				FA5227E62750DEE000440076 /* PreventionBackView.swift in Sources */,
 				FAD66884274BE75500CD0C97 /* InfoViewModel.swift in Sources */,
 				FAD6686D274BD66100CD0C97 /* InfoViewController.swift in Sources */,
 				FADAFBE4274F6AF20003BC9A /* InfoCountryModel.swift in Sources */,
@@ -479,6 +526,7 @@
 			files = (
 				FAB2B701274FCE26005023B2 /* InfoCoordinatorTests.swift in Sources */,
 				FADAFBE8274F96110003BC9A /* SecureStorageServiceTests.swift in Sources */,
+				FA5227E82751282A00440076 /* AboutCovidCoordinatorTests.swift in Sources */,
 				FADAFBEA274FA3200003BC9A /* RouterTests.swift in Sources */,
 				FA97E795274FB53400D8549F /* InfoViewControllerTests.swift in Sources */,
 			);

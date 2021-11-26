@@ -22,7 +22,6 @@ class InfoViewController: UIViewController {
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var mapView: MKMapView!
-    @IBOutlet weak var buttonConstraint: NSLayoutConstraint!
     @IBOutlet weak var tableBackView: StatisticBackView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var infectedCountLabel: UILabel!
@@ -30,6 +29,8 @@ class InfoViewController: UIViewController {
     @IBOutlet weak var recoveredCountLabel: UILabel!
     @IBOutlet weak var countryLabel: UILabel!
     @IBOutlet weak var updateLabel: UILabel!
+    @IBOutlet weak var doctorViewTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var menuButtonTopConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,9 +52,15 @@ class InfoViewController: UIViewController {
         tap.delegate = self
         view.addGestureRecognizer(tap)
     }
+    
+    private func moveCoutryAhead() {
+        guard let index = countryModels.firstIndex(where: {$0.name == self.countryLabel.text}) else { return }
+        let indexCountry = self.countryModels.remove(at: index)
+        self.countryModels.insert(indexCountry, at: 0)
+    }
 
     @IBAction func seeDetailsTapped(_ sender: Any) {
-        print(countryModels.count)
+        viewModel.routeToAboutCovidScreen()
     }
     
     @IBAction func dropDownTapped(_ sender: Any) {
@@ -81,6 +88,7 @@ extension InfoViewController: InfoViewInput {
     
     func setCountries(countryModels: [CountryModel]) {
         self.countryModels = countryModels
+        moveCoutryAhead()
     }
     
     func updateInfo(by country: InfoCountryModel) {
@@ -98,18 +106,20 @@ extension InfoViewController: InfoViewInput {
         annotation.coordinate = location
         annotation.subtitle = "Infected - \(String(country.confirmed ?? 0))\nDeaths - \(String(country.deaths ?? 0))\n Recovered - \(String(country.recovered ?? 0))"
         mapView.addAnnotation(annotation)
+        
+        moveCoutryAhead()
     }
 }
 
 extension InfoViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if scrollView == self.scrollView {
-            view.frame.origin.y = max(0, (-scrollView.contentOffset.y) * 1.5)
+            doctorViewTopConstraint.constant = max(1, (-scrollView.contentOffset.y) * 0.7)
+            menuButtonTopConstraint.constant = max(1, (-scrollView.contentOffset.y) * 0.7)
             view.layer.sublayers?[0].frame = CGRect(x: 0,
                                                     y: 0,
                                                     width: UIScreen.main.bounds.width,
-                                                    height: max(UIScreen.main.bounds.height / 2, -scrollView.contentOffset.y * 2.8))
-            buttonConstraint.constant = 45 - (-scrollView.contentOffset.y)
+                                                    height: max(UIScreen.main.bounds.height / 2, -scrollView.contentOffset.y * 5))
         }
     }
 }
@@ -146,11 +156,10 @@ extension InfoViewController: UITableViewDataSource {
 extension InfoViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let country = countryModels.remove(at: indexPath.row)
-        countryModels.insert(country, at: 0)
+        let country = countryModels[indexPath.row]
         countryLabel.text = country.name
-        hideTableView()
         viewModel.getInfoBy(country: country.slug ?? "")
+        hideTableView()
     }
 }
 

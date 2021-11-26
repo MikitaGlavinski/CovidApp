@@ -8,7 +8,7 @@
 import UIKit
 
 protocol InfoCoordinatorDelegate: AnyObject {
-    
+    func routeToAboutCovidScreen()
 }
 
 class InfoCoordinator: Coordinator {
@@ -49,4 +49,12 @@ class InfoCoordinator: Coordinator {
 
 extension InfoCoordinator: InfoCoordinatorDelegate {
     
+    func routeToAboutCovidScreen() {
+        let aboutCovidCoordinator = AboutCovidCoordinator(navigation: rootNavigationController)
+        aboutCovidCoordinator.onEnd = {
+            self.remove(childCoordinator: aboutCovidCoordinator)
+        }
+        aboutCovidCoordinator.start()
+        add(childCoordinator: aboutCovidCoordinator)
+    }
 }

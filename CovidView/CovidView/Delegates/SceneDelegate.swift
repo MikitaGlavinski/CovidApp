@@ -22,6 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.rootViewController = navigationController
         window?.backgroundColor = .white
         window?.makeKeyAndVisible()
+        window?.overrideUserInterfaceStyle = .light
         let infoCoordinator = InfoCoordinator(navigation: navigationController)
         infoCoordinator.start()
     }

@@ -10,6 +10,7 @@ import Foundation
 protocol InfoViewModelProtocol: AnyObject {
     func viewDidLoad()
     func getInfoBy(country: String)
+    func routeToAboutCovidScreen()
 }
 
 class InfoViewModel {
@@ -56,5 +57,9 @@ extension InfoViewModel: InfoViewModelProtocol {
                 }
             }
         }
+    }
+    
+    func routeToAboutCovidScreen() {
+        coordinator.routeToAboutCovidScreen()
     }
 }

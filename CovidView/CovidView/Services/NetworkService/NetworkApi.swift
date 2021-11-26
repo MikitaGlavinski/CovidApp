@@ -33,7 +33,6 @@ enum NetworkEndPoint: EndPointType {
             return "/countries"
         case let .getInfoBy(country: country):
             return "/live/country/\(country)"
-//            return "/live/country/\(country)/status/confirmed/date/\(date)"
         }
     }
     
