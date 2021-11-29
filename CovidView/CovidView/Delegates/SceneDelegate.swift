@@ -20,9 +20,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
         let navigationController = UINavigationController()
         window?.rootViewController = navigationController
-        window?.backgroundColor = .white
         window?.makeKeyAndVisible()
-        window?.overrideUserInterfaceStyle = .light
+        if window?.traitCollection.userInterfaceStyle == .dark {
+            window?.backgroundColor = .black
+        } else {
+            window?.backgroundColor = .white
+        }
         let infoCoordinator = InfoCoordinator(navigation: navigationController)
         infoCoordinator.start()
     }

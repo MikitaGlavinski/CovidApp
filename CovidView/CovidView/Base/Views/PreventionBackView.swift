@@ -14,8 +14,14 @@ import UIKit
     }
     
     override func draw(_ rect: CGRect) {
-        let firstShadowLayer = makeShadowLayer(shadowColor: .lightGray, offsetSize: .init(width: 55, height: 5), opacity: 0.2, radius: 10, rect: rect)
-        layer.insertSublayer(firstShadowLayer, at: 0)
+        var shadowLayer: CALayer
+        if traitCollection.userInterfaceStyle == .dark {
+            shadowLayer = makeShadowLayer(shadowColor: .lightGray, offsetSize: .init(width: 5, height: 5), opacity: 0.2, radius: 10, rect: rect)
+        } else {
+            shadowLayer = makeShadowLayer(shadowColor: .lightGray, offsetSize: .init(width: 5, height: 5), opacity: 0.2, radius: 10, rect: rect)
+        }
+//        let firstShadowLayer = makeShadowLayer(shadowColor: .lightGray, offsetSize: .init(width: 55, height: 5), opacity: 0.2, radius: 10, rect: rect)
+        layer.insertSublayer(shadowLayer, at: 0)
         self.layer.masksToBounds = false
     }
     

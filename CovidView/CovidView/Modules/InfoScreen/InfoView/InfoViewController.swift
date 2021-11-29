@@ -31,6 +31,9 @@ class InfoViewController: UIViewController {
     @IBOutlet weak var updateLabel: UILabel!
     @IBOutlet weak var doctorViewTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var menuButtonTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var statisticBackView: StatisticBackView!
+    @IBOutlet weak var textFieldBackView: TextFieldBackView!
+    @IBOutlet weak var menuButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,7 +47,19 @@ class InfoViewController: UIViewController {
         tableView.delegate = self
         navigationController?.navigationBar.isHidden = true
         
+        setupDarkMode()
         addGestures()
+    }
+    
+    private func setupDarkMode() {
+        if traitCollection.userInterfaceStyle == .dark {
+            view.backgroundColor = .black
+            statisticBackView.backgroundColor = .black
+            textFieldBackView.backgroundColor = .black
+            menuButton.tintColor = .black
+        } else {
+            menuButton.tintColor = .white
+        }
     }
     
     private func addGestures() {

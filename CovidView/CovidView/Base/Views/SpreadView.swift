@@ -25,7 +25,11 @@ import UIKit
         path.addLine(to: p4)
         path.close()
         
-        UIColor(red: 253/255, green: 253/255, blue: 253/255, alpha: 1).set()
+        if traitCollection.userInterfaceStyle == .dark {
+            UIColor.black.set()
+        } else {
+            UIColor(red: 253/255, green: 253/255, blue: 253/255, alpha: 1).set()
+        }
         path.fill()
     }
 }

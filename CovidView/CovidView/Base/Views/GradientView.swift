@@ -20,6 +20,12 @@ import UIKit
     }
     
     override func draw(_ rect: CGRect) {
+        if traitCollection.userInterfaceStyle == .dark {
+            backgroundColor = .black
+        } else {
+            backgroundColor = UIColor(red: 253/255, green: 253/255, blue: 253/255, alpha: 1)
+        }
+        
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = [startColor.cgColor, endColor.cgColor]
         gradientLayer.locations = [0.0, 1.0]

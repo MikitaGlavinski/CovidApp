@@ -17,6 +17,13 @@ class AboutCovidViewController: UIViewController {
     @IBOutlet weak var doctorTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var menuButtonTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var backButtonTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var headacheView: StatisticBackView!
+    @IBOutlet weak var coughView: StatisticBackView!
+    @IBOutlet weak var feverView: StatisticBackView!
+    @IBOutlet weak var wearMaskView: PreventionBackView!
+    @IBOutlet weak var washHandsView: PreventionBackView!
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var menuButton: UIButton!
     
     var viewModel: AboutCovidViewModelProtocol!
 
@@ -27,6 +34,23 @@ class AboutCovidViewController: UIViewController {
     
     private func setupUI() {
         scrollView.delegate = self
+        setupDarkMode()
+    }
+    
+    private func setupDarkMode() {
+        if traitCollection.userInterfaceStyle == .dark {
+            view.backgroundColor = .black
+            headacheView.backgroundColor = .black
+            coughView.backgroundColor = .black
+            feverView.backgroundColor = .black
+            wearMaskView.backgroundColor = .black
+            washHandsView.backgroundColor = .black
+            menuButton.tintColor = .black
+            backButton.tintColor = .black
+        } else {
+            menuButton.tintColor = .white
+            backButton.tintColor = .white
+        }
     }
     
     @IBAction func backButtonTapped(_ sender: Any) {
