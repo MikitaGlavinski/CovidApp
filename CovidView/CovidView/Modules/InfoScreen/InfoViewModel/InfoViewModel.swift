@@ -21,8 +21,9 @@ class InfoViewModel {
 extension InfoViewModel: InfoViewModelProtocol {
     
     func viewDidLoad() {
-        let lastInfo = SecureStorageService.shared.obtainLastInfo()
-        view.updateInfo(by: lastInfo)
+        if let lastInfo = SecureStorageService.shared.obtainLastInfo() {
+            view.updateInfo(by: lastInfo)
+        }
         NetworkService.shared.getAllCountries { result in
             switch result {
             case .success(let countries):

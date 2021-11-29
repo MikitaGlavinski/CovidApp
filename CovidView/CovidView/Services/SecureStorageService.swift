@@ -9,7 +9,9 @@ import Foundation
 
 protocol SecureStorageServiceProtocol {
     func saveLastInfo(countryInfo: InfoCountryModel, currentDate: String)
-    func obtainLastInfo() -> InfoCountryModel
+    func obtainLastInfo() -> InfoCountryModel?
+    func saveToken(token: String)
+    func obtainToken() -> String?
 }
 
 class SecureStorageService: SecureStorageServiceProtocol {
@@ -21,22 +23,27 @@ class SecureStorageService: SecureStorageServiceProtocol {
     let storage = UserDefaults.standard
     
     func saveLastInfo(countryInfo: InfoCountryModel, currentDate: String) {
-        storage.setValue(countryInfo.name, forKey: "country")
-        storage.setValue(countryInfo.confirmed, forKey: "confirmed")
-        storage.setValue(countryInfo.deaths, forKey: "deaths")
-        storage.setValue(countryInfo.recovered, forKey: "recovered")
-        storage.setValue(countryInfo.lat, forKey: "lat")
-        storage.setValue(countryInfo.lon, forKey: "lon")
-        storage.setValue(currentDate, forKey: "date")
+        var country = countryInfo
+        country.date = currentDate
+        guard let data = try? JSONEncoder().encode(country) else { return }
+        storage.setValue(data, forKey: "countryInfo")
     }
     
-    func obtainLastInfo() -> InfoCountryModel {
-        InfoCountryModel(name: storage.string(forKey: "country"),
-                         lat: storage.double(forKey: "lat"),
-                         lon: storage.double(forKey: "lon"),
-                         confirmed: storage.integer(forKey: "confirmed"),
-                         deaths: storage.integer(forKey: "deaths"),
-                         recovered: storage.integer(forKey: "recovered"),
-                         date: storage.string(forKey: "date"))
+    func obtainLastInfo() -> InfoCountryModel? {
+        guard
+            let data = storage.data(forKey: "countryInfo"),
+            let countryInfo = try? JSONDecoder().decode(InfoCountryModel.self, from: data)
+        else {
+            return nil
+        }
+        return countryInfo
+    }
+    
+    func saveToken(token: String) {
+        storage.setValue(token, forKey: "token")
+    }
+    
+    func obtainToken() -> String? {
+        storage.string(forKey: "token")
     }
 }

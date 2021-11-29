@@ -26,8 +26,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         } else {
             window?.backgroundColor = .white
         }
-        let infoCoordinator = InfoCoordinator(navigation: navigationController)
-        infoCoordinator.start()
+        if let _ = SecureStorageService.shared.obtainToken() {
+            let infoCoordinator = InfoCoordinator(navigation: navigationController)
+            infoCoordinator.start()
+        } else {
+            let authCoordinator = AuthCoordinator(navigation: navigationController)
+            authCoordinator.start()
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

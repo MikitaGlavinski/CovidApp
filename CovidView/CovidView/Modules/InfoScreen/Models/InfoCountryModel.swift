@@ -8,26 +8,26 @@
 import Foundation
 
 struct InfoCountryModel: Codable {
-    var id: String?
-    var name: String?
-    var code: String?
-    var province: String?
-    var city: String?
-    var cityCode: String?
-    var lat: Double?
-    var lon: Double?
-    var confirmed: Int?
-    var deaths: Int?
-    var recovered: Int?
-    var active: Int?
-    var date: String?
+    var id: String
+    var name: String
+    var code: String
+    var province: String
+    var city: String
+    var cityCode: String
+    var lat: Double
+    var lon: Double
+    var confirmed: Int
+    var deaths: Int
+    var recovered: Int
+    var active: Int
+    var date: String
     
-    init(id: String? = nil, name: String? = nil,
-         code: String? = nil, province: String? = nil,
-         city: String? = nil, cityCode: String? = nil,
-         lat: Double? = nil, lon: Double? = nil,
-         confirmed: Int? = nil, deaths: Int? = nil,
-         recovered: Int? = nil, active: Int? = nil, date: String? = nil) {
+    init(id: String, name: String,
+         code: String, province: String,
+         city: String, cityCode: String,
+         lat: Double, lon: Double,
+         confirmed: Int, deaths: Int,
+         recovered: Int, active: Int, date: String) {
         
         self.id = id
         self.name = name
@@ -62,19 +62,19 @@ struct InfoCountryModel: Codable {
     
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        id = try container.decodeIfPresent(String.self, forKey: .id)
-        name = try container.decodeIfPresent(String.self, forKey: .name)
-        code = try container.decodeIfPresent(String.self, forKey: .code)
-        province = try container.decodeIfPresent(String.self, forKey: .province)
-        city = try container.decodeIfPresent(String.self, forKey: .city)
-        cityCode = try container.decodeIfPresent(String.self, forKey: .cityCode)
-        lat = Double(try container.decodeIfPresent(String.self, forKey: .lat) ?? "0.0")
-        lon = Double(try container.decodeIfPresent(String.self, forKey: .lon) ?? "0.0")
-        confirmed = try container.decodeIfPresent(Int.self, forKey: .confirmed)
-        deaths = try container.decodeIfPresent(Int.self, forKey: .deaths)
-        recovered = try container.decodeIfPresent(Int.self, forKey: .recovered)
-        active = try container.decodeIfPresent(Int.self, forKey: .active)
-        date = try container.decodeIfPresent(String.self, forKey: .date)
+        id = try container.decode(String.self, forKey: .id)
+        name = try container.decode(String.self, forKey: .name)
+        code = try container.decode(String.self, forKey: .code)
+        province = try container.decode(String.self, forKey: .province)
+        city = try container.decode(String.self, forKey: .city)
+        cityCode = try container.decode(String.self, forKey: .cityCode)
+        lat = Double(try container.decode(String.self, forKey: .lat)) ?? 0.0
+        lon = Double(try container.decode(String.self, forKey: .lon)) ?? 0.0
+        confirmed = try container.decode(Int.self, forKey: .confirmed)
+        deaths = try container.decode(Int.self, forKey: .deaths)
+        recovered = try container.decode(Int.self, forKey: .recovered)
+        active = try container.decode(Int.self, forKey: .active)
+        date = try container.decode(String.self, forKey: .date)
     }
     
     func encode(to encoder: Encoder) throws {
@@ -85,8 +85,8 @@ struct InfoCountryModel: Codable {
         try container.encodeIfPresent(province, forKey: .province)
         try container.encodeIfPresent(city, forKey: .city)
         try container.encodeIfPresent(cityCode, forKey: .cityCode)
-        try container.encodeIfPresent("\(lat ?? 0.0)", forKey: .lat)
-        try container.encodeIfPresent("\(lon ?? 0.0)", forKey: .lon)
+        try container.encodeIfPresent("\(lat)", forKey: .lat)
+        try container.encodeIfPresent("\(lon)", forKey: .lon)
         try container.encodeIfPresent(confirmed, forKey: .confirmed)
         try container.encodeIfPresent(deaths, forKey: .deaths)
         try container.encodeIfPresent(recovered, forKey: .recovered)

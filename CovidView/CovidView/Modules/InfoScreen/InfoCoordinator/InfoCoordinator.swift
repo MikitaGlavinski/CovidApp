@@ -30,7 +30,7 @@ class InfoCoordinator: Coordinator {
         infoViewModel.coordinator = self
         infoView.viewModel = infoViewModel
         
-        rootNavigationController.pushViewController(infoView, animated: true)
+        rootNavigationController.setViewControllers([infoView], animated: true)
     }
     
     func add(childCoordinator: Coordinator) {
@@ -51,7 +51,7 @@ extension InfoCoordinator: InfoCoordinatorDelegate {
     
     func routeToAboutCovidScreen() {
         let aboutCovidCoordinator = AboutCovidCoordinator(navigation: rootNavigationController)
-        aboutCovidCoordinator.onEnd = {
+        aboutCovidCoordinator.onEnd = { [unowned aboutCovidCoordinator] in
             self.remove(childCoordinator: aboutCovidCoordinator)
         }
         aboutCovidCoordinator.start()

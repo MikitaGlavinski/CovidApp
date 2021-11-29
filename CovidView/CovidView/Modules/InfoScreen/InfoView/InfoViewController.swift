@@ -107,19 +107,19 @@ extension InfoViewController: InfoViewInput {
     }
     
     func updateInfo(by country: InfoCountryModel) {
-        infectedCountLabel.text = String(country.confirmed ?? 0)
-        deathsCountLabel.text = String(country.deaths ?? 0)
-        recoveredCountLabel.text = String(country.recovered ?? 0)
+        infectedCountLabel.text = String(country.confirmed)
+        deathsCountLabel.text = String(country.deaths)
+        recoveredCountLabel.text = String(country.recovered)
         countryLabel.text = country.name
         
-        updateLabel.text = "Newest update \(country.date ?? "")"
+        updateLabel.text = "Newest update \(country.date)"
         
         mapView.removeAnnotations(mapView.annotations)
-        let location = CLLocationCoordinate2D(latitude: country.lat ?? 54.55, longitude: country.lon ?? 52.25)
+        let location = CLLocationCoordinate2D(latitude: country.lat, longitude: country.lon)
         mapView.setCenter(location, animated: true)
         let annotation = MKPointAnnotation()
         annotation.coordinate = location
-        annotation.subtitle = "Infected - \(String(country.confirmed ?? 0))\nDeaths - \(String(country.deaths ?? 0))\n Recovered - \(String(country.recovered ?? 0))"
+        annotation.subtitle = "Infected - \(String(country.confirmed))\nDeaths - \(String(country.deaths))\n Recovered - \(String(country.recovered))"
         mapView.addAnnotation(annotation)
         
         moveCoutryAhead()
@@ -173,7 +173,7 @@ extension InfoViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let country = countryModels[indexPath.row]
         countryLabel.text = country.name
-        viewModel.getInfoBy(country: country.slug ?? "")
+        viewModel.getInfoBy(country: country.slug)
         hideTableView()
     }
 }
