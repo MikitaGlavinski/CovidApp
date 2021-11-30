@@ -295,7 +295,7 @@ is stay at home.</string>
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVJ-2n-caB">
-                                                                <rect key="frame" x="57" y="20" width="73.5" height="25.5"/>
+                                                                <rect key="frame" x="57" y="20" width="262" height="25.5"/>
                                                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="18"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -319,6 +319,7 @@ is stay at home.</string>
                                                         <constraints>
                                                             <constraint firstItem="eVJ-2n-caB" firstAttribute="leading" secondItem="hI9-ml-tjp" secondAttribute="trailing" constant="15" id="5qd-Mo-PRU"/>
                                                             <constraint firstItem="hI9-ml-tjp" firstAttribute="leading" secondItem="7Lp-Cn-thE" secondAttribute="leading" constant="19" id="6F2-0w-NdR"/>
+                                                            <constraint firstItem="CEQ-Pg-aAg" firstAttribute="leading" secondItem="eVJ-2n-caB" secondAttribute="trailing" constant="15" id="78u-1b-zSK"/>
                                                             <constraint firstItem="CEQ-Pg-aAg" firstAttribute="centerY" secondItem="7Lp-Cn-thE" secondAttribute="centerY" id="BRr-Db-rxq"/>
                                                             <constraint firstAttribute="trailing" secondItem="CEQ-Pg-aAg" secondAttribute="trailing" constant="20" id="Bbr-DY-4wV"/>
                                                             <constraint firstAttribute="height" constant="65" id="Ysc-bz-Maq"/>
@@ -372,181 +373,121 @@ is stay at home.</string>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o81-UN-fcB" customClass="StatisticBackView" customModule="CovidView" customModuleProvider="target">
                                                         <rect key="frame" x="25" y="268" width="364" height="170"/>
                                                         <subviews>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UJW-ga-RfM">
-                                                                <rect key="frame" x="40" y="18" width="30" height="30"/>
-                                                                <subviews>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aZM-Vm-hjv" customClass="MarkBorderView" customModule="CovidView" customModuleProvider="target">
-                                                                        <rect key="frame" x="7.5" y="7.5" width="15" height="15"/>
-                                                                        <color key="backgroundColor" red="1" green="0.92941176470588238" blue="0.89411764705882346" alpha="1" colorSpace="calibratedRGB"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" constant="15" id="9kd-le-EGw"/>
-                                                                            <constraint firstAttribute="height" constant="15" id="YPd-FH-U0w"/>
-                                                                        </constraints>
-                                                                        <userDefinedRuntimeAttributes>
-                                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                                                <real key="value" value="2"/>
-                                                                            </userDefinedRuntimeAttribute>
-                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                                <real key="value" value="7.5"/>
-                                                                            </userDefinedRuntimeAttribute>
-                                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                                <color key="value" red="1" green="0.61176470588235299" blue="0.40784313725490196" alpha="1" colorSpace="calibratedRGB"/>
-                                                                            </userDefinedRuntimeAttribute>
-                                                                        </userDefinedRuntimeAttributes>
-                                                                    </view>
-                                                                </subviews>
-                                                                <color key="backgroundColor" red="1" green="0.92941176470588238" blue="0.89411764705882346" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S0Z-hy-DeP" customClass="StatisticView" customModule="CovidView" customModuleProvider="target">
+                                                                <rect key="frame" x="17" y="20" width="80" height="125"/>
+                                                                <color key="backgroundColor" name="backColor"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="height" constant="30" id="2PH-EI-gzg"/>
-                                                                    <constraint firstItem="aZM-Vm-hjv" firstAttribute="centerX" secondItem="UJW-ga-RfM" secondAttribute="centerX" id="Qbz-66-VyK"/>
-                                                                    <constraint firstAttribute="width" constant="30" id="c9a-bf-PWO"/>
-                                                                    <constraint firstItem="aZM-Vm-hjv" firstAttribute="centerY" secondItem="UJW-ga-RfM" secondAttribute="centerY" id="ikX-pm-C6C"/>
+                                                                    <constraint firstAttribute="width" constant="80" id="1Ui-av-393"/>
                                                                 </constraints>
                                                                 <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="backViewBackgroundColor">
+                                                                        <color key="value" red="1" green="0.92941176470588238" blue="0.89411764705882346" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderViewBackgroundColor">
+                                                                        <color key="value" red="1" green="0.92941176469999998" blue="0.89411764709999997" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderViewBorderColor">
+                                                                        <color key="value" red="1" green="0.61176470588235299" blue="0.40784313725490196" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="labelColor">
+                                                                        <color key="value" red="1" green="0.61176470588235299" blue="0.40784313725490196" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="secondaryLabelColor">
+                                                                        <color key="value" red="0.67450980392156867" green="0.67450980392156867" blue="0.67450980392156867" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="backViewCornerRadius">
                                                                         <real key="value" value="15"/>
                                                                     </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderViewCornerRadius">
+                                                                        <real key="value" value="7.5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderViewBorderWidth">
+                                                                        <real key="value" value="2"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="secondaryText" value="Infected"/>
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SRV-Cm-aX9">
-                                                                <rect key="frame" x="167" y="18" width="30" height="30"/>
-                                                                <subviews>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SJu-Hq-6qQ" customClass="MarkBorderView" customModule="CovidView" customModuleProvider="target">
-                                                                        <rect key="frame" x="7.5" y="7.5" width="15" height="15"/>
-                                                                        <color key="backgroundColor" red="1" green="0.85098039215686272" blue="0.85098039215686272" alpha="1" colorSpace="calibratedRGB"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" constant="15" id="98k-8Q-ue5"/>
-                                                                            <constraint firstAttribute="height" constant="15" id="QQZ-jp-HsO"/>
-                                                                        </constraints>
-                                                                        <userDefinedRuntimeAttributes>
-                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                                <real key="value" value="7.5"/>
-                                                                            </userDefinedRuntimeAttribute>
-                                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                                                <real key="value" value="2"/>
-                                                                            </userDefinedRuntimeAttribute>
-                                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                                <color key="value" red="1" green="0.33725490196078434" blue="0.33725490196078434" alpha="1" colorSpace="calibratedRGB"/>
-                                                                            </userDefinedRuntimeAttribute>
-                                                                        </userDefinedRuntimeAttributes>
-                                                                    </view>
-                                                                </subviews>
-                                                                <color key="backgroundColor" red="1" green="0.85098039215686272" blue="0.85098039215686272" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wfL-cL-4c7" customClass="StatisticView" customModule="CovidView" customModuleProvider="target">
+                                                                <rect key="frame" x="142" y="20" width="80" height="125"/>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="height" constant="30" id="6Hx-QZ-aKl"/>
-                                                                    <constraint firstAttribute="width" constant="30" id="FYg-Qd-pSv"/>
-                                                                    <constraint firstItem="SJu-Hq-6qQ" firstAttribute="centerX" secondItem="SRV-Cm-aX9" secondAttribute="centerX" id="VJQ-kl-4gl"/>
-                                                                    <constraint firstItem="SJu-Hq-6qQ" firstAttribute="centerY" secondItem="SRV-Cm-aX9" secondAttribute="centerY" id="fqf-dg-9NF"/>
+                                                                    <constraint firstAttribute="width" constant="80" id="pVR-MS-vPA"/>
                                                                 </constraints>
                                                                 <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="backViewBackgroundColor">
+                                                                        <color key="value" red="1" green="0.85098039215686272" blue="0.85098039215686272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderViewBackgroundColor">
+                                                                        <color key="value" red="1" green="0.85098039215686272" blue="0.85098039215686272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderViewBorderColor">
+                                                                        <color key="value" red="1" green="0.33725490196078434" blue="0.33725490196078434" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="labelColor">
+                                                                        <color key="value" red="1" green="0.33725490196078434" blue="0.33725490196078434" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="secondaryLabelColor">
+                                                                        <color key="value" red="0.67450980392156867" green="0.67450980392156867" blue="0.67450980392156867" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="backViewCornerRadius">
                                                                         <real key="value" value="15"/>
                                                                     </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderViewCornerRadius">
+                                                                        <real key="value" value="7.5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderViewBorderWidth">
+                                                                        <real key="value" value="2"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="secondaryText" value="Deaths"/>
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ppD-Z3-xtx">
-                                                                <rect key="frame" x="294" y="18" width="30" height="30"/>
-                                                                <subviews>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n9F-O2-uJP" customClass="MarkBorderView" customModule="CovidView" customModuleProvider="target">
-                                                                        <rect key="frame" x="7.5" y="7.5" width="15" height="15"/>
-                                                                        <color key="backgroundColor" red="0.83529411764705885" green="0.97647058823529409" blue="0.82352941176470584" alpha="1" colorSpace="calibratedRGB"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" constant="15" id="Hlh-yd-iJg"/>
-                                                                            <constraint firstAttribute="height" constant="15" id="cBG-Z5-orq"/>
-                                                                        </constraints>
-                                                                        <userDefinedRuntimeAttributes>
-                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                                <real key="value" value="7.5"/>
-                                                                            </userDefinedRuntimeAttribute>
-                                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                                                <real key="value" value="2"/>
-                                                                            </userDefinedRuntimeAttribute>
-                                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                                <color key="value" red="0.30196078431372547" green="0.78431372549019607" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
-                                                                            </userDefinedRuntimeAttribute>
-                                                                        </userDefinedRuntimeAttributes>
-                                                                    </view>
-                                                                </subviews>
-                                                                <color key="backgroundColor" red="0.83529411764705885" green="0.97647058823529409" blue="0.82352941176470584" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xoa-Y3-Frd" customClass="StatisticView" customModule="CovidView" customModuleProvider="target">
+                                                                <rect key="frame" x="267" y="20" width="80" height="125"/>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                 <constraints>
-                                                                    <constraint firstItem="n9F-O2-uJP" firstAttribute="centerY" secondItem="ppD-Z3-xtx" secondAttribute="centerY" id="5Ct-ly-wMg"/>
-                                                                    <constraint firstAttribute="width" constant="30" id="Jgk-ZE-lXa"/>
-                                                                    <constraint firstAttribute="height" constant="30" id="QhG-a6-gHH"/>
-                                                                    <constraint firstItem="n9F-O2-uJP" firstAttribute="centerX" secondItem="ppD-Z3-xtx" secondAttribute="centerX" id="bBO-lk-4XX"/>
+                                                                    <constraint firstAttribute="width" constant="80" id="U6V-Xa-ErG"/>
                                                                 </constraints>
                                                                 <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="backViewBackgroundColor">
+                                                                        <color key="value" red="0.83529411764705885" green="0.97647058823529409" blue="0.82352941176470584" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderViewBackgroundColor">
+                                                                        <color key="value" red="0.83529411764705885" green="0.97647058823529409" blue="0.82352941176470584" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderViewBorderColor">
+                                                                        <color key="value" red="0.31372549019607843" green="0.792156862745098" blue="0.27843137254901962" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="labelColor">
+                                                                        <color key="value" red="0.31372549019607843" green="0.792156862745098" blue="0.27843137254901962" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="secondaryLabelColor">
+                                                                        <color key="value" red="0.67450980392156867" green="0.67450980392156867" blue="0.67450980392156867" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="backViewCornerRadius">
                                                                         <real key="value" value="15"/>
                                                                     </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderViewCornerRadius">
+                                                                        <real key="value" value="7.5"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderViewBorderWidth">
+                                                                        <real key="value" value="2"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="secondaryText" value="Recovered"/>
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ddk-eR-kas">
-                                                                <rect key="frame" x="17.5" y="73" width="75" height="42"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="75" id="L4Y-7l-5aR"/>
-                                                                </constraints>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                                                <color key="textColor" red="1" green="0.5725490196078431" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="mYw-DX-k6e">
-                                                                <rect key="frame" x="144.5" y="73" width="75" height="42"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="75" id="o8s-9y-7re"/>
-                                                                </constraints>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                                                <color key="textColor" red="1" green="0.28235294117647058" blue="0.28235294117647058" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="7dG-dG-eCt">
-                                                                <rect key="frame" x="271.5" y="73" width="75" height="42"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="75" id="j87-2V-AJI"/>
-                                                                </constraints>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                                                <color key="textColor" red="0.21176470588235294" green="0.75686274509803919" blue="0.17254901960784313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Infected" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tok-Qf-PMa">
-                                                                <rect key="frame" x="22" y="125" width="66.5" height="22.5"/>
-                                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
-                                                                <color key="textColor" red="0.67450980392156867" green="0.67450980392156867" blue="0.67450980392156867" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deaths" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mL7-oH-iDC">
-                                                                <rect key="frame" x="153.5" y="125" width="57" height="22.5"/>
-                                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
-                                                                <color key="textColor" red="0.67450980390000004" green="0.67450980390000004" blue="0.67450980390000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recovered" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p0c-b1-kSK">
-                                                                <rect key="frame" x="266" y="126" width="86" height="22.5"/>
-                                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
-                                                                <color key="textColor" red="0.67450980390000004" green="0.67450980390000004" blue="0.67450980390000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
                                                         </subviews>
                                                         <color key="backgroundColor" name="backColor"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="trailing" secondItem="ppD-Z3-xtx" secondAttribute="trailing" constant="40" id="90T-jj-z3G"/>
-                                                            <constraint firstItem="UJW-ga-RfM" firstAttribute="leading" secondItem="o81-UN-fcB" secondAttribute="leading" constant="40" id="CQn-aR-Qbu"/>
-                                                            <constraint firstItem="mL7-oH-iDC" firstAttribute="top" secondItem="mYw-DX-k6e" secondAttribute="bottom" constant="10" id="DQb-NX-YTK"/>
-                                                            <constraint firstItem="ddk-eR-kas" firstAttribute="centerX" secondItem="UJW-ga-RfM" secondAttribute="centerX" id="EfW-SR-L3H"/>
-                                                            <constraint firstItem="ppD-Z3-xtx" firstAttribute="top" secondItem="o81-UN-fcB" secondAttribute="top" constant="18" id="FCM-kr-8Q2"/>
-                                                            <constraint firstItem="7dG-dG-eCt" firstAttribute="centerX" secondItem="ppD-Z3-xtx" secondAttribute="centerX" id="JBH-LP-ERq"/>
-                                                            <constraint firstItem="7dG-dG-eCt" firstAttribute="top" secondItem="ppD-Z3-xtx" secondAttribute="bottom" constant="25" id="L2F-gz-ciL"/>
-                                                            <constraint firstItem="mYw-DX-k6e" firstAttribute="top" secondItem="SRV-Cm-aX9" secondAttribute="bottom" constant="25" id="LFs-O3-h92"/>
-                                                            <constraint firstItem="mYw-DX-k6e" firstAttribute="centerX" secondItem="SRV-Cm-aX9" secondAttribute="centerX" id="Tno-f8-cT2"/>
-                                                            <constraint firstItem="p0c-b1-kSK" firstAttribute="centerX" secondItem="7dG-dG-eCt" secondAttribute="centerX" id="d7Y-vK-1Zl"/>
-                                                            <constraint firstItem="SRV-Cm-aX9" firstAttribute="centerX" secondItem="o81-UN-fcB" secondAttribute="centerX" id="fhM-cr-unf"/>
-                                                            <constraint firstItem="p0c-b1-kSK" firstAttribute="top" secondItem="7dG-dG-eCt" secondAttribute="bottom" constant="11" id="ga3-Kb-5aL"/>
-                                                            <constraint firstItem="mL7-oH-iDC" firstAttribute="centerX" secondItem="mYw-DX-k6e" secondAttribute="centerX" id="gwW-VG-Fv1"/>
-                                                            <constraint firstItem="UJW-ga-RfM" firstAttribute="top" secondItem="o81-UN-fcB" secondAttribute="top" constant="18" id="mHi-Nc-gOg"/>
-                                                            <constraint firstItem="SRV-Cm-aX9" firstAttribute="top" secondItem="o81-UN-fcB" secondAttribute="top" constant="18" id="mjV-GP-rdH"/>
-                                                            <constraint firstItem="tok-Qf-PMa" firstAttribute="top" secondItem="ddk-eR-kas" secondAttribute="bottom" constant="10" id="p66-DL-EQe"/>
-                                                            <constraint firstItem="tok-Qf-PMa" firstAttribute="centerX" secondItem="ddk-eR-kas" secondAttribute="centerX" id="vP6-ty-55D"/>
+                                                            <constraint firstItem="S0Z-hy-DeP" firstAttribute="top" secondItem="o81-UN-fcB" secondAttribute="top" constant="20" id="0yo-0k-tqo"/>
+                                                            <constraint firstAttribute="trailing" secondItem="xoa-Y3-Frd" secondAttribute="trailing" constant="17" id="6Tq-5x-ClO"/>
+                                                            <constraint firstAttribute="bottom" secondItem="xoa-Y3-Frd" secondAttribute="bottom" constant="25" id="6zl-83-tLl"/>
+                                                            <constraint firstAttribute="bottom" secondItem="wfL-cL-4c7" secondAttribute="bottom" constant="25" id="HXU-ur-mrV"/>
+                                                            <constraint firstItem="xoa-Y3-Frd" firstAttribute="top" secondItem="o81-UN-fcB" secondAttribute="top" constant="20" id="OWA-by-BTV"/>
+                                                            <constraint firstAttribute="bottom" secondItem="S0Z-hy-DeP" secondAttribute="bottom" constant="25" id="Rmd-ku-et0"/>
+                                                            <constraint firstItem="wfL-cL-4c7" firstAttribute="centerX" secondItem="o81-UN-fcB" secondAttribute="centerX" id="VrU-nZ-b3D"/>
+                                                            <constraint firstItem="S0Z-hy-DeP" firstAttribute="leading" secondItem="o81-UN-fcB" secondAttribute="leading" constant="17" id="bCj-qy-ulI"/>
+                                                            <constraint firstItem="wfL-cL-4c7" firstAttribute="top" secondItem="o81-UN-fcB" secondAttribute="top" constant="20" id="iMW-gP-pKt"/>
                                                             <constraint firstAttribute="height" constant="170" id="zOk-kH-b94"/>
-                                                            <constraint firstItem="ddk-eR-kas" firstAttribute="top" secondItem="UJW-ga-RfM" secondAttribute="bottom" constant="25" id="zTl-Tx-hRg"/>
                                                         </constraints>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -676,7 +617,7 @@ is stay at home.</string>
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exi-Gh-n83">
-                                                <rect key="frame" x="359" y="128" width="40" height="40"/>
+                                                <rect key="frame" x="359" y="45" width="40" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="MAk-38-WLK"/>
                                                     <constraint firstAttribute="width" constant="40" id="NHj-FF-VdQ"/>
@@ -751,13 +692,13 @@ is stay at home.</string>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="countryLabel" destination="eVJ-2n-caB" id="1A1-48-tEr"/>
-                        <outlet property="deathsCountLabel" destination="mYw-DX-k6e" id="0wA-he-daf"/>
+                        <outlet property="deathsView" destination="wfL-cL-4c7" id="wiw-w7-WqW"/>
                         <outlet property="doctorViewTopConstraint" destination="Fo4-uP-J0A" id="Yoo-il-VEf"/>
-                        <outlet property="infectedCountLabel" destination="ddk-eR-kas" id="nYb-fw-Sbt"/>
+                        <outlet property="infectedView" destination="S0Z-hy-DeP" id="lWD-Ok-nBe"/>
                         <outlet property="mapView" destination="6Sd-Xu-z3q" id="52g-mb-F59"/>
                         <outlet property="menuButton" destination="exi-Gh-n83" id="Jt0-qV-N0R"/>
                         <outlet property="menuButtonTopConstraint" destination="ukh-ui-QiT" id="WHP-lS-az3"/>
-                        <outlet property="recoveredCountLabel" destination="7dG-dG-eCt" id="V2K-tA-04e"/>
+                        <outlet property="recoveredView" destination="xoa-Y3-Frd" id="qw3-6g-BfM"/>
                         <outlet property="scrollView" destination="LSm-kB-Kf6" id="Hpu-au-PGJ"/>
                         <outlet property="statisticBackView" destination="o81-UN-fcB" id="EOY-RJ-I4M"/>
                         <outlet property="tableBackView" destination="Ph9-Hf-mGS" id="hzh-eF-6A7"/>
@@ -1046,7 +987,7 @@ About Covid-19.</string>
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="049-f3-i03">
-                                                <rect key="frame" x="359" y="170" width="40" height="40"/>
+                                                <rect key="frame" x="359" y="45" width="40" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="VHK-le-kWu"/>
                                                     <constraint firstAttribute="width" constant="40" id="epS-Mn-OD7"/>
@@ -1058,7 +999,7 @@ About Covid-19.</string>
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vgx-w7-C3A">
-                                                <rect key="frame" x="15" y="170" width="40" height="40"/>
+                                                <rect key="frame" x="15" y="45" width="40" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="IsI-Yd-Y4R"/>
                                                     <constraint firstAttribute="width" constant="40" id="ufn-eb-taI"/>

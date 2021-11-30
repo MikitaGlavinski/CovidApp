@@ -16,6 +16,9 @@
 		FA5227E42750CF6900440076 /* AboutCovidCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5227E32750CF6900440076 /* AboutCovidCoordinator.swift */; };
 		FA5227E62750DEE000440076 /* PreventionBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5227E52750DEE000440076 /* PreventionBackView.swift */; };
 		FA5227E82751282A00440076 /* AboutCovidCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5227E72751282A00440076 /* AboutCovidCoordinatorTests.swift */; };
+		FA541FE42756425C00FE6D4D /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA541FE32756425C00FE6D4D /* UIViewExtension.swift */; };
+		FA541FE62756467500FE6D4D /* StatisticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA541FE52756467500FE6D4D /* StatisticView.swift */; };
+		FA541FE82756471C00FE6D4D /* StatisticView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA541FE72756471C00FE6D4D /* StatisticView.xib */; };
 		FA67CE6C274E5300000AA1C1 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA67CE6B274E5300000AA1C1 /* NetworkService.swift */; };
 		FA67CE6E274E530E000AA1C1 /* NetworkApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA67CE6D274E530E000AA1C1 /* NetworkApi.swift */; };
 		FA67CE70274E5316000AA1C1 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA67CE6F274E5316000AA1C1 /* Router.swift */; };
@@ -29,7 +32,6 @@
 		FAB35FD0274D07980075D76A /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB35FCF274D07980075D76A /* GradientView.swift */; };
 		FAB35FD2274D166A0075D76A /* TextFieldBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB35FD1274D166A0075D76A /* TextFieldBackView.swift */; };
 		FAB35FD6274D2B120075D76A /* StatisticBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB35FD5274D2B120075D76A /* StatisticBackView.swift */; };
-		FAB35FD8274D33170075D76A /* MarkBorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB35FD7274D33170075D76A /* MarkBorderView.swift */; };
 		FAD6683D274BD2C300CD0C97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD6683C274BD2C300CD0C97 /* AppDelegate.swift */; };
 		FAD6683F274BD2C300CD0C97 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD6683E274BD2C300CD0C97 /* SceneDelegate.swift */; };
 		FAD66846274BD2C400CD0C97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAD66845274BD2C400CD0C97 /* Assets.xcassets */; };
@@ -97,6 +99,9 @@
 		FA5227E32750CF6900440076 /* AboutCovidCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCovidCoordinator.swift; sourceTree = "<group>"; };
 		FA5227E52750DEE000440076 /* PreventionBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreventionBackView.swift; sourceTree = "<group>"; };
 		FA5227E72751282A00440076 /* AboutCovidCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCovidCoordinatorTests.swift; sourceTree = "<group>"; };
+		FA541FE32756425C00FE6D4D /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		FA541FE52756467500FE6D4D /* StatisticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticView.swift; sourceTree = "<group>"; };
+		FA541FE72756471C00FE6D4D /* StatisticView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatisticView.xib; sourceTree = "<group>"; };
 		FA67CE6B274E5300000AA1C1 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		FA67CE6D274E530E000AA1C1 /* NetworkApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkApi.swift; sourceTree = "<group>"; };
 		FA67CE6F274E5316000AA1C1 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
@@ -110,7 +115,6 @@
 		FAB35FCF274D07980075D76A /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		FAB35FD1274D166A0075D76A /* TextFieldBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldBackView.swift; sourceTree = "<group>"; };
 		FAB35FD5274D2B120075D76A /* StatisticBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticBackView.swift; sourceTree = "<group>"; };
-		FAB35FD7274D33170075D76A /* MarkBorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkBorderView.swift; sourceTree = "<group>"; };
 		FAD66839274BD2C300CD0C97 /* CovidView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CovidView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAD6683C274BD2C300CD0C97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAD6683E274BD2C300CD0C97 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -341,6 +345,7 @@
 			isa = PBXGroup;
 			children = (
 				FAD66878274BE24900CD0C97 /* UIFontExtension.swift */,
+				FA541FE32756425C00FE6D4D /* UIViewExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -352,8 +357,9 @@
 				FAB35FCF274D07980075D76A /* GradientView.swift */,
 				FAB35FD1274D166A0075D76A /* TextFieldBackView.swift */,
 				FAB35FD5274D2B120075D76A /* StatisticBackView.swift */,
-				FAB35FD7274D33170075D76A /* MarkBorderView.swift */,
 				FA5227E52750DEE000440076 /* PreventionBackView.swift */,
+				FA541FE52756467500FE6D4D /* StatisticView.swift */,
+				FA541FE72756471C00FE6D4D /* StatisticView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -605,6 +611,7 @@
 				FAD66874274BE18000CD0C97 /* Poppins-Bold.ttf in Resources */,
 				FAB35FCE274D00CB0075D76A /* Main.storyboard in Resources */,
 				FAD66846274BD2C400CD0C97 /* Assets.xcassets in Resources */,
+				FA541FE82756471C00FE6D4D /* StatisticView.xib in Resources */,
 				FAD66876274BE18000CD0C97 /* Poppins-Regular.ttf in Resources */,
 				FAFD49D82754D41D00DDD5E1 /* GoogleService-Info.plist in Resources */,
 			);
@@ -742,6 +749,7 @@
 				FA5227E42750CF6900440076 /* AboutCovidCoordinator.swift in Sources */,
 				FAB35FA8274CC5E40075D76A /* Coordinator.swift in Sources */,
 				FA67CE74274E5A9A000AA1C1 /* ParametersEncoder.swift in Sources */,
+				FA541FE42756425C00FE6D4D /* UIViewExtension.swift in Sources */,
 				FA5227E02750CE8000440076 /* AboutCovidViewController.swift in Sources */,
 				FAD6683D274BD2C300CD0C97 /* AppDelegate.swift in Sources */,
 				FA67CE72274E580E000AA1C1 /* DictinoryHelper.swift in Sources */,
@@ -756,7 +764,6 @@
 				FA67CE70274E5316000AA1C1 /* Router.swift in Sources */,
 				FAFD49E42754DFB100DDD5E1 /* AuthViewModel.swift in Sources */,
 				FAFD49E82754DFF200DDD5E1 /* AuthCoordinator.swift in Sources */,
-				FAB35FD8274D33170075D76A /* MarkBorderView.swift in Sources */,
 				FADAFBE6274F844C0003BC9A /* SecureStorageService.swift in Sources */,
 				FAD6686F274BD7FF00CD0C97 /* SpreadView.swift in Sources */,
 				FAB35FD6274D2B120075D76A /* StatisticBackView.swift in Sources */,
@@ -766,6 +773,7 @@
 				FAD6686D274BD66100CD0C97 /* InfoViewController.swift in Sources */,
 				FADAFBE4274F6AF20003BC9A /* InfoCountryModel.swift in Sources */,
 				FAD6683F274BD2C300CD0C97 /* SceneDelegate.swift in Sources */,
+				FA541FE62756467500FE6D4D /* StatisticView.swift in Sources */,
 				FAFD49F02755025200DDD5E1 /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

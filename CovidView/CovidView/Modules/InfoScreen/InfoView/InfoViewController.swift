@@ -24,9 +24,9 @@ class InfoViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var tableBackView: StatisticBackView!
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var infectedCountLabel: UILabel!
-    @IBOutlet weak var deathsCountLabel: UILabel!
-    @IBOutlet weak var recoveredCountLabel: UILabel!
+    @IBOutlet weak var infectedView: StatisticView!
+    @IBOutlet weak var deathsView: StatisticView!
+    @IBOutlet weak var recoveredView: StatisticView!
     @IBOutlet weak var countryLabel: UILabel!
     @IBOutlet weak var updateLabel: UILabel!
     @IBOutlet weak var doctorViewTopConstraint: NSLayoutConstraint!
@@ -105,9 +105,12 @@ extension InfoViewController: InfoViewInput {
     }
     
     func updateInfo(by country: InfoCountryModel) {
-        infectedCountLabel.text = String(country.confirmed)
-        deathsCountLabel.text = String(country.deaths)
-        recoveredCountLabel.text = String(country.recovered)
+        infectedView.countLabel.text = String(country.confirmed)
+        deathsView.countLabel.text = String(country.deaths)
+        recoveredView.countLabel.text = String(country.recovered)
+//        infectedCountLabel.text = String(country.confirmed)
+//        deathsCountLabel.text = String(country.deaths)
+//        recoveredCountLabel.text = String(country.recovered)
         countryLabel.text = country.name
         
         updateLabel.text = "Newest update \(country.date)"
