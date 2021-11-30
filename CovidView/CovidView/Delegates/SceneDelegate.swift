@@ -34,6 +34,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             authCoordinator.start()
         }
     }
+    
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        guard let url = URLContexts.first?.url else { return }
+        let delegate = UIApplication.shared.delegate as! AppDelegate
+        delegate.application(UIApplication.shared, open: url, options: [:])
+    }
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.

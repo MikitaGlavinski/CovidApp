@@ -13,6 +13,7 @@ protocol AuthViewModelProtocol {
     func signInTapped(email: String, password: String)
     func googleTapped()
     func createAccount()
+    func facebookSignIn(token: String)
 }
 
 class AuthViewModel {
@@ -71,5 +72,18 @@ extension AuthViewModel: AuthViewModelProtocol {
     
     func createAccount() {
         coordinator.routeToRegister()
+    }
+    
+    func facebookSignIn(token: String) {
+        let credential = FacebookAuthProvider.credential(withAccessToken: token)
+        Auth.auth().signIn(with: credential) { authResult, error in
+            if let error = error {
+                self.view.showError(error)
+                return
+            }
+            guard let token = authResult?.user.uid else { return }
+            SecureStorageService.shared.saveToken(token: token)
+            self.coordinator.routeToInfoScreen()
+        }
     }
 }

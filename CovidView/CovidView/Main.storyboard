@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -27,6 +28,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EqE-eB-j0K">
+                                <rect key="frame" x="50" y="442" width="314" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="swF-la-oTg"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Sign In with facebook"/>
+                                <connections>
+                                    <action selector="facebookTapped:" destination="cdP-JI-XFN" eventType="touchUpInside" id="8Qi-c6-I1q"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vAE-JR-otb">
+                                <rect key="frame" x="50" y="372" width="314" height="40"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="xVc-do-TYd"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Sign In with google"/>
+                                <connections>
+                                    <action selector="googleTapped:" destination="cdP-JI-XFN" eventType="touchUpInside" id="qgI-BY-W08"/>
+                                </connections>
+                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yUX-lu-1QO">
                                 <rect key="frame" x="50" y="144" width="314" height="34"/>
                                 <constraints>
@@ -51,20 +78,13 @@
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Sign In"/>
+                                <state key="normal" title="Sign In with email"/>
                                 <connections>
                                     <action selector="signInTapped:" destination="cdP-JI-XFN" eventType="touchUpInside" id="SRL-sg-LzH"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GMZ-8M-eJj" customClass="GIDSignInButton">
-                                <rect key="frame" x="50" y="370" width="314" height="30"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="cia-jH-pFe"/>
-                                </constraints>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aym-oa-9yq">
-                                <rect key="frame" x="100" y="808" width="214" height="35"/>
+                                <rect key="frame" x="80" y="808" width="254" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="64v-ef-oQa"/>
                                 </constraints>
@@ -96,23 +116,26 @@
                         <viewLayoutGuide key="safeArea" id="rDA-qd-cj7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="GMZ-8M-eJj" firstAttribute="top" secondItem="MNw-w6-DSP" secondAttribute="bottom" constant="28" id="0P3-bc-AhR"/>
                             <constraint firstItem="trB-Ci-0Dz" firstAttribute="top" secondItem="yUX-lu-1QO" secondAttribute="bottom" constant="37" id="4lR-qo-a1s"/>
+                            <constraint firstItem="vAE-JR-otb" firstAttribute="top" secondItem="MNw-w6-DSP" secondAttribute="bottom" constant="30" id="60t-kK-eFf"/>
                             <constraint firstItem="trB-Ci-0Dz" firstAttribute="leading" secondItem="rDA-qd-cj7" secondAttribute="leading" constant="50" id="6Ts-7o-DTS"/>
                             <constraint firstItem="xVj-4i-Y3U" firstAttribute="bottom" secondItem="SmC-1V-rTS" secondAttribute="bottom" id="BhR-PQ-awr"/>
                             <constraint firstItem="yUX-lu-1QO" firstAttribute="leading" secondItem="rDA-qd-cj7" secondAttribute="leading" constant="50" id="DYo-Ly-Qrj"/>
-                            <constraint firstItem="rDA-qd-cj7" firstAttribute="trailing" secondItem="aym-oa-9yq" secondAttribute="trailing" constant="100" id="EK8-f1-FpY"/>
+                            <constraint firstItem="rDA-qd-cj7" firstAttribute="trailing" secondItem="aym-oa-9yq" secondAttribute="trailing" constant="80" id="EK8-f1-FpY"/>
                             <constraint firstItem="rDA-qd-cj7" firstAttribute="trailing" secondItem="trB-Ci-0Dz" secondAttribute="trailing" constant="50" id="FLa-pT-Cin"/>
-                            <constraint firstItem="aym-oa-9yq" firstAttribute="leading" secondItem="rDA-qd-cj7" secondAttribute="leading" constant="100" id="MXU-RY-oAn"/>
+                            <constraint firstItem="rDA-qd-cj7" firstAttribute="trailing" secondItem="vAE-JR-otb" secondAttribute="trailing" constant="50" id="KCd-L5-Kjo"/>
+                            <constraint firstItem="aym-oa-9yq" firstAttribute="leading" secondItem="rDA-qd-cj7" secondAttribute="leading" constant="80" id="MXU-RY-oAn"/>
                             <constraint firstItem="xVj-4i-Y3U" firstAttribute="leading" secondItem="rDA-qd-cj7" secondAttribute="leading" id="OqD-JJ-DCV"/>
-                            <constraint firstItem="rDA-qd-cj7" firstAttribute="trailing" secondItem="GMZ-8M-eJj" secondAttribute="trailing" constant="50" id="Rxs-im-Dve"/>
+                            <constraint firstItem="EqE-eB-j0K" firstAttribute="leading" secondItem="rDA-qd-cj7" secondAttribute="leading" constant="50" id="Qs3-Lk-zJj"/>
+                            <constraint firstItem="rDA-qd-cj7" firstAttribute="trailing" secondItem="EqE-eB-j0K" secondAttribute="trailing" constant="50" id="QyB-6f-8pR"/>
+                            <constraint firstItem="vAE-JR-otb" firstAttribute="leading" secondItem="rDA-qd-cj7" secondAttribute="leading" constant="50" id="RWI-Sm-iK0"/>
                             <constraint firstItem="MNw-w6-DSP" firstAttribute="leading" secondItem="rDA-qd-cj7" secondAttribute="leading" constant="50" id="XW0-9x-TcM"/>
+                            <constraint firstItem="EqE-eB-j0K" firstAttribute="top" secondItem="vAE-JR-otb" secondAttribute="bottom" constant="30" id="bj9-oL-4C6"/>
                             <constraint firstItem="rDA-qd-cj7" firstAttribute="bottom" secondItem="aym-oa-9yq" secondAttribute="bottom" constant="19" id="eTd-xC-xAQ"/>
                             <constraint firstItem="rDA-qd-cj7" firstAttribute="trailing" secondItem="xVj-4i-Y3U" secondAttribute="trailing" id="iCP-eT-vQk"/>
                             <constraint firstItem="MNw-w6-DSP" firstAttribute="top" secondItem="trB-Ci-0Dz" secondAttribute="bottom" constant="53" id="icP-1j-CZO"/>
                             <constraint firstItem="rDA-qd-cj7" firstAttribute="trailing" secondItem="yUX-lu-1QO" secondAttribute="trailing" constant="50" id="kd0-Gp-ATs"/>
                             <constraint firstAttribute="top" secondItem="xVj-4i-Y3U" secondAttribute="top" id="sQR-Kz-cOA"/>
-                            <constraint firstItem="GMZ-8M-eJj" firstAttribute="leading" secondItem="rDA-qd-cj7" secondAttribute="leading" constant="50" id="woB-Wn-tE4"/>
                             <constraint firstItem="rDA-qd-cj7" firstAttribute="trailing" secondItem="MNw-w6-DSP" secondAttribute="trailing" constant="50" id="xPb-sU-WLb"/>
                             <constraint firstItem="yUX-lu-1QO" firstAttribute="top" secondItem="rDA-qd-cj7" secondAttribute="top" constant="100" id="xjL-A0-kOs"/>
                         </constraints>
@@ -122,7 +145,7 @@
                         <outlet property="activityIndicator" destination="5vr-7C-ehX" id="tU7-Zg-b3T"/>
                         <outlet property="blurView" destination="xVj-4i-Y3U" id="vh9-Nz-ezF"/>
                         <outlet property="emailTextfield" destination="yUX-lu-1QO" id="QFm-BB-EF0"/>
-                        <outlet property="googleButton" destination="GMZ-8M-eJj" id="SLp-1I-Ie8"/>
+                        <outlet property="googleButton" destination="vAE-JR-otb" id="a7L-lr-x1i"/>
                         <outlet property="passwordTextfield" destination="trB-Ci-0Dz" id="8dE-9n-lsI"/>
                     </connections>
                 </viewController>
@@ -224,11 +247,8 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Drcorona" translatesAutoresizingMaskIntoConstraints="NO" id="jau-Jd-2eV">
                                         <rect key="frame" x="0.0" y="20" width="240" height="381"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YEu-U2-5KG">
-                                        <rect key="frame" x="150" y="50" width="200" height="56"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="200" id="GMt-Vj-d3b"/>
-                                        </constraints>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="YEu-U2-5KG">
+                                        <rect key="frame" x="150" y="50" width="224" height="56"/>
                                         <string key="text">All you need
 is stay at home.</string>
                                         <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="20"/>
@@ -267,14 +287,14 @@ is stay at home.</string>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Lp-Cn-thE" customClass="TextFieldBackView" customModule="CovidView" customModuleProvider="target">
                                                         <rect key="frame" x="20" y="80" width="374" height="65"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="maps-and-flags" translatesAutoresizingMaskIntoConstraints="NO" id="hI9-ml-tjp">
+                                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="maps-and-flags" translatesAutoresizingMaskIntoConstraints="NO" id="hI9-ml-tjp">
                                                                 <rect key="frame" x="19" y="20" width="23" height="25"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="23" id="4XN-Sn-bXn"/>
                                                                     <constraint firstAttribute="height" constant="25" id="iRr-q0-VhV"/>
                                                                 </constraints>
                                                             </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVJ-2n-caB">
+                                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVJ-2n-caB">
                                                                 <rect key="frame" x="57" y="20" width="73.5" height="25.5"/>
                                                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="18"/>
                                                                 <nil key="textColor"/>
@@ -295,7 +315,7 @@ is stay at home.</string>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
-                                                        <color key="backgroundColor" red="0.99215686270000003" green="0.99215686270000003" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="backgroundColor" name="backColor"/>
                                                         <constraints>
                                                             <constraint firstItem="eVJ-2n-caB" firstAttribute="leading" secondItem="hI9-ml-tjp" secondAttribute="trailing" constant="15" id="5qd-Mo-PRU"/>
                                                             <constraint firstItem="hI9-ml-tjp" firstAttribute="leading" secondItem="7Lp-Cn-thE" secondAttribute="leading" constant="19" id="6F2-0w-NdR"/>
@@ -323,8 +343,8 @@ is stay at home.</string>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Newest update March 28" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z6w-8r-2d7">
-                                                        <rect key="frame" x="20" y="217" width="188" height="21"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Newest update March 28" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Z6w-8r-2d7">
+                                                        <rect key="frame" x="20" y="217" width="249" height="21"/>
                                                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
                                                         <color key="textColor" systemColor="secondaryLabelColor"/>
                                                         <nil key="highlightedColor"/>
@@ -353,7 +373,7 @@ is stay at home.</string>
                                                         <rect key="frame" x="25" y="268" width="364" height="170"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UJW-ga-RfM">
-                                                                <rect key="frame" x="60" y="18" width="30" height="30"/>
+                                                                <rect key="frame" x="40" y="18" width="30" height="30"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aZM-Vm-hjv" customClass="MarkBorderView" customModule="CovidView" customModuleProvider="target">
                                                                         <rect key="frame" x="7.5" y="7.5" width="15" height="15"/>
@@ -425,7 +445,7 @@ is stay at home.</string>
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ppD-Z3-xtx">
-                                                                <rect key="frame" x="274" y="18" width="30" height="30"/>
+                                                                <rect key="frame" x="294" y="18" width="30" height="30"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n9F-O2-uJP" customClass="MarkBorderView" customModule="CovidView" customModuleProvider="target">
                                                                         <rect key="frame" x="7.5" y="7.5" width="15" height="15"/>
@@ -461,34 +481,34 @@ is stay at home.</string>
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ddk-eR-kas">
-                                                                <rect key="frame" x="35" y="73" width="80" height="42"/>
+                                                                <rect key="frame" x="17.5" y="73" width="75" height="42"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" constant="80" id="L4Y-7l-5aR"/>
+                                                                    <constraint firstAttribute="width" constant="75" id="L4Y-7l-5aR"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                                                 <color key="textColor" red="1" green="0.5725490196078431" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="mYw-DX-k6e">
-                                                                <rect key="frame" x="142" y="73" width="80" height="42"/>
+                                                                <rect key="frame" x="144.5" y="73" width="75" height="42"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" constant="80" id="o8s-9y-7re"/>
+                                                                    <constraint firstAttribute="width" constant="75" id="o8s-9y-7re"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                                                 <color key="textColor" red="1" green="0.28235294117647058" blue="0.28235294117647058" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="7dG-dG-eCt">
-                                                                <rect key="frame" x="249" y="73" width="80" height="42"/>
+                                                                <rect key="frame" x="271.5" y="73" width="75" height="42"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" constant="80" id="j87-2V-AJI"/>
+                                                                    <constraint firstAttribute="width" constant="75" id="j87-2V-AJI"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                                                 <color key="textColor" red="0.21176470588235294" green="0.75686274509803919" blue="0.17254901960784313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Infected" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tok-Qf-PMa">
-                                                                <rect key="frame" x="42" y="125" width="66.5" height="22.5"/>
+                                                                <rect key="frame" x="22" y="125" width="66.5" height="22.5"/>
                                                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
                                                                 <color key="textColor" red="0.67450980392156867" green="0.67450980392156867" blue="0.67450980392156867" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -500,16 +520,16 @@ is stay at home.</string>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recovered" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p0c-b1-kSK">
-                                                                <rect key="frame" x="246" y="126" width="86" height="22.5"/>
+                                                                <rect key="frame" x="266" y="126" width="86" height="22.5"/>
                                                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
                                                                 <color key="textColor" red="0.67450980390000004" green="0.67450980390000004" blue="0.67450980390000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
-                                                        <color key="backgroundColor" red="0.99215686270000003" green="0.99215686270000003" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="backgroundColor" name="backColor"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="trailing" secondItem="ppD-Z3-xtx" secondAttribute="trailing" constant="60" id="90T-jj-z3G"/>
-                                                            <constraint firstItem="UJW-ga-RfM" firstAttribute="leading" secondItem="o81-UN-fcB" secondAttribute="leading" constant="60" id="CQn-aR-Qbu"/>
+                                                            <constraint firstAttribute="trailing" secondItem="ppD-Z3-xtx" secondAttribute="trailing" constant="40" id="90T-jj-z3G"/>
+                                                            <constraint firstItem="UJW-ga-RfM" firstAttribute="leading" secondItem="o81-UN-fcB" secondAttribute="leading" constant="40" id="CQn-aR-Qbu"/>
                                                             <constraint firstItem="mL7-oH-iDC" firstAttribute="top" secondItem="mYw-DX-k6e" secondAttribute="bottom" constant="10" id="DQb-NX-YTK"/>
                                                             <constraint firstItem="ddk-eR-kas" firstAttribute="centerX" secondItem="UJW-ga-RfM" secondAttribute="centerX" id="EfW-SR-L3H"/>
                                                             <constraint firstItem="ppD-Z3-xtx" firstAttribute="top" secondItem="o81-UN-fcB" secondAttribute="top" constant="18" id="FCM-kr-8Q2"/>
@@ -632,6 +652,7 @@ is stay at home.</string>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
+                                                    <constraint firstItem="1cC-cc-Fpl" firstAttribute="leading" secondItem="Z6w-8r-2d7" secondAttribute="trailing" constant="15" id="Aoz-D3-Edk"/>
                                                     <constraint firstItem="4dZ-hL-80U" firstAttribute="leading" secondItem="3Ri-73-0xa" secondAttribute="leading" constant="25" id="BIt-mK-uK6"/>
                                                     <constraint firstAttribute="trailing" secondItem="mKu-eu-2x8" secondAttribute="trailing" constant="20" id="Fyw-yY-gB0"/>
                                                     <constraint firstAttribute="trailing" secondItem="o81-UN-fcB" secondAttribute="trailing" constant="25" id="HDX-me-Fjf"/>
@@ -655,15 +676,15 @@ is stay at home.</string>
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exi-Gh-n83">
-                                                <rect key="frame" x="359" y="45" width="40" height="40"/>
+                                                <rect key="frame" x="359" y="128" width="40" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="MAk-38-WLK"/>
                                                     <constraint firstAttribute="width" constant="40" id="NHj-FF-VdQ"/>
                                                 </constraints>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" name="backColor"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" image="menu">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="titleColor" name="backColor"/>
                                                 </state>
                                             </button>
                                             <imageView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="virus" translatesAutoresizingMaskIntoConstraints="NO" id="18B-H4-gGh">
@@ -704,7 +725,7 @@ is stay at home.</string>
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" red="0.99215686270000003" green="0.99215686270000003" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="backColor"/>
                         <constraints>
                             <constraint firstItem="C4I-bw-j2h" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="AtK-2Y-EQ1"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="LSm-kB-Kf6" secondAttribute="trailing" id="Cvz-Li-qWK"/>
@@ -712,6 +733,7 @@ is stay at home.</string>
                             <constraint firstItem="3tr-Yl-KAr" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" id="Fqd-Xh-1fd"/>
                             <constraint firstItem="LSm-kB-Kf6" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="J6w-nf-ZRI"/>
                             <constraint firstAttribute="top" secondItem="LSm-kB-Kf6" secondAttribute="top" id="Ny9-vN-QRy"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="YEu-U2-5KG" secondAttribute="trailing" constant="20" id="eGY-YR-rbv"/>
                             <constraint firstItem="LSm-kB-Kf6" firstAttribute="bottom" secondItem="5EZ-qb-Rvc" secondAttribute="bottom" id="l9z-aV-vWQ"/>
                             <constraint firstItem="exi-Gh-n83" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="1" id="ukh-ui-QiT"/>
                         </constraints>
@@ -762,8 +784,8 @@ is stay at home.</string>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coronadr" translatesAutoresizingMaskIntoConstraints="NO" id="Hdj-gZ-zYv">
                                         <rect key="frame" x="0.0" y="20" width="353" height="380"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fG5-Em-5V6">
-                                        <rect key="frame" x="233" y="50" width="161.5" height="56"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fG5-Em-5V6">
+                                        <rect key="frame" x="233" y="50" width="211" height="56"/>
                                         <string key="text">Get to know
 About Covid-19.</string>
                                         <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="20"/>
@@ -827,7 +849,7 @@ About Covid-19.</string>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
-                                                                <color key="backgroundColor" red="0.99215686270000003" green="0.99215686270000003" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <color key="backgroundColor" name="backColor"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="trailing" secondItem="LUN-yj-Dpq" secondAttribute="trailing" constant="5" id="2nf-9H-y8N"/>
                                                                     <constraint firstItem="LUN-yj-Dpq" firstAttribute="leading" secondItem="ayN-yk-1Dk" secondAttribute="leading" constant="5" id="7WA-Mq-Z3U"/>
@@ -855,7 +877,7 @@ About Covid-19.</string>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
-                                                                <color key="backgroundColor" red="0.99215686270000003" green="0.99215686270000003" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <color key="backgroundColor" name="backColor"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="bottom" secondItem="llL-ab-sA2" secondAttribute="bottom" constant="7" id="AYg-1K-E8s"/>
                                                                     <constraint firstAttribute="trailing" secondItem="42M-Jw-6po" secondAttribute="trailing" constant="5" id="CP0-pw-dBO"/>
@@ -883,7 +905,7 @@ About Covid-19.</string>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
-                                                                <color key="backgroundColor" red="0.99215686270000003" green="0.99215686270000003" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <color key="backgroundColor" name="backColor"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="bottom" secondItem="pHy-oK-paB" secondAttribute="bottom" constant="20" id="KP0-QM-ZYK"/>
                                                                     <constraint firstItem="Avt-iu-tDO" firstAttribute="centerX" secondItem="QNk-Dm-Jbc" secondAttribute="centerX" id="KjJ-uB-NAk"/>
@@ -918,14 +940,14 @@ About Covid-19.</string>
                                                                     <constraint firstAttribute="height" constant="232" id="tUj-na-eZ2"/>
                                                                 </constraints>
                                                             </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wash your hands" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gIq-4g-Ddc">
-                                                                <rect key="frame" x="184.5" y="15" width="158" height="25.5"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wash your hands" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="gIq-4g-Ddc">
+                                                                <rect key="frame" x="199.5" y="15" width="159.5" height="25.5"/>
                                                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="18"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="These diseases include gastrointestinal infections, such as Salmonella, and respiratory infections, such as influenza." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mnf-8y-zAn">
-                                                                <rect key="frame" x="184.5" y="55.5" width="169.5" height="50.5"/>
+                                                                <rect key="frame" x="199.5" y="55.5" width="159.5" height="50.5"/>
                                                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="9"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -934,19 +956,20 @@ About Covid-19.</string>
                                                                 <rect key="frame" x="352" y="157.5" width="7" height="12.5"/>
                                                             </imageView>
                                                         </subviews>
-                                                        <color key="backgroundColor" red="0.99215686270000003" green="0.99215686270000003" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="backgroundColor" name="backColor"/>
                                                         <constraints>
                                                             <constraint firstItem="gIq-4g-Ddc" firstAttribute="top" secondItem="vNw-nX-E4Y" secondAttribute="top" constant="15" id="4Le-w0-alo"/>
                                                             <constraint firstItem="2vw-9N-Oor" firstAttribute="width" secondItem="vNw-nX-E4Y" secondAttribute="width" multiplier="0.6" id="5WS-t4-T60"/>
                                                             <constraint firstItem="mnf-8y-zAn" firstAttribute="top" secondItem="gIq-4g-Ddc" secondAttribute="bottom" constant="15" id="9zt-hD-QKX"/>
                                                             <constraint firstAttribute="trailing" secondItem="V8A-4m-VgI" secondAttribute="trailing" constant="15" id="Dbf-uh-b7V"/>
-                                                            <constraint firstAttribute="trailing" secondItem="mnf-8y-zAn" secondAttribute="trailing" constant="20" id="EQA-5m-7Ra"/>
+                                                            <constraint firstAttribute="trailing" secondItem="mnf-8y-zAn" secondAttribute="trailing" constant="15" id="EQA-5m-7Ra"/>
+                                                            <constraint firstAttribute="trailing" secondItem="gIq-4g-Ddc" secondAttribute="trailing" constant="15" id="EUc-TO-PXb"/>
                                                             <constraint firstItem="2vw-9N-Oor" firstAttribute="top" secondItem="vNw-nX-E4Y" secondAttribute="top" constant="-21" id="Hy6-Dq-kbD"/>
-                                                            <constraint firstItem="mnf-8y-zAn" firstAttribute="leading" secondItem="2vw-9N-Oor" secondAttribute="trailing" constant="-40" id="Ibt-vi-9Z1"/>
+                                                            <constraint firstItem="mnf-8y-zAn" firstAttribute="leading" secondItem="2vw-9N-Oor" secondAttribute="trailing" constant="-25" id="Ibt-vi-9Z1"/>
                                                             <constraint firstAttribute="bottom" secondItem="V8A-4m-VgI" secondAttribute="bottom" constant="15" id="T8C-g4-Cdq"/>
                                                             <constraint firstAttribute="bottom" secondItem="2vw-9N-Oor" secondAttribute="bottom" constant="-26" id="Whc-d7-sPD"/>
                                                             <constraint firstAttribute="height" constant="185" id="dpM-Nb-VU8"/>
-                                                            <constraint firstItem="gIq-4g-Ddc" firstAttribute="leading" secondItem="2vw-9N-Oor" secondAttribute="trailing" constant="-40" id="g5F-oq-98o"/>
+                                                            <constraint firstItem="gIq-4g-Ddc" firstAttribute="leading" secondItem="2vw-9N-Oor" secondAttribute="trailing" constant="-25" id="g5F-oq-98o"/>
                                                             <constraint firstItem="2vw-9N-Oor" firstAttribute="leading" secondItem="vNw-nX-E4Y" secondAttribute="leading" id="jIF-IP-yqQ"/>
                                                         </constraints>
                                                         <userDefinedRuntimeAttributes>
@@ -964,14 +987,14 @@ About Covid-19.</string>
                                                                     <constraint firstAttribute="height" constant="232" id="TQe-jJ-8bw"/>
                                                                 </constraints>
                                                             </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wear face mask" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tsm-yf-Y4T">
-                                                                <rect key="frame" x="184.5" y="15" width="147.5" height="25.5"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wear face mask" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="tsm-yf-Y4T">
+                                                                <rect key="frame" x="199.5" y="15" width="159.5" height="25.5"/>
                                                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="18"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zkw-Lo-ata">
-                                                                <rect key="frame" x="184.5" y="55.5" width="169.5" height="63"/>
+                                                                <rect key="frame" x="199.5" y="55.5" width="159.5" height="63"/>
                                                                 <string key="text">Since the start of the coronovirus outbreak some places have fully embraced wearing face masks, and anyone caught without one risks becoming a social pariah.</string>
                                                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="9"/>
                                                                 <nil key="textColor"/>
@@ -981,18 +1004,19 @@ About Covid-19.</string>
                                                                 <rect key="frame" x="352" y="157.5" width="7" height="12.5"/>
                                                             </imageView>
                                                         </subviews>
-                                                        <color key="backgroundColor" red="0.99215686270000003" green="0.99215686270000003" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="backgroundColor" name="backColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="bottom" secondItem="8Z0-NC-nbY" secondAttribute="bottom" constant="15" id="3ec-4Z-cB7"/>
                                                             <constraint firstAttribute="trailing" secondItem="8Z0-NC-nbY" secondAttribute="trailing" constant="15" id="MZo-bI-LPS"/>
-                                                            <constraint firstItem="tsm-yf-Y4T" firstAttribute="leading" secondItem="Kgr-eG-Zgg" secondAttribute="trailing" constant="-40" id="Ogy-fV-4ZL"/>
+                                                            <constraint firstItem="tsm-yf-Y4T" firstAttribute="leading" secondItem="Kgr-eG-Zgg" secondAttribute="trailing" constant="-25" id="Ogy-fV-4ZL"/>
                                                             <constraint firstAttribute="bottom" secondItem="Kgr-eG-Zgg" secondAttribute="bottom" constant="-26" id="V5f-cW-tTy"/>
                                                             <constraint firstItem="Kgr-eG-Zgg" firstAttribute="top" secondItem="pqN-ki-DC0" secondAttribute="top" constant="-21" id="YlP-Kf-XCW"/>
                                                             <constraint firstItem="Kgr-eG-Zgg" firstAttribute="leading" secondItem="pqN-ki-DC0" secondAttribute="leading" id="ZnN-bm-2N2"/>
-                                                            <constraint firstAttribute="trailing" secondItem="zkw-Lo-ata" secondAttribute="trailing" constant="20" id="bWd-pV-Jee"/>
-                                                            <constraint firstItem="zkw-Lo-ata" firstAttribute="leading" secondItem="Kgr-eG-Zgg" secondAttribute="trailing" constant="-40" id="j2X-oF-hcN"/>
+                                                            <constraint firstAttribute="trailing" secondItem="zkw-Lo-ata" secondAttribute="trailing" constant="15" id="bWd-pV-Jee"/>
+                                                            <constraint firstItem="zkw-Lo-ata" firstAttribute="leading" secondItem="Kgr-eG-Zgg" secondAttribute="trailing" constant="-25" id="j2X-oF-hcN"/>
                                                             <constraint firstItem="tsm-yf-Y4T" firstAttribute="top" secondItem="pqN-ki-DC0" secondAttribute="top" constant="15" id="n8n-R7-eor"/>
                                                             <constraint firstAttribute="height" constant="185" id="pyw-C0-JDv"/>
+                                                            <constraint firstAttribute="trailing" secondItem="tsm-yf-Y4T" secondAttribute="trailing" constant="15" id="sX8-hB-56W"/>
                                                             <constraint firstItem="zkw-Lo-ata" firstAttribute="top" secondItem="tsm-yf-Y4T" secondAttribute="bottom" constant="15" id="u3h-nc-gSt"/>
                                                             <constraint firstItem="Kgr-eG-Zgg" firstAttribute="width" secondItem="pqN-ki-DC0" secondAttribute="width" multiplier="0.6" id="yHA-4y-6mw"/>
                                                         </constraints>
@@ -1022,24 +1046,24 @@ About Covid-19.</string>
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="049-f3-i03">
-                                                <rect key="frame" x="359" y="45" width="40" height="40"/>
+                                                <rect key="frame" x="359" y="170" width="40" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="VHK-le-kWu"/>
                                                     <constraint firstAttribute="width" constant="40" id="epS-Mn-OD7"/>
                                                 </constraints>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" name="backColor"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" image="menu">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vgx-w7-C3A">
-                                                <rect key="frame" x="15" y="45" width="40" height="40"/>
+                                                <rect key="frame" x="15" y="170" width="40" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="IsI-Yd-Y4R"/>
                                                     <constraint firstAttribute="width" constant="40" id="ufn-eb-taI"/>
                                                 </constraints>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" name="backColor"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" image="chevron.backward" catalog="system">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1077,11 +1101,12 @@ About Covid-19.</string>
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nzn-Ht-zG4"/>
-                        <color key="backgroundColor" red="0.99215686274509807" green="0.99215686274509807" blue="0.99215686274509807" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="backColor"/>
                         <constraints>
                             <constraint firstItem="Vgx-w7-C3A" firstAttribute="top" secondItem="nzn-Ht-zG4" secondAttribute="top" constant="1" id="Dra-3G-vIt"/>
                             <constraint firstItem="049-f3-i03" firstAttribute="top" secondItem="nzn-Ht-zG4" secondAttribute="top" constant="1" id="IUW-tJ-4Ht"/>
                             <constraint firstItem="q2V-0v-owW" firstAttribute="width" secondItem="aeE-0y-43h" secondAttribute="width" id="YCW-Sx-jn6"/>
+                            <constraint firstItem="nzn-Ht-zG4" firstAttribute="trailing" secondItem="fG5-Em-5V6" secondAttribute="trailing" constant="20" id="aal-AU-khh"/>
                             <constraint firstItem="wtH-AH-mco" firstAttribute="bottom" secondItem="aeE-0y-43h" secondAttribute="bottom" id="bpc-3U-uEm"/>
                             <constraint firstAttribute="top" secondItem="wtH-AH-mco" secondAttribute="top" id="frd-Ng-04F"/>
                             <constraint firstItem="nzn-Ht-zG4" firstAttribute="trailing" secondItem="wtH-AH-mco" secondAttribute="trailing" id="ik6-wv-y1N"/>
@@ -1131,6 +1156,12 @@ About Covid-19.</string>
         <image name="virus" width="441" height="300"/>
         <image name="wash_hands" width="175" height="156"/>
         <image name="wear_mask" width="175" height="156"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="backColor">
+            <color red="0.99215686274509807" green="0.99215686274509807" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

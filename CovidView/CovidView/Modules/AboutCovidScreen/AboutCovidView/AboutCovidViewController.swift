@@ -34,23 +34,6 @@ class AboutCovidViewController: UIViewController {
     
     private func setupUI() {
         scrollView.delegate = self
-        setupDarkMode()
-    }
-    
-    private func setupDarkMode() {
-        if traitCollection.userInterfaceStyle == .dark {
-            view.backgroundColor = .black
-            headacheView.backgroundColor = .black
-            coughView.backgroundColor = .black
-            feverView.backgroundColor = .black
-            wearMaskView.backgroundColor = .black
-            washHandsView.backgroundColor = .black
-            menuButton.tintColor = .black
-            backButton.tintColor = .black
-        } else {
-            menuButton.tintColor = .white
-            backButton.tintColor = .white
-        }
     }
     
     @IBAction func backButtonTapped(_ sender: Any) {

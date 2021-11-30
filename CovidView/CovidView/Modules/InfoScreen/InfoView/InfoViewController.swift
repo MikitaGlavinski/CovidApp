@@ -47,25 +47,16 @@ class InfoViewController: UIViewController {
         tableView.delegate = self
         navigationController?.navigationBar.isHidden = true
         
-        setupDarkMode()
         addGestures()
-    }
-    
-    private func setupDarkMode() {
-        if traitCollection.userInterfaceStyle == .dark {
-            view.backgroundColor = .black
-            statisticBackView.backgroundColor = .black
-            textFieldBackView.backgroundColor = .black
-            menuButton.tintColor = .black
-        } else {
-            menuButton.tintColor = .white
-        }
     }
     
     private func addGestures() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(hideTableView))
         tap.delegate = self
         view.addGestureRecognizer(tap)
+        
+        let textFieldTap = UITapGestureRecognizer(target: self, action: #selector(handleCountryList))
+        textFieldBackView.addGestureRecognizer(textFieldTap)
     }
     
     private func moveCoutryAhead() {
@@ -85,10 +76,17 @@ class InfoViewController: UIViewController {
         tableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: false)
     }
     
-    @objc func hideTableView() {
+    @objc private func hideTableView() {
         tableBackView.isHidden = true
         tableView.isHidden = true
         tableViewAppeared = false
+    }
+    
+    @objc private func handleCountryList() {
+        tableBackView.isHidden = false
+        tableView.isHidden = false
+        tableView.reloadData()
+        tableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: false)
     }
 }
 
