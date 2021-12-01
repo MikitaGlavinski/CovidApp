@@ -216,6 +216,7 @@ extension AuthViewController: LoginButtonDelegate {
         guard let token = AccessToken.current?.tokenString else {
             blurView.isHidden = true
             activityIndicator.stopAnimating()
+            showError(NetworkError.unrecognized)
             return
         }
         viewModel.facebookSignIn(token: token)
