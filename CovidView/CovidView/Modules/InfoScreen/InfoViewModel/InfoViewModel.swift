@@ -11,6 +11,7 @@ protocol InfoViewModelProtocol: AnyObject {
     func viewDidLoad()
     func getInfoBy(country: String)
     func routeToAboutCovidScreen()
+    func signOut()
 }
 
 class InfoViewModel {
@@ -45,7 +46,7 @@ extension InfoViewModel: InfoViewModelProtocol {
                 guard var country = infoCountryModels.last else { return }
                 let date = Date()
                 let formatter = DateFormatter()
-                formatter.dateFormat = "MMMM dd"
+                formatter.dateFormat = "MMMM d"
                 let stringDate = formatter.string(from: date)
                 SecureStorageService.shared.saveLastInfo(countryInfo: country, currentDate: stringDate)
                 country.date = stringDate
@@ -62,5 +63,17 @@ extension InfoViewModel: InfoViewModelProtocol {
     
     func routeToAboutCovidScreen() {
         coordinator.routeToAboutCovidScreen()
+    }
+    
+    func signOut() {
+        AuthorizationService.shared.signOut { result in
+            switch result {
+            case .success:
+                SecureStorageService.shared.removeToken()
+                self.coordinator.routeToAuthScreen()
+            case .failure(let error):
+                self.view.showError(error)
+            }
+        }
     }
 }

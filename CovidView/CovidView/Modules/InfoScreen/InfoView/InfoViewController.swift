@@ -31,6 +31,7 @@ class InfoViewController: UIViewController {
     @IBOutlet weak var updateLabel: UILabel!
     @IBOutlet weak var doctorViewTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var menuButtonTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var logOutTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var statisticBackView: StatisticBackView!
     @IBOutlet weak var textFieldBackView: TextFieldBackView!
     @IBOutlet weak var menuButton: UIButton!
@@ -74,6 +75,17 @@ class InfoViewController: UIViewController {
         tableView.isHidden = false
         tableView.reloadData()
         tableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: false)
+    }
+    
+    @IBAction func logOut(_ sender: Any) {
+        let alert = UIAlertController(title: "Sign Out", message: "Are you sure to sign out?", preferredStyle: .alert)
+        let firstAction = UIAlertAction(title: "Yes", style: .default) { _ in
+            self.viewModel.signOut()
+        }
+        let secondAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alert.addAction(firstAction)
+        alert.addAction(secondAction)
+        present(alert, animated: true, completion: nil)
     }
     
     @objc private func hideTableView() {
@@ -129,6 +141,7 @@ extension InfoViewController: UIScrollViewDelegate {
         if scrollView == self.scrollView {
             doctorViewTopConstraint.constant = max(1, (-scrollView.contentOffset.y) * 0.7)
             menuButtonTopConstraint.constant = max(1, (-scrollView.contentOffset.y) * 0.7)
+            logOutTopConstraint.constant = max(1, (-scrollView.contentOffset.y) * 0.7)
             view.layer.sublayers?[0].frame = CGRect(x: 0,
                                                     y: 0,
                                                     width: UIScreen.main.bounds.width,

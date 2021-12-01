@@ -23,14 +23,14 @@ class RegisterViewModel {
 extension RegisterViewModel: RegisterViewModelProtocol {
     
     func createAccount(with email: String, password: String) {
-        Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
-            if let error = error {
+        AuthorizationService.shared.createAccount(with: email, password: password) { result in
+            switch result {
+            case .success(let token):
+                SecureStorageService.shared.saveToken(token: token)
+                self.coordinator.routeToInfoScreen()
+            case .failure(let error):
                 self.view.showError(error)
-                return
             }
-            guard let token = authResult?.user.uid else { return }
-            SecureStorageService.shared.saveToken(token: token)
-            self.coordinator.routeToInfoScreen()
         }
     }
     

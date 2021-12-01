@@ -17,15 +17,16 @@ class AboutCovidViewController: UIViewController {
     @IBOutlet weak var doctorTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var menuButtonTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var backButtonTopConstraint: NSLayoutConstraint!
-    @IBOutlet weak var headacheView: StatisticBackView!
-    @IBOutlet weak var coughView: StatisticBackView!
-    @IBOutlet weak var feverView: StatisticBackView!
     @IBOutlet weak var wearMaskView: PreventionBackView!
     @IBOutlet weak var washHandsView: PreventionBackView!
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var menuButton: UIButton!
     
     var viewModel: AboutCovidViewModelProtocol!
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        viewModel.routeToInfoScreen()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

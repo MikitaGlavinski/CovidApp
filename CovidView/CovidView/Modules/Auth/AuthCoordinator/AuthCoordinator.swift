@@ -31,7 +31,7 @@ class AuthCoordinator: Coordinator {
         authViewModel.coordinator = self
         authView.viewModel = authViewModel
         
-        rootNavigationController.pushViewController(authView, animated: true)
+        rootNavigationController.setViewControllers([authView], animated: false)
     }
     
     func add(childCoordinator: Coordinator) {

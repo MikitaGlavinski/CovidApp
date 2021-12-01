@@ -9,6 +9,7 @@ import UIKit
 
 protocol InfoCoordinatorDelegate: AnyObject {
     func routeToAboutCovidScreen()
+    func routeToAuthScreen()
 }
 
 class InfoCoordinator: Coordinator {
@@ -56,5 +57,11 @@ extension InfoCoordinator: InfoCoordinatorDelegate {
         }
         aboutCovidCoordinator.start()
         add(childCoordinator: aboutCovidCoordinator)
+    }
+    
+    func routeToAuthScreen() {
+        guard let rootNavigationController = rootNavigationController else { return }
+        let authCoordinator = AuthCoordinator(navigation: rootNavigationController)
+        authCoordinator.start()
     }
 }

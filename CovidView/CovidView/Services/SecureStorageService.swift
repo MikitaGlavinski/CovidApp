@@ -12,6 +12,7 @@ protocol SecureStorageServiceProtocol {
     func obtainLastInfo() -> InfoCountryModel?
     func saveToken(token: String)
     func obtainToken() -> String?
+    func removeToken()
 }
 
 class SecureStorageService: SecureStorageServiceProtocol {
@@ -45,5 +46,9 @@ class SecureStorageService: SecureStorageServiceProtocol {
     
     func obtainToken() -> String? {
         storage.string(forKey: "token")
+    }
+    
+    func removeToken() {
+        storage.removeObject(forKey: "token")
     }
 }

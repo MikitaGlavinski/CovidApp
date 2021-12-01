@@ -67,6 +67,7 @@
 		FAFD49F02755025200DDD5E1 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD49EF2755025200DDD5E1 /* RegisterViewController.swift */; };
 		FAFD49F22755028F00DDD5E1 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD49F12755028F00DDD5E1 /* RegisterViewModel.swift */; };
 		FAFD49F4275502E200DDD5E1 /* RegisterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD49F3275502E200DDD5E1 /* RegisterCoordinator.swift */; };
+		FAFDDD7127578C360033506A /* AuthorizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFDDD7027578C360033506A /* AuthorizationService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -148,6 +149,8 @@
 		FAFD49EF2755025200DDD5E1 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		FAFD49F12755028F00DDD5E1 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		FAFD49F3275502E200DDD5E1 /* RegisterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCoordinator.swift; sourceTree = "<group>"; };
+		FAFDDD6F275777630033506A /* CovidView.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CovidView.entitlements; sourceTree = "<group>"; };
+		FAFDDD7027578C360033506A /* AuthorizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationService.swift; sourceTree = "<group>"; };
 		FFCE5EECF11B26A00DF23433 /* Pods_CovidView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CovidView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -243,6 +246,7 @@
 				FA67CE71274E580E000AA1C1 /* DictinoryHelper.swift */,
 				FA67CE73274E5A9A000AA1C1 /* ParametersEncoder.swift */,
 				FADAFBE5274F844C0003BC9A /* SecureStorageService.swift */,
+				FAFDDD7027578C360033506A /* AuthorizationService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -301,6 +305,7 @@
 		FAD6683B274BD2C300CD0C97 /* CovidView */ = {
 			isa = PBXGroup;
 			children = (
+				FAFDDD6F275777630033506A /* CovidView.entitlements */,
 				FAFD49D72754D41D00DDD5E1 /* GoogleService-Info.plist */,
 				FA67CE69274E52D4000AA1C1 /* Services */,
 				FAB35FA6274CC5C30075D76A /* Base */,
@@ -759,6 +764,7 @@
 				FA541FE42756425C00FE6D4D /* UIViewExtension.swift in Sources */,
 				FA5227E02750CE8000440076 /* AboutCovidViewController.swift in Sources */,
 				FAD6683D274BD2C300CD0C97 /* AppDelegate.swift in Sources */,
+				FAFDDD7127578C360033506A /* AuthorizationService.swift in Sources */,
 				FA67CE72274E580E000AA1C1 /* DictinoryHelper.swift in Sources */,
 				FAFD49E02754DF8600DDD5E1 /* AuthViewController.swift in Sources */,
 				FAB35FD0274D07980075D76A /* GradientView.swift in Sources */,
@@ -962,9 +968,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CovidView/CovidView.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = BAW28W4LV2;
+				DEVELOPMENT_TEAM = 5ACJXA9F63;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CovidView/Source/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -992,9 +999,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CovidView/CovidView.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = BAW28W4LV2;
+				DEVELOPMENT_TEAM = 5ACJXA9F63;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CovidView/Source/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

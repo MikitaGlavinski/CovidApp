@@ -35,10 +35,33 @@
                                     <constraint firstAttribute="height" constant="40" id="swF-la-oTg"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Sign In with facebook"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Sign In with facebook"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="facebookTapped:" destination="cdP-JI-XFN" eventType="touchUpInside" id="8Qi-c6-I1q"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L2N-dy-cxH">
+                                <rect key="frame" x="50" y="512" width="314" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="SF5-tr-uiW"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Sign In with apple"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="appleTapped:" destination="cdP-JI-XFN" eventType="touchUpInside" id="jee-P3-k25"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vAE-JR-otb">
@@ -50,6 +73,11 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Sign In with google"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="googleTapped:" destination="cdP-JI-XFN" eventType="touchUpInside" id="qgI-BY-W08"/>
                                 </connections>
@@ -70,6 +98,18 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zcS-0P-XjP">
+                                <rect key="frame" x="50" y="183" width="63.5" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0vP-Xe-4jt">
+                                <rect key="frame" x="50" y="254" width="88" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MNw-w6-DSP">
                                 <rect key="frame" x="50" y="302" width="314" height="40"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -79,6 +119,11 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Sign In with email"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="signInTapped:" destination="cdP-JI-XFN" eventType="touchUpInside" id="SRL-sg-LzH"/>
                                 </connections>
@@ -117,25 +162,32 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="trB-Ci-0Dz" firstAttribute="top" secondItem="yUX-lu-1QO" secondAttribute="bottom" constant="37" id="4lR-qo-a1s"/>
+                            <constraint firstItem="0vP-Xe-4jt" firstAttribute="top" secondItem="trB-Ci-0Dz" secondAttribute="bottom" constant="5" id="5rm-Gy-NcH"/>
                             <constraint firstItem="vAE-JR-otb" firstAttribute="top" secondItem="MNw-w6-DSP" secondAttribute="bottom" constant="30" id="60t-kK-eFf"/>
                             <constraint firstItem="trB-Ci-0Dz" firstAttribute="leading" secondItem="rDA-qd-cj7" secondAttribute="leading" constant="50" id="6Ts-7o-DTS"/>
                             <constraint firstItem="xVj-4i-Y3U" firstAttribute="bottom" secondItem="SmC-1V-rTS" secondAttribute="bottom" id="BhR-PQ-awr"/>
                             <constraint firstItem="yUX-lu-1QO" firstAttribute="leading" secondItem="rDA-qd-cj7" secondAttribute="leading" constant="50" id="DYo-Ly-Qrj"/>
                             <constraint firstItem="rDA-qd-cj7" firstAttribute="trailing" secondItem="aym-oa-9yq" secondAttribute="trailing" constant="80" id="EK8-f1-FpY"/>
                             <constraint firstItem="rDA-qd-cj7" firstAttribute="trailing" secondItem="trB-Ci-0Dz" secondAttribute="trailing" constant="50" id="FLa-pT-Cin"/>
+                            <constraint firstItem="zcS-0P-XjP" firstAttribute="top" secondItem="yUX-lu-1QO" secondAttribute="bottom" constant="5" id="J0r-kz-3HH"/>
                             <constraint firstItem="rDA-qd-cj7" firstAttribute="trailing" secondItem="vAE-JR-otb" secondAttribute="trailing" constant="50" id="KCd-L5-Kjo"/>
                             <constraint firstItem="aym-oa-9yq" firstAttribute="leading" secondItem="rDA-qd-cj7" secondAttribute="leading" constant="80" id="MXU-RY-oAn"/>
                             <constraint firstItem="xVj-4i-Y3U" firstAttribute="leading" secondItem="rDA-qd-cj7" secondAttribute="leading" id="OqD-JJ-DCV"/>
                             <constraint firstItem="EqE-eB-j0K" firstAttribute="leading" secondItem="rDA-qd-cj7" secondAttribute="leading" constant="50" id="Qs3-Lk-zJj"/>
                             <constraint firstItem="rDA-qd-cj7" firstAttribute="trailing" secondItem="EqE-eB-j0K" secondAttribute="trailing" constant="50" id="QyB-6f-8pR"/>
                             <constraint firstItem="vAE-JR-otb" firstAttribute="leading" secondItem="rDA-qd-cj7" secondAttribute="leading" constant="50" id="RWI-Sm-iK0"/>
+                            <constraint firstItem="0vP-Xe-4jt" firstAttribute="leading" secondItem="rDA-qd-cj7" secondAttribute="leading" constant="50" id="Ud5-QA-gfv"/>
                             <constraint firstItem="MNw-w6-DSP" firstAttribute="leading" secondItem="rDA-qd-cj7" secondAttribute="leading" constant="50" id="XW0-9x-TcM"/>
                             <constraint firstItem="EqE-eB-j0K" firstAttribute="top" secondItem="vAE-JR-otb" secondAttribute="bottom" constant="30" id="bj9-oL-4C6"/>
+                            <constraint firstItem="L2N-dy-cxH" firstAttribute="top" secondItem="EqE-eB-j0K" secondAttribute="bottom" constant="30" id="cfr-8P-Bnh"/>
                             <constraint firstItem="rDA-qd-cj7" firstAttribute="bottom" secondItem="aym-oa-9yq" secondAttribute="bottom" constant="19" id="eTd-xC-xAQ"/>
                             <constraint firstItem="rDA-qd-cj7" firstAttribute="trailing" secondItem="xVj-4i-Y3U" secondAttribute="trailing" id="iCP-eT-vQk"/>
                             <constraint firstItem="MNw-w6-DSP" firstAttribute="top" secondItem="trB-Ci-0Dz" secondAttribute="bottom" constant="53" id="icP-1j-CZO"/>
                             <constraint firstItem="rDA-qd-cj7" firstAttribute="trailing" secondItem="yUX-lu-1QO" secondAttribute="trailing" constant="50" id="kd0-Gp-ATs"/>
+                            <constraint firstItem="rDA-qd-cj7" firstAttribute="trailing" secondItem="L2N-dy-cxH" secondAttribute="trailing" constant="50" id="lhY-t8-5aH"/>
+                            <constraint firstItem="L2N-dy-cxH" firstAttribute="leading" secondItem="rDA-qd-cj7" secondAttribute="leading" constant="50" id="olI-dh-ooA"/>
                             <constraint firstAttribute="top" secondItem="xVj-4i-Y3U" secondAttribute="top" id="sQR-Kz-cOA"/>
+                            <constraint firstItem="zcS-0P-XjP" firstAttribute="leading" secondItem="rDA-qd-cj7" secondAttribute="leading" constant="50" id="taa-6c-9PW"/>
                             <constraint firstItem="rDA-qd-cj7" firstAttribute="trailing" secondItem="MNw-w6-DSP" secondAttribute="trailing" constant="50" id="xPb-sU-WLb"/>
                             <constraint firstItem="yUX-lu-1QO" firstAttribute="top" secondItem="rDA-qd-cj7" secondAttribute="top" constant="100" id="xjL-A0-kOs"/>
                         </constraints>
@@ -144,8 +196,10 @@
                     <connections>
                         <outlet property="activityIndicator" destination="5vr-7C-ehX" id="tU7-Zg-b3T"/>
                         <outlet property="blurView" destination="xVj-4i-Y3U" id="vh9-Nz-ezF"/>
+                        <outlet property="emailLabel" destination="zcS-0P-XjP" id="9Aw-Af-lkh"/>
                         <outlet property="emailTextfield" destination="yUX-lu-1QO" id="QFm-BB-EF0"/>
                         <outlet property="googleButton" destination="vAE-JR-otb" id="a7L-lr-x1i"/>
+                        <outlet property="passwordLabel" destination="0vP-Xe-4jt" id="JdT-0B-37l"/>
                         <outlet property="passwordTextfield" destination="trB-Ci-0Dz" id="8dE-9n-lsI"/>
                     </connections>
                 </viewController>
@@ -166,11 +220,23 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AUj-zt-LyI">
+                                <rect key="frame" x="50" y="183" width="63.5" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vci-0N-NUQ">
                                 <rect key="frame" x="50" y="215" width="314" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iyv-t6-1dx">
+                                <rect key="frame" x="50" y="254" width="87.5" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DbR-CB-wjN">
                                 <rect key="frame" x="50" y="302" width="314" height="40"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -180,6 +246,11 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Create account"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="createAccount:" destination="zTH-M2-Frz" eventType="touchUpInside" id="T3u-7N-G39"/>
                                 </connections>
@@ -206,10 +277,13 @@
                         <viewLayoutGuide key="safeArea" id="4Xg-Xk-pra"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="iyv-t6-1dx" firstAttribute="top" secondItem="vci-0N-NUQ" secondAttribute="bottom" constant="5" id="4YY-U2-IZ3"/>
+                            <constraint firstItem="AUj-zt-LyI" firstAttribute="leading" secondItem="4Xg-Xk-pra" secondAttribute="leading" constant="50" id="9Jl-5k-knt"/>
                             <constraint firstItem="4Xg-Xk-pra" firstAttribute="trailing" secondItem="9kr-Ug-Fqw" secondAttribute="trailing" id="9aX-bz-2NT"/>
                             <constraint firstItem="4Xg-Xk-pra" firstAttribute="trailing" secondItem="vci-0N-NUQ" secondAttribute="trailing" constant="50" id="AFP-II-fBg"/>
                             <constraint firstItem="DbR-CB-wjN" firstAttribute="top" secondItem="vci-0N-NUQ" secondAttribute="bottom" constant="53" id="Cuc-qx-RZI"/>
                             <constraint firstItem="DbR-CB-wjN" firstAttribute="leading" secondItem="4Xg-Xk-pra" secondAttribute="leading" constant="50" id="Ezl-sq-7Vs"/>
+                            <constraint firstItem="AUj-zt-LyI" firstAttribute="top" secondItem="dNG-s9-Rc0" secondAttribute="bottom" constant="5" id="Iq3-E4-k9r"/>
                             <constraint firstItem="9kr-Ug-Fqw" firstAttribute="leading" secondItem="4Xg-Xk-pra" secondAttribute="leading" id="J0w-cE-aKr"/>
                             <constraint firstItem="dNG-s9-Rc0" firstAttribute="leading" secondItem="4Xg-Xk-pra" secondAttribute="leading" constant="50" id="J7K-fH-QUp"/>
                             <constraint firstItem="vci-0N-NUQ" firstAttribute="leading" secondItem="4Xg-Xk-pra" secondAttribute="leading" constant="50" id="REY-5t-jwG"/>
@@ -218,6 +292,7 @@
                             <constraint firstItem="4Xg-Xk-pra" firstAttribute="trailing" secondItem="DbR-CB-wjN" secondAttribute="trailing" constant="50" id="lGz-Vb-oe0"/>
                             <constraint firstItem="4Xg-Xk-pra" firstAttribute="trailing" secondItem="dNG-s9-Rc0" secondAttribute="trailing" constant="50" id="lMh-DH-VVU"/>
                             <constraint firstAttribute="top" secondItem="9kr-Ug-Fqw" secondAttribute="top" id="nAr-sD-aSd"/>
+                            <constraint firstItem="iyv-t6-1dx" firstAttribute="leading" secondItem="4Xg-Xk-pra" secondAttribute="leading" constant="50" id="oxf-ih-ZZt"/>
                             <constraint firstItem="vci-0N-NUQ" firstAttribute="top" secondItem="dNG-s9-Rc0" secondAttribute="bottom" constant="37" id="vHF-Ka-VXL"/>
                         </constraints>
                     </view>
@@ -225,7 +300,9 @@
                     <connections>
                         <outlet property="activityIndicator" destination="e9K-Sj-qoN" id="Cb0-k1-0Vg"/>
                         <outlet property="blurView" destination="9kr-Ug-Fqw" id="nnI-Tw-ReW"/>
+                        <outlet property="emailLabel" destination="AUj-zt-LyI" id="S5b-Kl-dqg"/>
                         <outlet property="emailTextfield" destination="dNG-s9-Rc0" id="OBY-7U-qvP"/>
+                        <outlet property="passwordLabel" destination="iyv-t6-1dx" id="wjc-PY-aAi"/>
                         <outlet property="passwordTextfield" destination="vci-0N-NUQ" id="o9d-BQ-gF6"/>
                     </connections>
                 </viewController>
@@ -616,7 +693,7 @@ is stay at home.</string>
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exi-Gh-n83">
-                                                <rect key="frame" x="359" y="45" width="40" height="40"/>
+                                                <rect key="frame" x="359" y="90" width="40" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="MAk-38-WLK"/>
                                                     <constraint firstAttribute="width" constant="40" id="NHj-FF-VdQ"/>
@@ -633,6 +710,20 @@ is stay at home.</string>
                                                     <constraint firstAttribute="height" constant="180" id="egZ-bx-w2W"/>
                                                 </constraints>
                                             </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J3a-8p-Mdr">
+                                                <rect key="frame" x="15" y="90" width="70" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="Mfc-bK-jgI"/>
+                                                    <constraint firstAttribute="height" constant="40" id="f7R-YS-Wq7"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Log out"/>
+                                                <connections>
+                                                    <action selector="logOut:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="pFo-Sr-G8U"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -645,6 +736,7 @@ is stay at home.</string>
                                             <constraint firstAttribute="trailing" secondItem="RMc-1Q-RqJ" secondAttribute="trailing" id="HYy-hb-ATZ"/>
                                             <constraint firstItem="18B-H4-gGh" firstAttribute="leading" secondItem="3tr-Yl-KAr" secondAttribute="leading" id="KPe-KJ-f1r"/>
                                             <constraint firstItem="M5d-fX-WL5" firstAttribute="leading" secondItem="3tr-Yl-KAr" secondAttribute="leading" constant="20" id="L6m-Oj-SzV"/>
+                                            <constraint firstItem="J3a-8p-Mdr" firstAttribute="leading" secondItem="3tr-Yl-KAr" secondAttribute="leading" constant="15" id="W7I-qj-826"/>
                                             <constraint firstItem="18B-H4-gGh" firstAttribute="top" secondItem="3tr-Yl-KAr" secondAttribute="top" constant="45" id="iZb-BS-PV9"/>
                                             <constraint firstItem="3Ri-73-0xa" firstAttribute="leading" secondItem="3tr-Yl-KAr" secondAttribute="leading" id="jzC-1W-D8j"/>
                                             <constraint firstAttribute="trailing" secondItem="3Ri-73-0xa" secondAttribute="trailing" id="oK6-kA-ghP"/>
@@ -677,6 +769,7 @@ is stay at home.</string>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="YEu-U2-5KG" secondAttribute="trailing" constant="20" id="eGY-YR-rbv"/>
                             <constraint firstItem="LSm-kB-Kf6" firstAttribute="bottom" secondItem="5EZ-qb-Rvc" secondAttribute="bottom" id="l9z-aV-vWQ"/>
                             <constraint firstItem="exi-Gh-n83" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="1" id="ukh-ui-QiT"/>
+                            <constraint firstItem="J3a-8p-Mdr" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="1" id="xvh-E4-jS9"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="startColor">
@@ -695,6 +788,7 @@ is stay at home.</string>
                         <outlet property="deathsView" destination="wfL-cL-4c7" id="wiw-w7-WqW"/>
                         <outlet property="doctorViewTopConstraint" destination="Fo4-uP-J0A" id="Yoo-il-VEf"/>
                         <outlet property="infectedView" destination="S0Z-hy-DeP" id="lWD-Ok-nBe"/>
+                        <outlet property="logOutTopConstraint" destination="xvh-E4-jS9" id="nMx-1R-AIr"/>
                         <outlet property="mapView" destination="6Sd-Xu-z3q" id="52g-mb-F59"/>
                         <outlet property="menuButton" destination="exi-Gh-n83" id="Jt0-qV-N0R"/>
                         <outlet property="menuButtonTopConstraint" destination="ukh-ui-QiT" id="WHP-lS-az3"/>
@@ -825,7 +919,7 @@ About Covid-19.</string>
                                                         <rect key="frame" x="20" y="577" width="374" height="185"/>
                                                         <subviews>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wash_hands" translatesAutoresizingMaskIntoConstraints="NO" id="2vw-9N-Oor">
-                                                                <rect key="frame" x="-20" y="-823" width="224.5" height="232"/>
+                                                                <rect key="frame" x="-20" y="-820" width="224.5" height="232"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="232" id="tUj-na-eZ2"/>
                                                                 </constraints>
@@ -872,7 +966,7 @@ About Covid-19.</string>
                                                         <rect key="frame" x="20" y="352" width="374" height="185"/>
                                                         <subviews>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="wear_mask" translatesAutoresizingMaskIntoConstraints="NO" id="Kgr-eG-Zgg">
-                                                                <rect key="frame" x="-20" y="-598" width="224.5" height="232"/>
+                                                                <rect key="frame" x="-20" y="-595" width="224.5" height="232"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="232" id="TQe-jJ-8bw"/>
                                                                 </constraints>
@@ -936,7 +1030,7 @@ About Covid-19.</string>
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="049-f3-i03">
-                                                <rect key="frame" x="359" y="45" width="40" height="40"/>
+                                                <rect key="frame" x="359" y="48" width="40" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="VHK-le-kWu"/>
                                                     <constraint firstAttribute="width" constant="40" id="epS-Mn-OD7"/>
@@ -948,7 +1042,7 @@ About Covid-19.</string>
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vgx-w7-C3A">
-                                                <rect key="frame" x="15" y="45" width="40" height="40"/>
+                                                <rect key="frame" x="15" y="48" width="40" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="IsI-Yd-Y4R"/>
                                                     <constraint firstAttribute="width" constant="40" id="ufn-eb-taI"/>
@@ -1060,6 +1154,9 @@ About Covid-19.</string>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
