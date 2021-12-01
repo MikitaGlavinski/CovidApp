@@ -260,10 +260,9 @@ is stay at home.</string>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="jau-Jd-2eV" secondAttribute="bottom" id="FxE-lp-dHh"/>
                                     <constraint firstItem="YEu-U2-5KG" firstAttribute="leading" secondItem="jau-Jd-2eV" secondAttribute="trailing" constant="-90" id="JJm-tT-qFs"/>
-                                    <constraint firstAttribute="height" constant="401" id="NOI-0G-nDl"/>
                                     <constraint firstItem="jau-Jd-2eV" firstAttribute="leading" secondItem="C4I-bw-j2h" secondAttribute="leading" id="V6o-ve-AQX"/>
                                     <constraint firstAttribute="trailing" secondItem="jau-Jd-2eV" secondAttribute="trailing" id="XQ4-TP-mPc"/>
-                                    <constraint firstAttribute="width" constant="240" id="ngY-ky-NJv"/>
+                                    <constraint firstAttribute="width" constant="240" id="o7O-gr-JME"/>
                                     <constraint firstItem="YEu-U2-5KG" firstAttribute="top" secondItem="jau-Jd-2eV" secondAttribute="top" constant="30" id="oNh-AR-2mf"/>
                                     <constraint firstItem="jau-Jd-2eV" firstAttribute="top" secondItem="C4I-bw-j2h" secondAttribute="top" constant="20" id="thZ-b0-OXA"/>
                                 </constraints>
@@ -669,11 +668,12 @@ is stay at home.</string>
                         <color key="backgroundColor" name="backColor"/>
                         <constraints>
                             <constraint firstItem="C4I-bw-j2h" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="AtK-2Y-EQ1"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="LSm-kB-Kf6" secondAttribute="trailing" id="Cvz-Li-qWK"/>
+                            <constraint firstAttribute="trailing" secondItem="LSm-kB-Kf6" secondAttribute="trailing" id="Cvz-Li-qWK"/>
                             <constraint firstItem="C4I-bw-j2h" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="1" id="Fo4-uP-J0A"/>
                             <constraint firstItem="3tr-Yl-KAr" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" id="Fqd-Xh-1fd"/>
-                            <constraint firstItem="LSm-kB-Kf6" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="J6w-nf-ZRI"/>
+                            <constraint firstItem="LSm-kB-Kf6" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="J6w-nf-ZRI"/>
                             <constraint firstAttribute="top" secondItem="LSm-kB-Kf6" secondAttribute="top" id="Ny9-vN-QRy"/>
+                            <constraint firstItem="C4I-bw-j2h" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.447545" id="OJw-fO-qXv"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="YEu-U2-5KG" secondAttribute="trailing" constant="20" id="eGY-YR-rbv"/>
                             <constraint firstItem="LSm-kB-Kf6" firstAttribute="bottom" secondItem="5EZ-qb-Rvc" secondAttribute="bottom" id="l9z-aV-vWQ"/>
                             <constraint firstItem="exi-Gh-n83" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="1" id="ukh-ui-QiT"/>
@@ -777,88 +777,37 @@ About Covid-19.</string>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="TFp-Ye-4vX">
                                                         <rect key="frame" x="20" y="146" width="374" height="120"/>
                                                         <subviews>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ayN-yk-1Dk" customClass="StatisticBackView" customModule="CovidView" customModuleProvider="target">
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vwj-FB-SN8" customClass="SymptomView" customModule="CovidView" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="118" height="120"/>
-                                                                <subviews>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headache" translatesAutoresizingMaskIntoConstraints="NO" id="LUN-yj-Dpq">
-                                                                        <rect key="frame" x="5" y="5" width="108" height="95"/>
-                                                                    </imageView>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Headache" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C4E-WV-ALo">
-                                                                        <rect key="frame" x="33" y="99" width="52.5" height="14"/>
-                                                                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="10"/>
-                                                                        <nil key="textColor"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                </subviews>
-                                                                <color key="backgroundColor" name="backColor"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="trailing" secondItem="LUN-yj-Dpq" secondAttribute="trailing" constant="5" id="2nf-9H-y8N"/>
-                                                                    <constraint firstItem="LUN-yj-Dpq" firstAttribute="leading" secondItem="ayN-yk-1Dk" secondAttribute="leading" constant="5" id="7WA-Mq-Z3U"/>
-                                                                    <constraint firstAttribute="bottom" secondItem="C4E-WV-ALo" secondAttribute="bottom" constant="7" id="PY6-25-1kj"/>
-                                                                    <constraint firstItem="C4E-WV-ALo" firstAttribute="centerX" secondItem="ayN-yk-1Dk" secondAttribute="centerX" id="bRM-G7-h7O"/>
-                                                                    <constraint firstItem="LUN-yj-Dpq" firstAttribute="top" secondItem="ayN-yk-1Dk" secondAttribute="top" constant="5" id="stc-uO-Uo6"/>
-                                                                    <constraint firstAttribute="bottom" secondItem="LUN-yj-Dpq" secondAttribute="bottom" constant="20" id="y4a-L6-u1C"/>
-                                                                </constraints>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                 <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="headache"/>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                         <real key="value" value="18"/>
                                                                     </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="Headache"/>
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4rF-Hb-Ct5" customClass="StatisticBackView" customModule="CovidView" customModuleProvider="target">
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FjT-1l-L5H" customClass="SymptomView" customModule="CovidView" customModuleProvider="target">
                                                                 <rect key="frame" x="128" y="0.0" width="118" height="120"/>
-                                                                <subviews>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="caugh" translatesAutoresizingMaskIntoConstraints="NO" id="42M-Jw-6po">
-                                                                        <rect key="frame" x="5" y="5" width="108" height="95"/>
-                                                                    </imageView>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cough" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="llL-ab-sA2">
-                                                                        <rect key="frame" x="42" y="99" width="34" height="14"/>
-                                                                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="10"/>
-                                                                        <nil key="textColor"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                </subviews>
-                                                                <color key="backgroundColor" name="backColor"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="bottom" secondItem="llL-ab-sA2" secondAttribute="bottom" constant="7" id="AYg-1K-E8s"/>
-                                                                    <constraint firstAttribute="trailing" secondItem="42M-Jw-6po" secondAttribute="trailing" constant="5" id="CP0-pw-dBO"/>
-                                                                    <constraint firstItem="42M-Jw-6po" firstAttribute="top" secondItem="4rF-Hb-Ct5" secondAttribute="top" constant="5" id="UPP-56-2zJ"/>
-                                                                    <constraint firstItem="llL-ab-sA2" firstAttribute="centerX" secondItem="4rF-Hb-Ct5" secondAttribute="centerX" id="fpb-nX-tt1"/>
-                                                                    <constraint firstItem="42M-Jw-6po" firstAttribute="leading" secondItem="4rF-Hb-Ct5" secondAttribute="leading" constant="5" id="mN4-Rk-NC0"/>
-                                                                    <constraint firstAttribute="bottom" secondItem="42M-Jw-6po" secondAttribute="bottom" constant="20" id="yiW-Sa-FtI"/>
-                                                                </constraints>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                         <real key="value" value="18"/>
                                                                     </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="caugh"/>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="Cough"/>
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QNk-Dm-Jbc" customClass="StatisticBackView" customModule="CovidView" customModuleProvider="target">
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qNK-YQ-BKJ" customClass="SymptomView" customModule="CovidView" customModuleProvider="target">
                                                                 <rect key="frame" x="256" y="0.0" width="118" height="120"/>
-                                                                <subviews>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fever" translatesAutoresizingMaskIntoConstraints="NO" id="pHy-oK-paB">
-                                                                        <rect key="frame" x="5" y="5" width="108" height="95"/>
-                                                                    </imageView>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fever" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Avt-iu-tDO">
-                                                                        <rect key="frame" x="45.5" y="99" width="27.5" height="14"/>
-                                                                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="10"/>
-                                                                        <nil key="textColor"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                </subviews>
-                                                                <color key="backgroundColor" name="backColor"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="bottom" secondItem="pHy-oK-paB" secondAttribute="bottom" constant="20" id="KP0-QM-ZYK"/>
-                                                                    <constraint firstItem="Avt-iu-tDO" firstAttribute="centerX" secondItem="QNk-Dm-Jbc" secondAttribute="centerX" id="KjJ-uB-NAk"/>
-                                                                    <constraint firstItem="pHy-oK-paB" firstAttribute="leading" secondItem="QNk-Dm-Jbc" secondAttribute="leading" constant="5" id="PGA-tA-dlf"/>
-                                                                    <constraint firstAttribute="trailing" secondItem="pHy-oK-paB" secondAttribute="trailing" constant="5" id="dSs-yr-fKv"/>
-                                                                    <constraint firstItem="pHy-oK-paB" firstAttribute="top" secondItem="QNk-Dm-Jbc" secondAttribute="top" constant="5" id="jfj-YX-BiN"/>
-                                                                    <constraint firstAttribute="bottom" secondItem="Avt-iu-tDO" secondAttribute="bottom" constant="7" id="jkD-JM-ncY"/>
-                                                                </constraints>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                         <real key="value" value="18"/>
                                                                     </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="fever"/>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="Fever"/>
                                                                 </userDefinedRuntimeAttributes>
                                                             </view>
                                                         </subviews>
@@ -876,7 +825,7 @@ About Covid-19.</string>
                                                         <rect key="frame" x="20" y="577" width="374" height="185"/>
                                                         <subviews>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wash_hands" translatesAutoresizingMaskIntoConstraints="NO" id="2vw-9N-Oor">
-                                                                <rect key="frame" x="0.0" y="-21" width="224.5" height="232"/>
+                                                                <rect key="frame" x="-20" y="-823" width="224.5" height="232"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="232" id="tUj-na-eZ2"/>
                                                                 </constraints>
@@ -923,7 +872,7 @@ About Covid-19.</string>
                                                         <rect key="frame" x="20" y="352" width="374" height="185"/>
                                                         <subviews>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="wear_mask" translatesAutoresizingMaskIntoConstraints="NO" id="Kgr-eG-Zgg">
-                                                                <rect key="frame" x="0.0" y="-21" width="224.5" height="232"/>
+                                                                <rect key="frame" x="-20" y="-598" width="224.5" height="232"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="232" id="TQe-jJ-8bw"/>
                                                                 </constraints>
@@ -1050,8 +999,8 @@ About Covid-19.</string>
                             <constraint firstItem="nzn-Ht-zG4" firstAttribute="trailing" secondItem="fG5-Em-5V6" secondAttribute="trailing" constant="20" id="aal-AU-khh"/>
                             <constraint firstItem="wtH-AH-mco" firstAttribute="bottom" secondItem="aeE-0y-43h" secondAttribute="bottom" id="bpc-3U-uEm"/>
                             <constraint firstAttribute="top" secondItem="wtH-AH-mco" secondAttribute="top" id="frd-Ng-04F"/>
-                            <constraint firstItem="nzn-Ht-zG4" firstAttribute="trailing" secondItem="wtH-AH-mco" secondAttribute="trailing" id="ik6-wv-y1N"/>
-                            <constraint firstItem="wtH-AH-mco" firstAttribute="leading" secondItem="nzn-Ht-zG4" secondAttribute="leading" id="iz8-WA-rbv"/>
+                            <constraint firstAttribute="trailing" secondItem="wtH-AH-mco" secondAttribute="trailing" id="ik6-wv-y1N"/>
+                            <constraint firstItem="wtH-AH-mco" firstAttribute="leading" secondItem="aeE-0y-43h" secondAttribute="leading" id="iz8-WA-rbv"/>
                             <constraint firstItem="Lk6-0n-ylJ" firstAttribute="leading" secondItem="nzn-Ht-zG4" secondAttribute="leading" constant="-50" id="lHy-fZ-fNw"/>
                             <constraint firstItem="Lk6-0n-ylJ" firstAttribute="top" secondItem="nzn-Ht-zG4" secondAttribute="top" constant="1" id="vPb-FH-j4s"/>
                         </constraints>
@@ -1067,10 +1016,7 @@ About Covid-19.</string>
                     <connections>
                         <outlet property="backButton" destination="Vgx-w7-C3A" id="ImZ-bf-c0N"/>
                         <outlet property="backButtonTopConstraint" destination="Dra-3G-vIt" id="2TW-Iz-jh2"/>
-                        <outlet property="coughView" destination="4rF-Hb-Ct5" id="0X5-bs-Uu5"/>
                         <outlet property="doctorTopConstraint" destination="vPb-FH-j4s" id="I4Z-1h-Eh1"/>
-                        <outlet property="feverView" destination="QNk-Dm-Jbc" id="tXf-N3-96d"/>
-                        <outlet property="headacheView" destination="ayN-yk-1Dk" id="id6-qn-r5N"/>
                         <outlet property="menuButton" destination="049-f3-i03" id="EWB-sj-Tm3"/>
                         <outlet property="menuButtonTopConstraint" destination="IUW-tJ-4Ht" id="8IX-83-Tdd"/>
                         <outlet property="scrollView" destination="wtH-AH-mco" id="rX6-1v-iWe"/>

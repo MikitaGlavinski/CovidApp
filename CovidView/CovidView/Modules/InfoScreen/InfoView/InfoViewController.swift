@@ -108,9 +108,6 @@ extension InfoViewController: InfoViewInput {
         infectedView.countLabel.text = String(country.confirmed)
         deathsView.countLabel.text = String(country.deaths)
         recoveredView.countLabel.text = String(country.recovered)
-//        infectedCountLabel.text = String(country.confirmed)
-//        deathsCountLabel.text = String(country.deaths)
-//        recoveredCountLabel.text = String(country.recovered)
         countryLabel.text = country.name
         
         updateLabel.text = "Newest update \(country.date)"
@@ -135,7 +132,7 @@ extension InfoViewController: UIScrollViewDelegate {
             view.layer.sublayers?[0].frame = CGRect(x: 0,
                                                     y: 0,
                                                     width: UIScreen.main.bounds.width,
-                                                    height: max(UIScreen.main.bounds.height / 2, -scrollView.contentOffset.y * 5))
+                                                    height: max(UIScreen.main.bounds.height * 0.5, -scrollView.contentOffset.y * 20))
         }
     }
 }

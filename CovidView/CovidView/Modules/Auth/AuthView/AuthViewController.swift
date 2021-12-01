@@ -32,18 +32,11 @@ class AuthViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         addGestures()
-//        configureFacebookButton()
     }
     
     private func addGestures() {
         let hideKeyboardTap = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
         view.addGestureRecognizer(hideKeyboardTap)
-    }
-    
-    private func configureFacebookButton() {
-        let navBarHeight = navigationController?.navigationBar.frame.height ?? 0
-        facebookButton.frame = CGRect(x: 50, y: googleButton.frame.maxY + navBarHeight + 30, width: view.bounds.width - 100, height: 40)
-        view.insertSubview(facebookButton, belowSubview: blurView)
     }
     
     @IBAction func signInTapped(_ sender: Any) {

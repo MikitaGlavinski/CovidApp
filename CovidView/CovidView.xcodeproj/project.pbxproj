@@ -25,6 +25,8 @@
 		FA67CE72274E580E000AA1C1 /* DictinoryHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA67CE71274E580E000AA1C1 /* DictinoryHelper.swift */; };
 		FA67CE74274E5A9A000AA1C1 /* ParametersEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA67CE73274E5A9A000AA1C1 /* ParametersEncoder.swift */; };
 		FA67CE77274E6585000AA1C1 /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA67CE76274E6585000AA1C1 /* CountryModel.swift */; };
+		FA8B09E4275670170042CC18 /* SymptomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B09E3275670170042CC18 /* SymptomView.swift */; };
+		FA8B09E6275672230042CC18 /* SymptomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA8B09E5275672230042CC18 /* SymptomView.xib */; };
 		FA97E795274FB53400D8549F /* InfoViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA97E794274FB53400D8549F /* InfoViewControllerTests.swift */; };
 		FAB2B701274FCE26005023B2 /* InfoCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB2B700274FCE26005023B2 /* InfoCoordinatorTests.swift */; };
 		FAB35FA8274CC5E40075D76A /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB35FA7274CC5E40075D76A /* Coordinator.swift */; };
@@ -108,6 +110,8 @@
 		FA67CE71274E580E000AA1C1 /* DictinoryHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictinoryHelper.swift; sourceTree = "<group>"; };
 		FA67CE73274E5A9A000AA1C1 /* ParametersEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParametersEncoder.swift; sourceTree = "<group>"; };
 		FA67CE76274E6585000AA1C1 /* CountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryModel.swift; sourceTree = "<group>"; };
+		FA8B09E3275670170042CC18 /* SymptomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomView.swift; sourceTree = "<group>"; };
+		FA8B09E5275672230042CC18 /* SymptomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SymptomView.xib; sourceTree = "<group>"; };
 		FA97E794274FB53400D8549F /* InfoViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewControllerTests.swift; sourceTree = "<group>"; };
 		FAB2B700274FCE26005023B2 /* InfoCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCoordinatorTests.swift; sourceTree = "<group>"; };
 		FAB35FA7274CC5E40075D76A /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
@@ -360,6 +364,8 @@
 				FA5227E52750DEE000440076 /* PreventionBackView.swift */,
 				FA541FE52756467500FE6D4D /* StatisticView.swift */,
 				FA541FE72756471C00FE6D4D /* StatisticView.xib */,
+				FA8B09E3275670170042CC18 /* SymptomView.swift */,
+				FA8B09E5275672230042CC18 /* SymptomView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -613,6 +619,7 @@
 				FAD66846274BD2C400CD0C97 /* Assets.xcassets in Resources */,
 				FA541FE82756471C00FE6D4D /* StatisticView.xib in Resources */,
 				FAD66876274BE18000CD0C97 /* Poppins-Regular.ttf in Resources */,
+				FA8B09E6275672230042CC18 /* SymptomView.xib in Resources */,
 				FAFD49D82754D41D00DDD5E1 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -756,6 +763,7 @@
 				FAFD49E02754DF8600DDD5E1 /* AuthViewController.swift in Sources */,
 				FAB35FD0274D07980075D76A /* GradientView.swift in Sources */,
 				FA67CE77274E6585000AA1C1 /* CountryModel.swift in Sources */,
+				FA8B09E4275670170042CC18 /* SymptomView.swift in Sources */,
 				FAB35FD2274D166A0075D76A /* TextFieldBackView.swift in Sources */,
 				FAD66889274BE7EF00CD0C97 /* InfoCoordinator.swift in Sources */,
 				FAD66879274BE24900CD0C97 /* UIFontExtension.swift in Sources */,

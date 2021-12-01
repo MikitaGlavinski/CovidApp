@@ -13,31 +13,21 @@ import UIKit
         get { layer.cornerRadius }
     }
     
-    override func draw(_ rect: CGRect) {
+    private var alreadyLayedShadows: Bool = false
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        if alreadyLayedShadows {
+            clearShadows()
+        }
         var shadowLayer: CALayer
         if traitCollection.userInterfaceStyle == .dark {
-            shadowLayer = makeShadowLayer(shadowColor: .lightGray, offsetSize: .init(width: 5, height: 5), opacity: 0.2, radius: 10, rect: rect)
+            shadowLayer = makeShadowLayer(shadowColor: .lightGray, offsetSize: .init(width: 5, height: 5), opacity: 0.2, radius: 10, rect: bounds)
         } else {
-            shadowLayer = makeShadowLayer(shadowColor: .lightGray, offsetSize: .init(width: 5, height: 5), opacity: 0.2, radius: 10, rect: rect)
+            shadowLayer = makeShadowLayer(shadowColor: .lightGray, offsetSize: .init(width: 5, height: 5), opacity: 0.2, radius: 10, rect: bounds)
         }
-//        let firstShadowLayer = makeShadowLayer(shadowColor: .lightGray, offsetSize: .init(width: 55, height: 5), opacity: 0.2, radius: 10, rect: rect)
         layer.insertSublayer(shadowLayer, at: 0)
         self.layer.masksToBounds = false
-    }
-    
-    private func makeShadowLayer(shadowColor: UIColor, offsetSize: CGSize, opacity: Float, radius: CGFloat, rect: CGRect) -> CALayer {
-        let shadowPath = UIBezierPath(roundedRect: rect, cornerRadius: self.cornerRadius)
-        let shadowLayer = CALayer()
-        shadowLayer.shadowPath = shadowPath.cgPath
-        shadowLayer.backgroundColor = self.backgroundColor?.cgColor
-        shadowLayer.shadowColor = shadowColor.cgColor
-        shadowLayer.cornerRadius = self.cornerRadius
-        shadowLayer.shadowOffset = offsetSize
-        shadowLayer.shadowOpacity = opacity
-        shadowLayer.shadowRadius = radius
-        shadowLayer.masksToBounds = false
-        shadowLayer.position = CGPoint(x: rect.midX, y: rect.midY)
-        shadowLayer.frame = rect
-        return shadowLayer
+        alreadyLayedShadows = true
     }
 }

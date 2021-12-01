@@ -41,7 +41,8 @@ class StatisticView: UIView {
         addSubview(view)
     }
     
-    override func draw(_ rect: CGRect) {
+    override func layoutSubviews() {
+        super.layoutSubviews()
         backView.backgroundColor = backViewBackgroundColor
         backView.layer.cornerRadius = backViewCornerRadius
 

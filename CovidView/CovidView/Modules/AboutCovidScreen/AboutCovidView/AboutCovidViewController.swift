@@ -56,7 +56,7 @@ extension AboutCovidViewController: UIScrollViewDelegate {
             view.layer.sublayers?[0].frame = CGRect(x: 0,
                                                     y: 0,
                                                     width: UIScreen.main.bounds.width,
-                                                    height: max(UIScreen.main.bounds.height / 2, -scrollView.contentOffset.y * 5))
+                                                    height: max(UIScreen.main.bounds.height / 2, -scrollView.contentOffset.y * 20))
             
         }
     }
