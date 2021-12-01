@@ -9,6 +9,8 @@ target 'CovidView' do
   pod 'Firebase/Auth'
   pod 'GoogleSignIn'
   pod 'FBSDKLoginKit'
+  pod 'Firebase/Crashlytics'
+  pod 'Firebase/Analytics'
 
   target 'CovidViewTests' do
     inherit! :search_paths
