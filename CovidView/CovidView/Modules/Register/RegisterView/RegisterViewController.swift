@@ -78,8 +78,8 @@ extension RegisterViewController: RegisterViewInput {
     func showError(_ error: Error) {
         blurView.isHidden = true
         activityIndicator.stopAnimating()
-        let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
-        let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        let alert = UIAlertController(title: String(localized: "Error"), message: error.localizedDescription, preferredStyle: .alert)
+        let action = UIAlertAction(title: String(localized: "Ok"), style: .default, handler: nil)
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
     }

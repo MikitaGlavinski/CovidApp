@@ -48,6 +48,10 @@ class InfoViewController: UIViewController {
         tableView.delegate = self
         navigationController?.navigationBar.isHidden = true
         
+        infectedView.secondaryText = String(localized: "Infected")
+        deathsView.secondaryText = String(localized: "Deaths")
+        recoveredView.secondaryText = String(localized: "Recovered")
+        
         addGestures()
     }
     
@@ -78,11 +82,11 @@ class InfoViewController: UIViewController {
     }
     
     @IBAction func logOut(_ sender: Any) {
-        let alert = UIAlertController(title: "Sign Out", message: "Are you sure to sign out?", preferredStyle: .alert)
-        let firstAction = UIAlertAction(title: "Yes", style: .default) { _ in
+        let alert = UIAlertController(title: String(localized: "Sign Out"), message: String(localized: "Are you sure to sign out?"), preferredStyle: .alert)
+        let firstAction = UIAlertAction(title: String(localized: "Yes"), style: .default) { _ in
             self.viewModel.signOut()
         }
-        let secondAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let secondAction = UIAlertAction(title: String(localized: "Cancel"), style: .cancel, handler: nil)
         alert.addAction(firstAction)
         alert.addAction(secondAction)
         present(alert, animated: true, completion: nil)
@@ -105,8 +109,8 @@ class InfoViewController: UIViewController {
 extension InfoViewController: InfoViewInput {
     
     func showError(_ error: Error) {
-        let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
-        let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        let alert = UIAlertController(title: String(localized: "Error"), message: error.localizedDescription, preferredStyle: .alert)
+        let action = UIAlertAction(title: String(localized: "Ok"), style: .default, handler: nil)
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
     }
@@ -122,14 +126,14 @@ extension InfoViewController: InfoViewInput {
         recoveredView.countLabel.text = String(country.recovered)
         countryLabel.text = country.name
         
-        updateLabel.text = "Newest update \(country.date)"
+        updateLabel.text = "\(String(localized: "Newest update")) \(country.date)"
         
         mapView.removeAnnotations(mapView.annotations)
         let location = CLLocationCoordinate2D(latitude: country.lat, longitude: country.lon)
         mapView.setCenter(location, animated: true)
         let annotation = MKPointAnnotation()
         annotation.coordinate = location
-        annotation.subtitle = "Infected - \(String(country.confirmed))\nDeaths - \(String(country.deaths))\n Recovered - \(String(country.recovered))"
+        annotation.subtitle = "\(String(localized: "Infected")) - \(String(country.confirmed))\n\(String(localized: "Deaths")) - \(String(country.deaths))\n \(String(localized: "Recovered")) - \(String(country.recovered))"
         mapView.addAnnotation(annotation)
         
         moveCoutryAhead()

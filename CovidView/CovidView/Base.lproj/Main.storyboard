@@ -571,8 +571,8 @@ is stay at home.</string>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spread of Virus" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GjW-HB-ZKh">
-                                                        <rect key="frame" x="20" y="483" width="167.5" height="31"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spread of Virus" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="GjW-HB-ZKh">
+                                                        <rect key="frame" x="20" y="483" width="254" height="31"/>
                                                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="22"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -633,7 +633,7 @@ is stay at home.</string>
                                                                             <autoresizingMask key="autoresizingMask"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Indonesia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YbE-lo-J2i">
-                                                                                    <rect key="frame" x="15" y="20.5" width="302" height="26"/>
+                                                                                    <rect key="frame" x="15" y="21" width="302" height="25.5"/>
                                                                                     <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="18"/>
                                                                                     <nil key="textColor"/>
                                                                                     <nil key="highlightedColor"/>
@@ -674,6 +674,7 @@ is stay at home.</string>
                                                     <constraint firstAttribute="trailing" secondItem="mKu-eu-2x8" secondAttribute="trailing" constant="20" id="Fyw-yY-gB0"/>
                                                     <constraint firstAttribute="trailing" secondItem="o81-UN-fcB" secondAttribute="trailing" constant="25" id="HDX-me-Fjf"/>
                                                     <constraint firstItem="M5d-fX-WL5" firstAttribute="top" secondItem="7Lp-Cn-thE" secondAttribute="bottom" constant="40" id="HpS-uF-pR4"/>
+                                                    <constraint firstItem="mKu-eu-2x8" firstAttribute="leading" secondItem="GjW-HB-ZKh" secondAttribute="trailing" constant="10" id="NqA-PG-kNK"/>
                                                     <constraint firstItem="o81-UN-fcB" firstAttribute="leading" secondItem="3Ri-73-0xa" secondAttribute="leading" constant="25" id="P0o-DE-bog"/>
                                                     <constraint firstItem="GjW-HB-ZKh" firstAttribute="leading" secondItem="3Ri-73-0xa" secondAttribute="leading" constant="20" id="PRI-qK-0Z3"/>
                                                     <constraint firstItem="o81-UN-fcB" firstAttribute="top" secondItem="Z6w-8r-2d7" secondAttribute="bottom" constant="30" id="Q9b-h3-g7Z"/>
@@ -693,7 +694,7 @@ is stay at home.</string>
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exi-Gh-n83">
-                                                <rect key="frame" x="359" y="90" width="40" height="40"/>
+                                                <rect key="frame" x="359" y="45" width="40" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="MAk-38-WLK"/>
                                                     <constraint firstAttribute="width" constant="40" id="NHj-FF-VdQ"/>
@@ -711,7 +712,7 @@ is stay at home.</string>
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J3a-8p-Mdr">
-                                                <rect key="frame" x="15" y="90" width="70" height="40"/>
+                                                <rect key="frame" x="15" y="45" width="70" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="70" id="Mfc-bK-jgI"/>
                                                     <constraint firstAttribute="height" constant="40" id="f7R-YS-Wq7"/>
@@ -919,7 +920,7 @@ About Covid-19.</string>
                                                         <rect key="frame" x="20" y="577" width="374" height="185"/>
                                                         <subviews>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wash_hands" translatesAutoresizingMaskIntoConstraints="NO" id="2vw-9N-Oor">
-                                                                <rect key="frame" x="-20" y="-820" width="224.5" height="232"/>
+                                                                <rect key="frame" x="-20" y="-823" width="224.5" height="232"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="232" id="tUj-na-eZ2"/>
                                                                 </constraints>
@@ -966,7 +967,7 @@ About Covid-19.</string>
                                                         <rect key="frame" x="20" y="352" width="374" height="185"/>
                                                         <subviews>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="wear_mask" translatesAutoresizingMaskIntoConstraints="NO" id="Kgr-eG-Zgg">
-                                                                <rect key="frame" x="-20" y="-595" width="224.5" height="232"/>
+                                                                <rect key="frame" x="-20" y="-598" width="224.5" height="232"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="232" id="TQe-jJ-8bw"/>
                                                                 </constraints>
@@ -1030,7 +1031,7 @@ About Covid-19.</string>
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="049-f3-i03">
-                                                <rect key="frame" x="359" y="48" width="40" height="40"/>
+                                                <rect key="frame" x="359" y="45" width="40" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="VHK-le-kWu"/>
                                                     <constraint firstAttribute="width" constant="40" id="epS-Mn-OD7"/>
@@ -1042,7 +1043,7 @@ About Covid-19.</string>
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vgx-w7-C3A">
-                                                <rect key="frame" x="15" y="48" width="40" height="40"/>
+                                                <rect key="frame" x="15" y="45" width="40" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="IsI-Yd-Y4R"/>
                                                     <constraint firstAttribute="width" constant="40" id="ufn-eb-taI"/>
@@ -1110,7 +1111,10 @@ About Covid-19.</string>
                     <connections>
                         <outlet property="backButton" destination="Vgx-w7-C3A" id="ImZ-bf-c0N"/>
                         <outlet property="backButtonTopConstraint" destination="Dra-3G-vIt" id="2TW-Iz-jh2"/>
+                        <outlet property="coughView" destination="FjT-1l-L5H" id="nla-uO-Ge6"/>
                         <outlet property="doctorTopConstraint" destination="vPb-FH-j4s" id="I4Z-1h-Eh1"/>
+                        <outlet property="feverView" destination="qNK-YQ-BKJ" id="sfL-gZ-8Su"/>
+                        <outlet property="headacheView" destination="Vwj-FB-SN8" id="dON-t8-IU1"/>
                         <outlet property="menuButton" destination="049-f3-i03" id="EWB-sj-Tm3"/>
                         <outlet property="menuButtonTopConstraint" destination="IUW-tJ-4Ht" id="8IX-83-Tdd"/>
                         <outlet property="scrollView" destination="wtH-AH-mco" id="rX6-1v-iWe"/>

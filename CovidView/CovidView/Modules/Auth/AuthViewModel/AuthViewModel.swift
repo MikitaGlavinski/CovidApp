@@ -40,6 +40,7 @@ extension AuthViewModel: AuthViewModelProtocol {
         AuthorizationService.shared.signIn(with: email, password: password) { result in
             switch result {
             case .success(let token):
+                Analytics.logEvent("email_login", parameters: nil)
                 SecureStorageService.shared.saveToken(token: token)
                 self.coordinator.routeToInfoScreen()
             case .failure(let error):
@@ -66,6 +67,7 @@ extension AuthViewModel: AuthViewModelProtocol {
             }
 
             let credential = GoogleAuthProvider.credential(withIDToken: idToken, accessToken: authentication.accessToken)
+            Analytics.logEvent("google_login", parameters: nil)
             signIn(with: credential)
         }
     }
@@ -76,6 +78,7 @@ extension AuthViewModel: AuthViewModelProtocol {
     
     func facebookSignIn(token: String) {
         let credential = FacebookAuthProvider.credential(withAccessToken: token)
+        Analytics.logEvent("facebook_login", parameters: nil)
         signIn(with: credential)
     }
     
@@ -83,6 +86,7 @@ extension AuthViewModel: AuthViewModelProtocol {
         let credential = OAuthProvider.credential(withProviderID: "apple.com",
                                                   idToken: idToken,
                                                   rawNonce: rawNonce)
+        Analytics.logEvent("apple_login", parameters: nil)
         signIn(with: credential)
     }
 }

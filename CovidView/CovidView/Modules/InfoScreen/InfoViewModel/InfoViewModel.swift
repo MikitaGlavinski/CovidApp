@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Firebase
 
 protocol InfoViewModelProtocol: AnyObject {
     func viewDidLoad()
@@ -40,6 +41,7 @@ extension InfoViewModel: InfoViewModelProtocol {
     }
     
     func getInfoBy(country: String) {
+        Analytics.logEvent("city_selected", parameters: nil)
         NetworkService.shared.getInfoBy(country: country) { result in
             switch result {
             case .success(let infoCountryModels):
@@ -47,6 +49,9 @@ extension InfoViewModel: InfoViewModelProtocol {
                 let date = Date()
                 let formatter = DateFormatter()
                 formatter.dateFormat = "MMMM d"
+                if Locale.current.languageCode == "ru" {
+                    formatter.dateFormat = "d MMMM"
+                }
                 let stringDate = formatter.string(from: date)
                 SecureStorageService.shared.saveLastInfo(countryInfo: country, currentDate: stringDate)
                 country.date = stringDate
@@ -70,6 +75,7 @@ extension InfoViewModel: InfoViewModelProtocol {
             switch result {
             case .success:
                 SecureStorageService.shared.removeToken()
+                Analytics.logEvent("log_out", parameters: nil)
                 self.coordinator.routeToAuthScreen()
             case .failure(let error):
                 self.view.showError(error)

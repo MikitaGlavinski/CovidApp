@@ -27,6 +27,7 @@ extension RegisterViewModel: RegisterViewModelProtocol {
             switch result {
             case .success(let token):
                 SecureStorageService.shared.saveToken(token: token)
+                Analytics.logEvent("create_account", parameters: nil)
                 self.coordinator.routeToInfoScreen()
             case .failure(let error):
                 self.view.showError(error)

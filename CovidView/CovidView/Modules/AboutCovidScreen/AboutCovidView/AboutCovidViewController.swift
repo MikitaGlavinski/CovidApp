@@ -21,6 +21,9 @@ class AboutCovidViewController: UIViewController {
     @IBOutlet weak var washHandsView: PreventionBackView!
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var menuButton: UIButton!
+    @IBOutlet weak var headacheView: SymptomView!
+    @IBOutlet weak var coughView: SymptomView!
+    @IBOutlet weak var feverView: SymptomView!
     
     var viewModel: AboutCovidViewModelProtocol!
     
@@ -35,6 +38,10 @@ class AboutCovidViewController: UIViewController {
     
     private func setupUI() {
         scrollView.delegate = self
+        
+        headacheView.text = String(localized: "Headache")
+        coughView.text = String(localized: "Cough")
+        feverView.text = String(localized: "Fever")
     }
     
     @IBAction func backButtonTapped(_ sender: Any) {

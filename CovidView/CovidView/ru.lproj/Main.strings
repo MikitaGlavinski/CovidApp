@@ -1,0 +1,111 @@
+/* Class = "UILabel"; text = "Enter password"; ObjectID = "0vP-Xe-4jt"; */
+"0vP-Xe-4jt.text" = "Введите пароль";
+
+/* Class = "UIButton"; configuration.title = "See details"; ObjectID = "1cC-cc-Fpl"; */
+"1cC-cc-Fpl.configuration.title" = "Подробнее";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "1cC-cc-Fpl"; */
+"1cC-cc-Fpl.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Enter email"; ObjectID = "AUj-zt-LyI"; */
+"AUj-zt-LyI.text" = "Введите эл. адрес";
+
+/* Class = "UIButton"; configuration.title = "Create account"; ObjectID = "aym-oa-9yq"; */
+"aym-oa-9yq.configuration.title" = "Создать аккаунт";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "aym-oa-9yq"; */
+"aym-oa-9yq.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "CEQ-Pg-aAg"; */
+"CEQ-Pg-aAg.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Create account"; ObjectID = "DbR-CB-wjN"; */
+"DbR-CB-wjN.configuration.title" = "Создать аккаунт";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "DbR-CB-wjN"; */
+"DbR-CB-wjN.normalTitle" = "Button";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "dNG-s9-Rc0"; */
+"dNG-s9-Rc0.placeholder" = "Email";
+
+/* Class = "UINavigationItem"; title = "Sign In"; ObjectID = "ekF-Sm-OlP"; */
+"ekF-Sm-OlP.title" = "Войти";
+
+/* Class = "UIButton"; normalTitle = "Sign In with facebook"; ObjectID = "EqE-eB-j0K"; */
+"EqE-eB-j0K.normalTitle" = "Войти с facebook";
+
+/* Class = "UILabel"; text = "Country"; ObjectID = "eVJ-2n-caB"; */
+"eVJ-2n-caB.text" = "Страна";
+
+/* Class = "UILabel"; text = "Symptomps"; ObjectID = "f2x-Jr-iFX"; */
+"f2x-Jr-iFX.text" = "Симптомы";
+
+/* Class = "UILabel"; text = "Get to know\nAbout Covid-19."; ObjectID = "fG5-Em-5V6"; */
+"fG5-Em-5V6.text" = "Давайте узнаем\nо Covid-19.";
+
+/* Class = "UILabel"; text = "Wash your hands"; ObjectID = "gIq-4g-Ddc"; */
+"gIq-4g-Ddc.text" = "Мойте руки";
+
+/* Class = "UILabel"; text = "Spread of Virus"; ObjectID = "GjW-HB-ZKh"; */
+"GjW-HB-ZKh.text" = "Распространение вируса";
+
+/* Class = "UINavigationItem"; title = "Create account"; ObjectID = "icT-4Y-mNC"; */
+"icT-4Y-mNC.title" = "Создать аккаунт";
+
+/* Class = "UILabel"; text = "Enter password"; ObjectID = "iyv-t6-1dx"; */
+"iyv-t6-1dx.text" = "Введите пароль";
+
+/* Class = "UIButton"; normalTitle = "Log out"; ObjectID = "J3a-8p-Mdr"; */
+"J3a-8p-Mdr.normalTitle" = "Выйти";
+
+/* Class = "UIButton"; normalTitle = "Sign In with apple"; ObjectID = "L2N-dy-cxH"; */
+"L2N-dy-cxH.normalTitle" = "Войти с apple";
+
+/* Class = "UILabel"; text = "Case Update"; ObjectID = "M5d-fX-WL5"; */
+"M5d-fX-WL5.text" = "Обновление";
+
+/* Class = "UIButton"; configuration.title = "See details"; ObjectID = "mKu-eu-2x8"; */
+"mKu-eu-2x8.configuration.title" = "Подробнее";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "mKu-eu-2x8"; */
+"mKu-eu-2x8.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "These diseases include gastrointestinal infections, such as Salmonella, and respiratory infections, such as influenza."; ObjectID = "mnf-8y-zAn"; */
+"mnf-8y-zAn.text" = "Эти заболевания включают желудочно-кишечные инфекции, такие как сальмонелла, и респираторные инфекции, такие как грипп.";
+
+/* Class = "UIButton"; normalTitle = "Sign In with email"; ObjectID = "MNw-w6-DSP"; */
+"MNw-w6-DSP.normalTitle" = "Войти с email";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "trB-Ci-0Dz"; */
+"trB-Ci-0Dz.placeholder" = "Пароль";
+
+/* Class = "UILabel"; text = "Wear face mask"; ObjectID = "tsm-yf-Y4T"; */
+"tsm-yf-Y4T.text" = "Насите маску";
+
+/* Class = "UIButton"; normalTitle = "Sign In with google"; ObjectID = "vAE-JR-otb"; */
+"vAE-JR-otb.normalTitle" = "Войти с google";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "vci-0N-NUQ"; */
+"vci-0N-NUQ.placeholder" = "Пароль";
+
+/* Class = "UILabel"; text = "Prevention"; ObjectID = "WrQ-Pc-Mbq"; */
+"WrQ-Pc-Mbq.text" = "Предотвращение";
+
+/* Class = "UILabel"; text = "Indonesia"; ObjectID = "YbE-lo-J2i"; */
+"YbE-lo-J2i.text" = "Indonesia";
+
+/* Class = "UILabel"; text = "All you need\nis stay at home."; ObjectID = "YEu-U2-5KG"; */
+"YEu-U2-5KG.text" = "Все что надо\nэто остаться дома.";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "yUX-lu-1QO"; */
+"yUX-lu-1QO.placeholder" = "Email";
+
+/* Class = "UILabel"; text = "Newest update March 28"; ObjectID = "Z6w-8r-2d7"; */
+"Z6w-8r-2d7.text" = "Последние обновление";
+
+/* Class = "UILabel"; text = "Enter email"; ObjectID = "zcS-0P-XjP"; */
+"zcS-0P-XjP.text" = "Введите email";
+
+/* Class = "UILabel"; text = "Since the start of the coronovirus outbreak some places have fully embraced wearing face masks, and anyone caught without one risks becoming a social pariah."; ObjectID = "zkw-Lo-ata"; */
+"zkw-Lo-ata.text" = "С момента начала вспышки коронавируса в некоторых местах полностью принято носить маски для лица, и любой, кого поймают без него, рискует стать социальным изгоем.";
+
