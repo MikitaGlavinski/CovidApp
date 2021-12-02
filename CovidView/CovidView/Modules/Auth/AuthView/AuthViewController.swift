@@ -9,6 +9,7 @@ import UIKit
 import FBSDKLoginKit
 import CryptoKit
 import AuthenticationServices
+import Firebase
 
 protocol AuthViewInput: AnyObject {
     func showError(_ error: Error)
@@ -40,6 +41,7 @@ class AuthViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         addGestures()
+        Analytics.logEvent("open_AuthScreen", parameters: nil)
     }
     
     private func addGestures() {

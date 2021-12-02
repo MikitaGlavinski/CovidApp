@@ -7,6 +7,7 @@
 
 import UIKit
 import MapKit
+import Firebase
 
 protocol InfoViewInput: AnyObject {
     func showError(_ error: Error)
@@ -40,6 +41,7 @@ class InfoViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         viewModel.viewDidLoad()
+        Analytics.logEvent("open_InfoScreen", parameters: nil)
     }
     
     private func setupUI() {

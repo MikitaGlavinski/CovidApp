@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 protocol RegisterViewInput: AnyObject {
     func showError(_ error: Error)
@@ -28,6 +29,7 @@ class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         addGestures()
+        Analytics.logEvent("open_RegisterScreen", parameters: nil)
     }
     
     private func addGestures() {

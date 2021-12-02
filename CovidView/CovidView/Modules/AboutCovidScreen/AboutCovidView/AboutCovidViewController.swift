@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 protocol AboutCovidViewInput: AnyObject {
     
@@ -34,6 +35,7 @@ class AboutCovidViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        Analytics.logEvent("open_AboutScreen", parameters: nil)
     }
     
     private func setupUI() {
