@@ -1,5 +1,5 @@
 # CovidApp
-![](screenshots/photo1.png)
-![](screenshots/photo2.png)
-![](screenshots/photo3.png)
-![](screenshots/photo4.png)
+![](screenshots/photo1.jpg)
+![](screenshots/photo2.jpg)
+![](screenshots/photo3.jpg)
+![](screenshots/photo4.jpg)
